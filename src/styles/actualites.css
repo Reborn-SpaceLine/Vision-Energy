@@ -1,0 +1,1085 @@
+/* ==========================================================================
+   Actualités & Carrières — page-specific styles (mockup 1296 CSS px)
+   ========================================================================== */
+
+/* ---------- helpers ------------------------------------------------------- */
+.eyebrow.eyebrow--plain::before {
+  content: none;
+}
+
+.eyebrow--plain {
+  gap: 9px;
+}
+
+.eyebrow--plain svg {
+  font-size: 15px;
+}
+
+/* ---------- hero ---------------------------------------------------------- */
+.act-hero {
+  padding: 28px 0 80px;
+  background:
+    radial-gradient(52% 78% at 94% 6%, rgba(168, 236, 208, 0.6) 0%, rgba(168, 236, 208, 0) 62%),
+    linear-gradient(112deg, #f3f5f7 0%, #e9edf5 46%, #dbe7e4 100%);
+}
+
+.act-crumb {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.act-crumb svg {
+  font-size: 14px;
+}
+
+.act-crumb a:hover {
+  color: var(--g-700);
+}
+
+.act-crumb i {
+  font-style: normal;
+  opacity: 0.5;
+}
+
+.act-crumb b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.act-hero-pill {
+  margin-top: 26px;
+}
+
+.act-h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2.2rem, 4.56vw, 3.7rem);
+  font-weight: 700;
+  line-height: 1.09;
+  letter-spacing: -0.03em;
+  margin: 22px 0 0;
+  color: var(--ink);
+}
+
+.act-h1 .hl {
+  color: var(--g-600);
+}
+
+.act-hero-lead {
+  font-size: 1.0625rem;
+  line-height: 1.71;
+  color: var(--ink-soft);
+  max-width: 820px;
+  margin-top: 14px;
+}
+
+.act-hero-actions {
+  margin-top: 26px;
+  gap: 14px;
+}
+
+/* stats band */
+.act-stats {
+  margin-top: 44px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 30px 26px 26px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.act-stat {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.act-stat .icon-tile {
+  font-size: 20px;
+}
+
+.act-stat b {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 2.15rem;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.act-stat-label {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.act-stat-sub {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--g-700);
+}
+
+.act-stat-sub--blue {
+  color: var(--blue-700);
+}
+
+.act-stat-sub--ink {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+/* ---------- section titles ------------------------------------------------ */
+.act-h2 {
+  font-size: clamp(1.75rem, 3.24vw, 2.625rem);
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  margin-top: 14px;
+}
+
+.act-h2--wide {
+  max-width: 16.5ch;
+}
+
+.act-h2c {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 10px;
+}
+
+.icon-tile--gray {
+  background: #eceef0;
+  color: var(--ink);
+}
+
+.icon-tile--mint {
+  background: #cefce7;
+  color: var(--g-700);
+}
+
+/* ---------- news ---------------------------------------------------------- */
+.act-news {
+  padding: 86px 0 80px;
+  background: var(--bg);
+}
+
+.act-news-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 536px;
+  gap: 56px;
+  align-items: end;
+}
+
+.act-news-head .lead {
+  max-width: 34rem;
+}
+
+.act-filtercard {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  padding: 14px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  justify-content: flex-start;
+}
+
+.act-fchip {
+  border: 0;
+  background: transparent;
+  border-radius: 999px;
+  padding: 8px 15px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.act-fchip:hover {
+  background: var(--mint-wash);
+  color: var(--g-700);
+}
+
+.act-fchip--on {
+  background: var(--g-700);
+  color: #fff;
+  font-weight: 700;
+}
+
+.act-fchip--on:hover {
+  background: var(--g-600);
+  color: #fff;
+}
+
+/* featured */
+.act-feat {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1.42fr 1fr;
+  border-radius: var(--r-lg);
+}
+
+.act-feat-media {
+  border-radius: 0;
+  min-height: 100%;
+}
+
+.act-feat-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.act-feat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  left: 22px;
+  top: 20px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  padding: 9px 16px;
+}
+
+.act-feat-badge svg {
+  font-size: 13px;
+  color: var(--mint);
+}
+
+.act-feat-body {
+  padding: 34px 32px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.act-feat-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  margin-top: 16px;
+}
+
+.act-feat-text {
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--muted);
+  margin-top: 16px;
+}
+
+.act-feat-body .chips {
+  margin-top: 18px;
+}
+
+.act-tag {
+  background: #f1f3f5;
+  border-color: #e6e9ec;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 7px 12px;
+  border-radius: 9px;
+}
+
+.act-feat-foot {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.act-share {
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #f1f3f5;
+  color: var(--ink-soft);
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.act-share:hover {
+  background: var(--mint-wash);
+  color: var(--g-700);
+}
+
+/* news cards */
+.act-newscards {
+  margin-top: 40px;
+}
+
+.act-newscard {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.act-newscard .media {
+  border-radius: 0;
+  aspect-ratio: 762 / 388;
+}
+
+.act-newscard-body {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 auto;
+}
+
+.act-newscard-title {
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 1.43;
+  letter-spacing: -0.015em;
+}
+
+.act-newscard-text {
+  font-size: 0.88rem;
+  line-height: 1.42;
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.act-newscard .link-arrow {
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.act-newscard--text {
+  padding: 22px;
+}
+
+/* more / count row */
+.act-news-more {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.act-empty {
+  margin-top: 40px;
+  padding: 44px 26px;
+  text-align: center;
+  border: 1px dashed #cfd9d4;
+  border-radius: var(--r-lg);
+  background: #fff;
+  color: var(--muted);
+}
+
+.act-empty b {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+/* ---------- presse (dark band) ------------------------------------------- */
+.act-presscard {
+  margin-top: 38px;
+  background: var(--dark);
+  border-radius: var(--r-lg);
+  padding: 34px 40px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  color: #e7eeeb;
+  box-shadow: var(--shadow-md);
+}
+
+.act-press-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--g-700);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  flex: none;
+}
+
+.act-presscard h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 8px;
+  color: #fff;
+}
+
+.act-presscard p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #a9b6b1;
+  margin-top: 8px;
+  max-width: 46ch;
+}
+
+.act-press-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.act-btn-gray {
+  background: var(--dark-3);
+  border-color: #4a555a;
+  color: #e7eeeb;
+}
+
+.act-btn-gray:hover {
+  background: #465257;
+}
+
+/* ---------- marque employeur --------------------------------------------- */
+.act-emp {
+  padding: 87px 0 78px;
+  background: #f2f4f6;
+}
+
+.act-emp .lead {
+  max-width: 60rem;
+}
+
+.act-empgrid {
+  margin-top: 40px;
+  align-items: stretch;
+}
+
+.act-empcard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 26px;
+}
+
+.act-empcard .h3 {
+  font-size: 1.35rem;
+  line-height: 1.24;
+  font-weight: 600;
+}
+
+.act-empcard p {
+  font-size: 0.92rem;
+  line-height: 1.62;
+  color: var(--muted);
+  flex: 1 1 auto;
+}
+
+.act-empfoot {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--g-700);
+}
+
+.act-empfoot--ink {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.act-empfoot--blue {
+  color: var(--blue-700);
+}
+
+/* ---------- témoignage ---------------------------------------------------- */
+.act-testi {
+  margin-top: 40px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 328px minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.act-testi-media {
+  position: relative;
+  margin: 0;
+}
+
+.act-testi-media img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: var(--r-md);
+}
+
+.act-testi-pill {
+  position: absolute;
+  right: -18px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--g-900);
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+}
+
+.act-testi-pill svg {
+  font-size: 15px;
+  color: var(--mint);
+}
+
+.act-testi blockquote {
+  margin: 16px 0 0;
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.375;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.act-testi-author {
+  display: block;
+  margin-top: 26px;
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.act-testi-role {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.act-testi-committee {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--g-700);
+}
+
+/* ---------- offres -------------------------------------------------------- */
+.act-jobs {
+  padding: 87px 0 79px;
+  background: #f6f8fa;
+}
+
+.act-jobs-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 40px;
+  align-items: end;
+}
+
+.act-jobs-head .lead {
+  max-width: 44rem;
+}
+
+.act-jobs-count {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  padding-bottom: 4px;
+}
+
+.act-jobs-count .pill {
+  background: var(--g-700);
+  color: #fff;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  padding: 8px 16px;
+}
+
+.act-jobfilter {
+  margin-top: 34px;
+  padding: 20px 24px;
+  border-radius: var(--r-md);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.act-field label {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.act-ctl {
+  width: 100%;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 11px 14px;
+  outline: 0;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+select.act-ctl {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231d2723' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 9 7 7 7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+  padding-right: 38px;
+}
+
+.act-ctl:focus {
+  border-color: var(--g-600);
+  box-shadow: 0 0 0 3px rgba(15, 157, 110, 0.16);
+}
+
+.act-search {
+  position: relative;
+}
+
+.act-search svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.act-search .act-ctl {
+  padding-left: 38px;
+}
+
+.act-joblist {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.act-job {
+  padding: 22px 26px;
+  border-radius: var(--r-md);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 26px;
+  align-items: center;
+}
+
+.act-job-main {
+  min-width: 0;
+}
+
+.act-job-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.act-jbadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 7px;
+  background: #eceef0;
+  color: var(--ink-soft);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.act-jbadge--cdi {
+  background: #c2fbe1;
+  color: var(--g-900);
+}
+
+.act-jbadge--cdd {
+  background: #e8f3fc;
+  color: var(--blue-700);
+}
+
+.act-jref {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  background: #f1f3f5;
+  border: 1px solid #e6e9ec;
+  border-radius: 7px;
+  padding: 3px 9px;
+}
+
+.act-job h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+  margin-top: 12px;
+}
+
+.act-job-meta {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.act-job-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.act-job-meta svg {
+  font-size: 15px;
+  color: var(--g-600);
+}
+
+.act-job-desc {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  max-width: 78ch;
+}
+
+.act-job-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.act-btn-graylight {
+  background: #eceef0;
+  border-color: #eceef0;
+  color: var(--ink);
+}
+
+.act-btn-graylight:hover {
+  background: #e2e5e8;
+}
+
+.act-jobdetails {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  margin-top: 4px;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.act-jobdetails h4 {
+  font-size: 0.72rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--g-700);
+  margin-bottom: 10px;
+}
+
+/* ---------- candidature spontanée ---------------------------------------- */
+.act-spont {
+  padding: 79px 0;
+  background: #f2f4f6;
+}
+
+.act-spontcard {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 440px minmax(0, 1fr);
+  gap: 32px;
+}
+
+.act-spont-l .h3 {
+  font-size: 1.95rem;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+  margin-top: 12px;
+}
+
+.act-spont-l .lead {
+  font-size: 0.95rem;
+  line-height: 1.62;
+}
+
+.act-infobox {
+  margin-top: 18px;
+  background: #f2f4f6;
+  border: 1px solid #e9edf0;
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.act-infobox svg {
+  font-size: 20px;
+  color: var(--g-700);
+  margin-top: 2px;
+}
+
+.act-infobox b {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.act-infobox a {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--g-700);
+}
+
+.act-infobox a:hover {
+  text-decoration: underline;
+}
+
+.act-infobox span {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.act-infobox--blue svg {
+  color: var(--blue-700);
+}
+
+.act-note {
+  margin-top: 18px;
+  background: var(--mint-wash);
+  border: 1px solid #d5f0e3;
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.act-note svg {
+  font-size: 20px;
+  color: var(--g-600);
+}
+
+.act-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 22px;
+}
+
+.act-form .act-field--full {
+  grid-column: 1 / -1;
+}
+
+.act-drop {
+  display: grid;
+  place-items: center;
+  gap: 2px;
+  text-align: center;
+  border: 1.5px dashed #cfd8d3;
+  border-radius: 12px;
+  background: #fbfcfd;
+  padding: 20px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.act-drop:hover,
+.act-drop:focus-within {
+  border-color: var(--g-600);
+  background: var(--mint-wash);
+}
+
+.act-drop svg {
+  font-size: 26px;
+  color: var(--g-600);
+}
+
+.act-drop-text {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.act-drop-text b {
+  color: var(--g-700);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.act-drop-hint {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.act-form textarea.act-ctl {
+  min-height: 96px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.act-form-foot {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.act-form-foot .btn {
+  width: 100%;
+  padding: 16px 22px;
+}
+
+.act-form-msg {
+  grid-column: 1 / -1;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--g-700);
+}
+
+/* ---------- processus ----------------------------------------------------- */
+.act-proc {
+  padding: 48px 0 46px;
+  background: #f6f8fa;
+}
+
+.act-proc .sec-head {
+  margin-bottom: 34px;
+}
+
+.act-procgrid {
+  align-items: stretch;
+}
+
+.act-proccard {
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.act-procnum {
+  font-family: var(--font-head);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #cce1da;
+}
+
+.act-procnum--blue {
+  color: #d2dcf7;
+}
+
+.act-proccard .h3 {
+  font-size: 1.18rem;
+  line-height: 1.24;
+}
+
+.act-proccard p {
+  font-size: 0.88rem;
+  line-height: 1.58;
+  color: var(--muted);
+}
+
+/* ---------- responsive ---------------------------------------------------- */
+@media (max-width: 1080px) {
+  .act-news-head,
+  .act-jobs-head,
+  .act-feat,
+  .act-testi,
+  .act-spontcard,
+  .act-jobfilter {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+  .act-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .act-presscard {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .act-jobdetails {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+  .act-feat-media {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 720px) {
+  .act-h1 {
+    font-size: 2.1rem;
+  }
+  .act-h1 br {
+    display: none;
+  }
+  .act-stats,
+  .act-form,
+  .act-job {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .act-job {
+    padding: 20px;
+  }
+  .act-spontcard,
+  .act-testi,
+  .act-presscard {
+    padding: 24px;
+  }
+  .act-testi-media img {
+    max-width: 328px;
+  }
+}
