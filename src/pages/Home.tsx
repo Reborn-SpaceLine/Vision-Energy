@@ -5,7 +5,7 @@ import { Icon } from '../components/icons'
 const heroChecks = [
   { icon: <Icon.fuel />, label: 'Carburants Haute Performance' },
   { icon: <Icon.bolt />, label: 'Bornes E-Vision Ultra-Fast' },
-  { icon: <Icon.shield />, label: 'Norme ISO 9001:2015' },
+  { icon: <Icon.shield />, label: 'Qualité contrôlée en station' },
 ]
 
 function Hero() {
@@ -16,16 +16,15 @@ function Hero() {
       </div>
       <div className="hero-card">
         <span className="eyebrow eyebrow--dot eyebrow--mint">
-          Réseau en pleine expansion • Cameroun &amp; zone CEMAC
+          Réseau en pleine expansion • Cameroun
         </span>
         <h1 className="hero-title">
           Vision Energy en <span className="hl--mint">pleine expansion</span>
         </h1>
         <p className="hero-text">
-          Déploiement accéléré de notre réseau de stations-service à travers le Cameroun — ouverture
-          de Tobe / Poumougne, implantations à Bafoussam et à Douala — avec un objectif de plusieurs
-          dizaines de stations d’ici 2028. Carburants additivés de haute pureté, gaz butane certifié
-          et hubs multi-énergies.
+          Déploiement accéléré de notre réseau de stations-service à travers le Cameroun — Tobe /
+          Poumougne, Bafoussam, Batcham, Mbouda et Douala — avec un objectif de 30 stations d’ici
+          2028. Carburants additivés de haute pureté, gaz butane certifié et hubs multi-énergies.
         </p>
         <div className="btn-row">
           <a className="btn btn--primary" href={href('/groupe')}>
@@ -54,9 +53,9 @@ function Hero() {
 
 /* ------------------------------------------------------------- gouvernance */
 const govStats = [
-  { value: '120+', label: 'Stations Services Actives' },
-  { value: '6', label: 'Pays Couverts en Afrique Centrale' },
-  { value: '99.8%', label: 'Taux de Disponibilité Cuves' },
+  { value: '30', label: 'Stations Visées d’ici 2028' },
+  { value: '5', label: 'Villes Déjà Équipées au Cameroun' },
+  { value: '2', label: 'Centres de Remplissage de Gaz' },
 ]
 
 function Gouvernance() {
@@ -72,10 +71,10 @@ function Gouvernance() {
           </h2>
           <p className="lead">
             Acteur industriel camerounais spécialisé dans la commercialisation de produits pétroliers
-            de haute technicité, notre groupe combine l’ingénierie des dépôts et terminaux côtiers, la
-            construction et la réhabilitation de centres de remplissage de gaz (Douala, Bafoussam) et
-            un trading de brut auprès de stations de proximité. La direction technique est assurée par
-            des ingénieurs spécialisés en lubrifiants, électricité, automatisme et gaz.
+            de haute technicité, notre groupe exploite des stations-service à Douala, Bafoussam,
+            Batcham, Mbouda et Tobe, et poursuit la construction et la réhabilitation de centres de
+            remplissage de gaz à Douala et à Bafoussam. La direction technique est assurée par des
+            ingénieurs spécialisés en lubrifiants, électricité, automatisme et gaz.
           </p>
           <div className="gov-stats">
             {govStats.map((s) => (
@@ -179,29 +178,29 @@ const news = [
   {
     img: '/images/acc-news-1.jpg',
     badge: 'Expansion réseau',
-    date: '24 Mai 2025',
-    place: 'Douala, Cameroun',
-    title: 'Inauguration du nouveau hub multi-énergies de Bonabéri',
-    text: 'Vision Energy poursuit son maillage avec l’ouverture d’un hub équipé de 8 pompes gros débit, d’un terminal GPL et de bornes de recharge rapide.',
+    date: '28 Avril 2026',
+    place: 'Mbouda, Cameroun',
+    title: 'Ouverture officielle de notre station de Mbouda',
+    text: 'Nouvelle adresse du réseau Vision Energy dans la Région de l’Ouest: carburants, gaz domestique, lubrifiants et espace de rafraîchissement, au service des automobilistes et des mototaxis.',
     link: 'Lire le communiqué',
   },
   {
     img: '/images/acc-news-2.jpg',
-    badge: 'Produits & R&D',
-    date: '12 Mai 2025',
-    place: 'Technopôle R&D',
-    title: 'Lancement de la nouvelle gamme d’huiles VisionPro Synthetic',
-    text: 'Formulée spécifiquement pour résister aux contraintes thermiques élevées de la région Centre, la gamme VisionPro réduit l’usure moteur.',
-    link: 'Fiche technique & homologations',
+    badge: 'Réseau & stations',
+    date: '15 Janvier 2026',
+    place: 'Batcham, Cameroun',
+    title: 'Inauguration de la station de l’axe Mbouda – Batcham',
+    text: 'La direction générale a confirmé lors de l’ouverture un maillage continu de l’Ouest du pays, avec un objectif de 30 stations-service exploitées d’ici 2028.',
+    link: 'Retour sur l’inauguration',
   },
   {
     img: '/images/acc-news-3.jpg',
-    badge: 'Soutage maritime',
-    date: '03 Mai 2025',
-    place: 'Bata & Kribi',
-    title: 'Renforcement des capacités de soutage offshore au port en eau profonde',
-    text: 'Mise en service d’une nouvelle barge de ravitaillement de 5 000 tonnes métriques certifiée aux standards maritimes IMO 2020.',
-    link: 'Détails de l’accord',
+    badge: 'Conformité & environnement',
+    date: '27 Juin 2025',
+    place: 'Tobe (Poumougne), Cameroun',
+    title: 'Station de Tobe: dossier de conformité reçu',
+    text: 'Étude d’impact, plan d’urgence et dossier technique déposés auprès des autorités compétentes: notre implantation de Tobe, dans l’arrondissement de Poumougne, est accompagnée jusqu’à sa mise en service.',
+    link: 'Détails du dossier',
   },
 ]
 
@@ -294,7 +293,7 @@ function VisionPass() {
             <div className="pass-foot">
               <div>
                 <b>TITULAIRE PRO</b>
-                <span>GROUPE LOGISTIQUE CEMAC</span>
+                <span>FLOTTE TRANSPORT DOUALA</span>
               </div>
               <div className="pass-right">
                 <b>VALIDITÉ</b>

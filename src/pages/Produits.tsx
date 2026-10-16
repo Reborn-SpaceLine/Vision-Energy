@@ -45,9 +45,9 @@ function Hero() {
             <span className="hl--mint">Votre Quotidien</span>
           </h1>
           <p className="lead">
-            Du carburant additivé aux lubrifiants de synthèse marine, Vision Energy orchestre une
-            distribution énergétique de pointe, alliant sécurité logistique et technologies
-            d’avant-garde.
+            Du carburant additivé aux lubrifiants de synthèse, Vision Energy déploie au Cameroun une
+            offre complète de produits pétroliers et de gaz domestique, pensée pour allier sécurité,
+            régularité de la qualité et prix maîtrisé — la qualité à bon prix.
           </p>
           <div className="btn-row">
             <a className="btn btn--primary" href={href('/produits', 'carburants')}>
@@ -73,7 +73,7 @@ function Hero() {
               <Icon.fuel />
             </span>
             <div className="pro-hero-float-text">
-              <b>Super 95 ProClean™ &amp; Excellium</b>
+              <b>Super 95 &amp; Gasoil ProClean™</b>
               <span>Additivation nouvelle génération</span>
             </div>
             <span className="pill pill--cert">Certifié ISO</span>
@@ -134,7 +134,7 @@ const fuels = [
     pillCls: 'pill--sq pill--solid-blue',
     icon: <Icon.wrench />,
     tileCls: 'icon-tile--lav icon-tile--navy',
-    title: 'Gasoil Excellium Pro™',
+    title: 'Gasoil ProClean™',
     desc: 'Conçu pour les moteurs diesel Common Rail haute pression, il prévient le colmatage des injecteurs et espace vos cycles de maintenance.',
     stats: [
       { cls: 'pro-stat--green', icon: <Icon.leaf />, value: '−7%', label: 'Émissions CO₂ & suies' },

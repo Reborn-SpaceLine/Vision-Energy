@@ -334,8 +334,8 @@
 }
 
 .pro-carburants .sec-head .lead {
-  max-width: 660px;
-  font-size: 1.02rem;
+  max-width: 720px;
+  font-size: 0.98rem;
 }
 
 .pro-eff {
@@ -366,7 +366,7 @@
 .pro-fuel-card {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   padding: 24px;
 }
 
@@ -397,7 +397,7 @@
 .pro-stat {
   background: var(--pro-bg2);
   border-radius: var(--r-md);
-  padding: 14px 16px;
+  padding: 12px 14px;
 }
 
 .pro-stat b {
@@ -405,7 +405,7 @@
   align-items: center;
   gap: 8px;
   font-family: var(--font-head);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 700;
   line-height: 1;
 }
@@ -469,7 +469,7 @@
 }
 
 .pro-lub .sec-head .lead {
-  max-width: 620px;
+  max-width: 680px;
   font-size: 1.02rem;
 }
 
@@ -502,12 +502,12 @@
 .pro-lub-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 9px;
   padding: 18px;
 }
 
 .pro-lub-media {
-  aspect-ratio: 241 / 249;
+  aspect-ratio: 241 / 176;
   border-radius: var(--r-md);
 }
 
@@ -541,7 +541,7 @@
 .pro-lub-card .prod-text {
   font-size: 0.85rem;
   color: var(--muted);
-  flex: 1 1 auto;
+  flex: 0 0 auto;
 }
 
 .pro-spec-chips {
@@ -562,7 +562,7 @@
 .pro-lub-card .pro-card-foot {
   border-top: 0;
   padding-top: 4px;
-  margin-top: 2px;
+  margin-top: auto;
 }
 
 .pro-lub-price {
@@ -619,22 +619,22 @@
 
 .pro-info {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   align-items: flex-start;
   background: var(--pro-bg2);
   border-radius: 14px;
-  padding: 18px 20px;
+  padding: 15px 18px;
 }
 
 .pro-info + .pro-info {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .pro-info .icon-tile {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 12px;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .pro-info .h3 {
@@ -652,7 +652,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 12px;
+  gap: 10px;
   padding: 16px;
   border-radius: 18px;
 }
@@ -1071,13 +1071,13 @@
 .pro-form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px 24px;
-  margin-top: 24px;
+  gap: 14px 22px;
+  margin-top: 22px;
 }
 
 .pro-field {
   display: grid;
-  gap: 8px;
+  gap: 6px;
 }
 
 .pro-field--full {
@@ -1085,9 +1085,9 @@
 }
 
 .pro-field > span {
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--ink-soft);
 }
 
 .pro-field input,
@@ -1163,10 +1163,10 @@
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 19px 24px;
+  padding: 16px 24px;
   font-family: var(--font-head);
-  font-size: 1.02rem;
-  font-weight: 600;
+  font-size: 1.06rem;
+  font-weight: 500;
   color: var(--ink);
 }
 

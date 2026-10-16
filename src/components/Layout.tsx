@@ -100,14 +100,14 @@ export function Footer() {
             <b>Vision Energy</b>
           </div>
           <p>
-            Vision Energy S.A. — acteur camerounais des produits pétroliers, du gaz et des énergies.
-            Réseau de stations-service, centres de remplissage de gaz, lubrifiants et
-            approvisionnement de flottes, avec un maillage national en pleine expansion.
+            Vision Energy S.A. — société anonyme camerounaise des produits pétroliers, du gaz et des
+            énergies. Nos stations de Douala, Bafoussam, Batcham, Mbouda et Tobe délivrent carburants
+            additivés, gaz domestique et lubrifiants, avec un objectif de 30 stations d’ici 2028.
           </p>
           <div className="footer-certs">
-            <span>CERTIFICATION ISO 9001 / 14001</span>
+            <span>LA QUALITÉ À BON PRIX</span>
             <i aria-hidden="true">|</i>
-            <span className="green">NORMES HSE QUALITÉ TOTALE</span>
+            <span className="green">RÉSEAU &amp; CENTRES GAZ · CAMEROUN</span>
           </div>
         </div>
         <div>
