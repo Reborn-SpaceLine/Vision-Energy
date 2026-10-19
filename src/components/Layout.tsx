@@ -43,13 +43,12 @@ export function Header({ path }: { path: string }) {
     <header className="header">
       <div className="container header-inner">
         <a className="brand" href={href('/')} aria-label="Vision Energy S.A. — accueil">
-          <img src="/images/logo-roundel.png" alt="" className="brand-img" width="46" height="44" />
           <img
             src="/images/logo-wordmark.png"
             alt="Vision Energy SA"
             className="brand-logo"
-            width="196"
-            height="25"
+            width="210"
+            height="27"
           />
         </a>
         <button
@@ -99,8 +98,7 @@ export function Footer() {
       <div className="container footer-grid">
         <div className="footer-intro">
           <div className="footer-brand">
-            <img src="/images/logo-roundel.png" alt="" width="38" height="36" />
-            <b>Vision Energy S.A.</b>
+            <img src="/images/logo-wordmark.png" alt="Vision Energy SA" width="186" height="24" />
           </div>
           <p>
             Vision Energy S.A. — société anonyme camerounaise des produits pétroliers, du gaz et des
