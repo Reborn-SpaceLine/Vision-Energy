@@ -509,12 +509,89 @@
   border-radius: 22px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
+  background: var(--g-950);
 }
 
-.res-map > img {
+.vmap {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.vmap-title {
+  font-family: var(--font-head);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  fill: #fff;
+}
+
+.vmap-eyebrow {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  fill: var(--mint);
+}
+
+.vmap-region {
+  fill: rgba(104, 219, 169, 0.07);
+  stroke: rgba(104, 219, 169, 0.26);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 7;
+}
+
+.vmap-region-lbl {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  fill: rgba(168, 236, 208, 0.5);
+}
+
+.vmap-sea {
+  fill: #023040;
+  stroke: rgba(47, 143, 214, 0.45);
+  stroke-width: 1.5;
+}
+
+.vmap-road {
+  stroke: rgba(104, 219, 169, 0.4);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.vmap-dot {
+  fill: var(--mint);
+  stroke: var(--g-950);
+  stroke-width: 3;
+}
+
+.vmap-gas {
+  fill: none;
+  stroke: var(--amber);
+  stroke-width: 2.5;
+}
+
+.vmap-st-name {
+  font-family: var(--font-head);
+  font-size: 15.5px;
+  font-weight: 600;
+  fill: #eafaf2;
+}
+
+.vmap-st-sub {
+  font-size: 12.5px;
+  fill: rgba(168, 236, 208, 0.75);
+}
+
+.vmap-legend {
+  font-size: 13px;
+  fill: #cde9dd;
+}
+
+.vmap-note {
+  font-size: 11.5px;
+  fill: rgba(205, 233, 221, 0.6);
 }
 
 .res-map-card {
@@ -978,7 +1055,6 @@
   }
 
   .res-map {
-    min-height: 560px;
     margin-top: 26px;
   }
 

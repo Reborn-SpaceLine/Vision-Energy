@@ -876,6 +876,12 @@ ul {
 }
 
 @media (max-width: 720px) {
+  .header-inner {
+    gap: 14px;
+  }
+  .brand-text span {
+    display: none;
+  }
   .topbar-left .topbar-item:first-child,
   .topbar-right .topbar-item.lang {
     display: none;
@@ -890,6 +896,16 @@ ul {
   }
   .section {
     padding: 52px 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .topbar-left {
+    display: none;
+  }
+  .topbar-inner {
+    justify-content: center;
+    gap: 0;
   }
 }
 

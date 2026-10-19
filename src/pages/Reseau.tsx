@@ -392,10 +392,122 @@ export default function ReseauPage() {
           </div>
 
           <div className="res-map">
-            <img
-              src="/images/res-map.jpg"
-              alt="Carte des stations Vision Energy dans la région de Douala"
-            />
+            <svg className="vmap" viewBox="0 0 760 720" role="img" aria-labelledby="vmap-title">
+              <title id="vmap-title">
+                Schéma du réseau Vision Energy : six stations réparties entre le Littoral et
+                l’Ouest du Cameroun — Bonamoussadi et Logbessou PK15 à Douala, Bamendzi à
+                Bafoussam, Mbouda, Batcham et Tobe / Poumougne.
+              </title>
+              <defs>
+                <pattern id="vmap-grid" width="60" height="60" patternUnits="userSpaceOnUse">
+                  <path d="M60 0H0v60" fill="none" strokeWidth="1" stroke="rgba(255,255,255,.05)" />
+                </pattern>
+              </defs>
+              <rect width="760" height="720" fill="url(#vmap-grid)" />
+
+              <path
+                className="vmap-region"
+                d="M120 60q180-30 300 50 100 70 50 190-50 100-190 80-140-20-175-140-25-110 15-180z"
+              />
+              <path
+                className="vmap-region"
+                d="M430 380q130-40 230 40 80 70 40 180-50 100-180 80-120-20-140-140-15-100 50-160z"
+              />
+              <path className="vmap-sea" d="M760 508q-58 34-86 92-24 52-12 120h98z" />
+
+              <g className="vmap-road" fill="none">
+                <path d="M470 470Q400 392 302 252" />
+                <path d="M470 470Q300 400 182 192" />
+                <path d="M182 192Q270 138 388 152" />
+                <path d="M302 252Q356 202 388 152" />
+                <path d="M302 252Q358 288 400 330" />
+              </g>
+
+              <text className="vmap-eyebrow" x="36" y="48">
+                Réseau Vision Energy
+              </text>
+              <text className="vmap-title" x="36" y="80">
+                Littoral &amp; Ouest
+              </text>
+              <text className="vmap-note" x="36" y="106">
+                6 stations · 2 centres gaz
+              </text>
+
+              <text className="vmap-region-lbl" x="150" y="348">
+                OUEST
+              </text>
+              <text className="vmap-region-lbl" x="596" y="412">
+                LITTORAL
+              </text>
+
+              <g className="vmap-stop">
+                <circle className="vmap-dot" cx="388" cy="152" r="7.5" />
+                <text className="vmap-st-name" x="388" y="128" textAnchor="middle">
+                  Batcham
+                </text>
+              </g>
+              <g className="vmap-stop">
+                <circle className="vmap-dot" cx="181" cy="191" r="7.5" />
+                <text className="vmap-st-name" x="158" y="190" textAnchor="end">
+                  Mbouda
+                </text>
+                <text className="vmap-st-sub" x="158" y="209" textAnchor="end">
+                  Bamboutos
+                </text>
+              </g>
+              <g className="vmap-stop">
+                <circle className="vmap-gas" cx="301" cy="251" r="14" />
+                <circle className="vmap-dot" cx="301" cy="251" r="7.5" />
+                <text className="vmap-st-name" x="328" y="246">
+                  Bamendzi
+                </text>
+                <text className="vmap-st-sub" x="328" y="265">
+                  Bafoussam · centre gaz
+                </text>
+              </g>
+              <g className="vmap-stop">
+                <circle className="vmap-dot" cx="400" cy="330" r="7.5" />
+                <text className="vmap-st-name" x="424" y="326">
+                  Tobe · Poumougne
+                </text>
+                <text className="vmap-st-sub" x="424" y="345">
+                  Koung-Khi
+                </text>
+              </g>
+              <g className="vmap-stop">
+                <circle className="vmap-gas" cx="470" cy="470" r="14" />
+                <circle className="vmap-dot" cx="470" cy="470" r="7.5" />
+                <text className="vmap-st-name" x="446" y="464" textAnchor="end">
+                  Bonamoussadi
+                </text>
+                <text className="vmap-st-sub" x="446" y="483" textAnchor="end">
+                  Douala · centre gaz
+                </text>
+              </g>
+              <g className="vmap-stop">
+                <circle className="vmap-dot" cx="540" cy="505" r="7.5" />
+                <text className="vmap-st-name" x="564" y="500">
+                  Logbessou PK15
+                </text>
+                <text className="vmap-st-sub" x="564" y="519">
+                  Douala
+                </text>
+              </g>
+
+              <g className="vmap-legend-box">
+                <circle className="vmap-dot" cx="494" cy="150" r="6" />
+                <text className="vmap-legend" x="512" y="155">
+                  Station en exploitation
+                </text>
+                <circle className="vmap-gas" cx="494" cy="178" r="9" />
+                <text className="vmap-legend" x="512" y="183">
+                  Centre de remplissage gaz
+                </text>
+                <text className="vmap-note" x="470" y="212">
+                  Positions indicatives — schéma
+                </text>
+              </g>
+            </svg>
             <div className="res-map-card">
               <span className="res-map-icon">
                 <Icon.rosette />
