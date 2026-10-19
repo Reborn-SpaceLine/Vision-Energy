@@ -6,10 +6,10 @@ import '../styles/metiers.css'
 
 /* ------------------------------------------------------------------- hero */
 const heroStats = [
-  { value: '1.2M+', label: 'Tonnes métriques distribuées/an' },
-  { value: '145+', label: 'Stations-service actives' },
-  { value: '280k m³', label: 'Capacité globale de stockage' },
-  { value: '0.02', label: 'Taux de fréquence HSE (LTIF)' },
+  { value: '30', label: 'Stations visées d’ici 2028' },
+  { value: '6', label: 'Stations livrées ou citées' },
+  { value: '2', label: 'Villes de centres gaz — Douala & Bafoussam' },
+  { value: '4', label: 'Spécialités d’ingénierie' },
 ]
 
 function Hero() {
@@ -19,17 +19,17 @@ function Hero() {
       <div className="container">
         <div className="mt-hero-top">
           <span className="mt-hero-pill">
-            <Icon.share /> Intégration verticale
+            <Icon.share /> La qualité à bon prix
           </span>
-          <span className="mt-hero-tag">Afrique de l’Ouest &amp; Corridor Maritime</span>
+          <span className="mt-hero-tag">Cameroun — Littoral &amp; Ouest</span>
         </div>
         <h1 className="mt-hero-title">
           Nos Métiers <span className="hl--mint">— De l’approvisionnement en gros à la pompe de proximité.</span>
         </h1>
         <p className="mt-hero-lead">
-          Une maîtrise complète et sécurisée du flux d’hydrocarbures et de nouvelles énergies :
-          sourcing international, terminaux haute sécurité, livraison sur site minier et stations
-          connectées de dernière génération.
+          Une maîtrise complète et sécurisée du flux énergétique : approvisionnement en produits
+          pétroliers, centres de remplissage de gaz, lubrifiants et stations-service de proximité
+          au service des automobilistes et des ménages camerounais.
         </p>
         <div className="btn-row">
           <a className="btn btn--primary btn--lg" href={href('/metiers', 'chaine')}>
@@ -66,37 +66,37 @@ const steps: {
     icon: <Icon.globe />,
     tone: 'green',
     step: 'Étape 01 • Amont',
-    title: 'Importation & Négoce',
-    text: 'Affrètement de navires pétroliers (MR & LR), sourcing certifié sans dilution, gestion rigoureuse des cours mondiaux et couverture des risques de change.',
+    title: 'Approvisionnement en Gros',
+    text: 'Achats d’essence, gasoil, gaz de pétrole liquéfié et lubrifiants auprès de fournisseurs agréés, avec contrôle qualité rigoureux à chaque lot réceptionné.',
     noteLabel: 'Garantie qualité',
-    noteValue: 'Inspection SGS / Bureau Veritas',
+    noteValue: 'Produits conformes et tracés',
   },
   {
     icon: <Icon.ship />,
     tone: 'blue',
     step: 'Étape 02 • Hubs',
-    title: 'Stockage Maritime & Terrestre',
-    text: 'Parcs de cuves sécurisées raccordées aux sea-lines portuaires, systèmes d’inertage d’azote et séparateurs hydrocarbures de classe I.',
+    title: 'Stockage & Centres de Remplissage',
+    text: 'Cuves et centres de remplissage de bouteilles de gaz, construits et réhabilités par nos équipes techniques à Douala et Bafoussam, exploités sous protocole de sécurité.',
     noteLabel: 'Infrastructures',
-    noteValue: 'Terminaux Dakar, Abidjan & Lomé',
+    noteValue: 'Centres gaz Douala & Bafoussam',
   },
   {
     icon: <Icon.truck />,
     tone: 'green',
     step: 'Étape 03 • Transit',
     title: 'Transport & Logistique Flotte',
-    text: 'Flotte de citernes propriétaires certifiées ADR, géolocalisation satellite temps réel, capteurs anti-mélange de compartiments et conducteurs formés éco-conduite.',
+    text: 'Camions-citernes dédiés à la desserte de nos stations et de nos clients professionnels, itinéraires planifiés et scellés de chargement contrôlés à chaque étape.',
     noteLabel: 'Surveillance flotte',
-    noteValue: 'Télémétrie GPS & Scellés Électroniques',
+    noteValue: 'Suivi GPS & Scellés Électroniques',
   },
   {
     icon: <Icon.fuel />,
     tone: 'blue',
     step: 'Étape 04 • Usages',
     title: 'Distribution B2B & Réseau B2C',
-    text: 'Alimentation directe des installations industrielles, barges de bunkering au mouillage, et approvisionnement quotidien de nos stations-service grand public.',
+    text: 'Service quotidien dans nos stations — Bonamoussadi, Logbessou PK15, Bamendzi, Batcham, Mbouda, Tobe — et approvisionnement direct des professionnels et des ménages.',
     noteLabel: 'Points de contact',
-    noteValue: 'Automobilistes, Mines & Armateurs',
+    noteValue: 'Automobilistes, Ménages & Pros',
   },
 ]
 
@@ -139,10 +139,10 @@ function Chaine() {
           </span>
           <ul className="mt-legend">
             <li>
-              <i /> Flux Liquides (Super, Gasoil, HFO)
+              <i /> Flux Liquides (Essence, Diesel)
             </li>
             <li className="l-blue">
-              <i /> Flux Gaz &amp; Nouveaux Vecteurs
+              <i /> Flux Gaz &amp; Lubrifiants
             </li>
             <li className="l-gray">
               <i /> Supervision Numérique Cloud
@@ -186,161 +186,161 @@ const poles: Pole[] = [
     eyebrowTone: 'green',
     title: 'Distribution au Détail & Réseau Stations-Service',
     intro:
-      'Notre réseau de plus de 145 stations maillant axes autoroutiers et centres métropolitains ne se limite plus à la simple distribution de carburants. Vision Energy conçoit de véritables hubs de vie et multi-énergies, conçus pour le confort du conducteur et la rapidité du service.',
+      'Notre réseau de stations-service à Douala et dans la Région de l’Ouest — Bonamoussadi, Logbessou PK15, Bamendzi, Batcham, Mbouda et Tobe — vise 30 stations d’ici 2028. Bien plus qu’un point de ravitaillement, chaque station est un espace de service complet, pensé pour le confort du conducteur et la qualité de l’accueil.',
     feats: [
       {
         icon: <Icon.bolt />,
-        title: 'Concept Multi-Énergies',
-        text: 'Carburants additivés haute performance, GPL/Autogaz et bornes de recharge rapide DC 150kW en partenariat solaire.',
+        title: 'Offre Multi-Services',
+        text: 'Carburants, gaz en bouteille et lubrifiants réunis sur un même site, avec un objectif simple : la qualité à bon prix pour tous.',
         tone: 'green',
       },
       {
         icon: <Icon.nfc />,
-        title: 'Écosystème VisionPass',
-        text: 'Badge RFID et application smartphone avec débit instantané, gestion des plafonds de pleins et facturation mensuelle centralisée.',
+        title: 'Gaz Domestique en Bouteille',
+        text: 'Distribution de GPL ménager dans chaque station, approvisionnée par nos centres de remplissage de Douala et Bafoussam.',
         tone: 'blue',
       },
       {
         icon: <Icon.shop />,
-        title: 'Boutiques VisionMart',
-        text: 'Espaces de restauration saine, baies de lavage haute pression recyclant 80% des eaux et lubrifiants certifiés constructeurs.',
+        title: 'Boutiques & Espaces de Repos',
+        text: 'Espaces de rafraîchissement et boutiques pour souffler entre deux trajets, tout en trouvant lubrifiants et petits besoins du quotidien.',
         tone: 'green',
       },
       {
         icon: <Icon.shieldPlus />,
         title: 'Exactitude Volumétrique',
-        text: 'Étalonnage bimensuel assermenté des pistolets de distribution pour une précision infaillible au millilitre près.',
+        text: 'Pistolets de distribution contrôlés régulièrement et équipements conformes à la réglementation, pour un service juste à chaque plein.',
         tone: 'blue',
       },
     ],
-    foot: 'Couverture territoriale : Sénégal, Mali, Côte d’Ivoire, Guinée',
-    link: { label: 'En savoir plus sur l’affiliation de station', to: '/reseau', tone: 'green' },
+    foot: 'Repères du réseau : Douala, Bafoussam, Batcham, Mbouda & Tobe',
+    link: { label: 'En savoir plus sur notre réseau de stations', to: '/reseau', tone: 'green' },
   },
   {
     n: 'Pôle N°02',
     poleTone: 'blue',
     polePos: 'tr',
     img: '/images/met-b-clean.jpg',
-    alt: 'Ravitaillement d’engins sur site minier',
+    alt: 'Bouteilles de gaz et lubrifiants Vision Energy',
     side: 'right',
     eyebrowIco: <Icon.factory />,
-    eyebrow: 'Grands comptes & extraction',
+    eyebrow: 'Énergie des ménages & professionnels',
     eyebrowTone: 'blue',
-    title: 'B2B, Industrie Lourde & Exploitations Minières',
+    title: 'Gaz Domestique & Lubrifiants',
     intro:
-      'Les sites miniers isolés et les grands chantiers de génie civil ne peuvent tolérer aucune rupture d’approvisionnement. Vision Energy déploie des solutions clé en main d’approvisionnement en gros, de cuves mobiles sécurisées et de gestion d’hydrocarbures directement in situ.',
+      'Le gaz ménager et les lubrifiants sont au cœur de notre offre. Vision Energy développe un programme industriel de construction et de réhabilitation de centres de remplissage de gaz, notamment à Douala et Bafoussam, pour sécuriser l’approvisionnement des foyers et des ateliers au meilleur prix.',
     feats: [
       {
         icon: <Icon.fuel />,
-        title: 'Vente en Gros & Citernes Dédiées',
-        text: 'Livraisons cadencées par camions-citernes blindés avec dépotage assisté par pompes autonomes à gros débit (1 000 L/min).',
+        title: 'Centres de Remplissage GPL',
+        text: 'Programme de construction et de réhabilitation de centres de remplissage de bouteilles de gaz à Douala et Bafoussam, pilotes de notre offre domestique.',
         tone: 'blue',
       },
       {
         icon: <Icon.signal />,
-        title: 'Dépôts Déportés "Vendor-Managed"',
-        text: 'Installation et maintenance de stations privatives sur site client avec gestion automatique du réassort par télémétrie satellitaire.',
+        title: 'Expertise Lubrifiants',
+        text: 'Une gamme suivie par notre directeur technique, expert lubrifiants et gaz, présente dans toutes nos stations pour moteurs et équipements.',
         tone: 'green',
       },
       {
         icon: <Icon.wrench />,
-        title: 'Flottes & BTP Hors-Piste',
-        text: 'Carburant tout-terrain ultra-filtré (teneur en soufre maîtrisée) protégeant les injecteurs des engins Caterpillar, Komatsu et dumpers.',
+        title: 'Ateliers & Professionnels',
+        text: 'Livraison aux garages, transportsurs et PME qui consomnent régulièrement gaz et lubrifiants, avec des conditions adaptées à leur activité.',
         tone: 'blue',
       },
       {
         icon: <Icon.shield />,
-        title: 'Protocoles Zéro Déversement',
-        text: 'Bassins de rétention métalliques normalisés, kits d’intervention d’urgence anti-pollution et astreinte technique 24/7.',
+        title: 'Manipulation Sécurisée',
+        text: 'Protocoles de remplissage, de transport et de stockage des bouteilles, adossés à des plans d’urgence sur chaque site.',
         tone: 'green',
       },
     ],
-    foot: 'Contrats cadres : De 500 m³ à plus de 50 000 m³ / an',
-    link: { label: 'Demander un audit de consommation', to: '/metiers', sec: 'cotation', tone: 'blue' },
+    foot: 'Programme industriel : centres de remplissage gaz en développement',
+    link: { label: 'Demander une offre gaz & lubrifiants', to: '/metiers', sec: 'cotation', tone: 'blue' },
   },
   {
     n: 'Pôle N°03',
     poleTone: 'green',
     polePos: 'tl',
     img: '/images/met-c-clean.jpg',
-    alt: 'Barge de soutage au port',
+    alt: 'Équipe d’ingénierie Vision Energy sur une installation',
     side: 'left',
     eyebrowIco: <Icon.ship />,
-    eyebrow: 'Logistique offshore & ports',
+    eyebrow: 'Quatre spécialités d’ingénierie',
     eyebrowTone: 'green',
-    title: 'Soutage Maritime (Bunkering) & Avitaillement Fluvial',
+    title: 'Ingénierie & Travaux Énergétiques',
     intro:
-      'Positionné stratégiquement sur les grandes routes maritimes transatlantiques et ouest-africaines, Vision Energy assure l’avitaillement sécurisé des navires porte-conteneurs, chalutiers industriels, minéraliers et bâtiments de soutien offshore (PSV/OSV).',
+      'Nos installations sont conçues et entretenues par nos propres compétences : ingénieurs en lubrifiants, électricité, automatisme et gaz. Cette équipe interne pilote la construction et la réhabilitation de nos centres de remplissage et de nos stations, de l’étude à la mise en service.',
     feats: [
       {
         icon: <Icon.anchor />,
-        title: 'Conformité Stricte IMO 2020',
-        text: 'Livraison de VLSFO (Very Low Sulphur Fuel Oil 0.5%), MGO (Marine Gas Oil DMA) et lubrifiants marins certifiés ISO 8217.',
+        title: 'Construction de Centres Gaz',
+        text: 'Conception et travaux de nouveaux centres de remplissage, avec nos experts gaz et lubrifiants sous la direction technique de Derrick Pavel Bognou Chiwa.',
         tone: 'green',
       },
       {
         icon: <Icon.ship />,
-        title: 'Avitaillement au Quai & Rade',
-        text: 'Opérations menées par barges de soutage dédiées (jusqu’à 3 500 DWT) et par camions autorisés sur appontements portuaires sécurisés.',
+        title: 'Réhabilitation de Stations',
+        text: 'Remise à niveau des installations existantes — îlots de distribution, unités de pompage — à l’image de la mise en conformité de Tobe en juin 2025.',
         tone: 'blue',
       },
       {
         icon: <Icon.gauge />,
-        title: 'Débit Rapide & Sécurisé',
-        text: 'Cadence de pompage jusqu’à 650 tonnes/heure pour minimiser le temps d’escale au port et réduire les frais de surestarie.',
+        title: 'Électricité & Automatisme',
+        text: 'Câblage, automatismes de distribution et supervision des équipements, assurés par nos ingénieurs électricité et automatisme.',
         tone: 'green',
       },
       {
         icon: <Icon.drop />,
-        title: 'Prélèvement Témoin MARPOL',
-        text: 'Échantillonnage continu d’égouttement (continuous drip sampling) scellé en 4 flacons homologués en présence de l’équipage.',
+        title: 'Gestion de Projet',
+        text: 'Chantier suivi de A à Z par notre direction technique et gestion de projet, en lien avec les opérations de Douala.',
         tone: 'blue',
       },
     ],
-    foot: 'Bunkering Desk disponible 24/7 pour confirmations de stem',
-    link: { label: 'Consulter les prix Platts & Disponibilités', to: '/metiers', sec: 'cotation', tone: 'green' },
+    foot: 'Lubrifiants, électricité, automatisme & gaz : 4 spécialités internes',
+    link: { label: 'Présenter un projet technique', to: '/metiers', sec: 'cotation', tone: 'green' },
   },
   {
     n: 'Pôle N°04',
     poleTone: 'green',
     polePos: 'tr',
     img: '/images/met-d.jpg',
-    alt: 'Parc de stockage et dépôt pétrolier',
+    alt: 'Installation de stockage et distribution Vision Energy',
     side: 'right',
     eyebrowIco: <Icon.check />,
-    eyebrow: 'Infrastructures & sécurité Seveso III',
+    eyebrow: 'Conformité & accompagnement administratif',
     eyebrowTone: 'blue',
-    title: 'Logistique, Dépôts & Stockage Haute Sécurité',
+    title: 'Sécurité, Conformité & Suivi Réglementaire',
     intro:
-      'L’épine dorsale de notre chaîne énergétique réside dans nos parcs de stockage modernes. Conçus selon les directives internationales les plus rigoureuses, nos terminaux assurent le tampon stratégique des réserves énergétiques nationales.',
+      'Chaque station et chaque centre gaz est exploité dans un cadre réglementaire strict : études d’impact, plans d’urgence et dossiers MINMIDT sont établis et suivis par nos équipes, du projet initial jusqu’à la mise en conformité des sites repris.',
     feats: [
       {
         icon: <Icon.gauge />,
-        title: 'Télémétrage Automatisé',
-        text: 'Capteurs radar Endress+Hauser mesurant niveau, température moyenne et teneur en eau avec précision millimétrique en temps réel.',
+        title: 'Études d’Impact',
+        text: 'Analyses environnementales et sécurité réalisées en amont de chaque nouvelle implantation du réseau, comme pour Batcham ou Mbouda.',
         tone: 'blue',
       },
       {
         icon: <Icon.fire />,
-        title: 'Protection Incendie Automatisée',
-        text: 'Couronnes de mousse à haut foisonnement, rideaux d’eau de refroidissement et motopompes diesel redondantes à démarrage instantané.',
+        title: 'Plans d’Urgence',
+        text: 'Dispositifs d’intervention et de prévention incendie élaborés pour chaque site, stations comme centres de remplissage de gaz.',
         tone: 'green',
       },
       {
         icon: <Icon.flask />,
-        title: 'Laboratoire Qualité sur Site',
-        text: 'Analyses de densité, point d’éclair, distillation sous vide et conductivité réalisées avant chaque chargement de camion.',
+        title: 'Dossiers MINMIDT',
+        text: 'Constitutions et suivi des dossiers auprès du Ministère chargé des Mines, de l’Industrie et du Développement Technologique.',
         tone: 'blue',
       },
       {
         icon: <Icon.cpu />,
-        title: 'Îlots de Chargement Bas',
-        text: 'Système « Bottom Loading » avec récupération des vapeurs d’hydrocarbures (VRU) préservant la santé des opérateurs et l’air ambiant.',
+        title: 'Mise en Conformité',
+        text: 'Accompagnement des sites existants vers les normes en vigueur, à l’image de la station de Tobe accompagnée le 27 juin 2025.',
         tone: 'green',
       },
     ],
-    foot: 'Capacités disponibles en location ou souscription hôtelière',
-    link: { label: 'Réserver des capacités de passage', to: '/metiers', sec: 'cotation', tone: 'blue' },
+    foot: 'Station de Bonamoussadi : mise en conformité depuis 2021',
+    link: { label: 'Poser une question réglementaire', to: '/metiers', sec: 'cotation', tone: 'blue' },
   },
 ]
 
@@ -408,30 +408,30 @@ function Piliers() {
 /* -------------------------------------------------------------- standards */
 const standards = [
   {
-    tile: '9001',
+    tile: 'HSE',
     tone: 'green' as const,
-    label: 'Qualité opérationnelle',
-    title: 'ISO 9001:2015',
-    text: "Management de la qualité totale : contrôle rigoureux de l'approvisionnement, satisfaction client traçable et amélioration continue de nos procédures de livraison.",
-    noteLabel: 'Reconduction validée • 2024–2027',
+    label: 'Sécurité des personnes',
+    title: 'Sécurité sur chaque site',
+    text: "Plans d’urgence, procédures de manipulation des bouteilles de gaz et dispositifs de prévention incendie dans nos stations et centres de remplissage.",
+    noteLabel: 'Sécurité en station • Non négociable',
     noteValue: '',
   },
   {
-    tile: '14001',
+    tile: 'REG',
     tone: 'green' as const,
-    label: 'Protection environnementale',
-    title: 'ISO 14001:2015',
-    text: "Prévention active de la pollution des sols et nappes, gestion responsable des résidus hydrocarbures et réduction programmée de l'empreinte carbone des opérations.",
-    noteLabel: 'Programme « Zero Spills » actif',
+    label: 'Conformité réglementaire',
+    title: 'Dossiers MINMIDT',
+    text: "Études d’impact et dossiers administratifs déposés et suivis auprès du Ministère en charge des Mines, de l’Industrie et du Développement Technologique.",
+    noteLabel: 'Mise en conformité accompagnée, comme à Tobe',
     noteValue: '',
   },
   {
-    tile: '45001',
+    tile: 'QUAL',
     tone: 'blue' as const,
-    label: 'Santé & sécurité au travail',
-    title: 'ISO 45001 (OHSAS 18001)',
-    text: "Protection maximale du personnel de gantry, des équipages en mer et des chauffeurs routiers. Culture de « Stop-Work Authority » accordée à chaque agent.",
-    noteLabel: "Taux d'accident LTIF < 0.05",
+    label: 'Qualité perçue en station',
+    title: 'La qualité à bon prix',
+    text: "Produits contrôlés à la réception, justesses de distribution vérifiées et service attentif : notre promesse publique, tenue à chaque visite.",
+    noteLabel: 'Slogan public de Vision Energy',
     noteValue: '',
   },
 ]
@@ -444,19 +444,19 @@ function Standards() {
           <span className="eyebrow mt-ico">
             <Icon.rosette /> Exigence &amp; conformité
           </span>
-          <h2 className="h2">Les Standards les plus Exigeants de l’Industrie</h2>
+          <h2 className="h2">Une Discipline Opérationnelle Strictement Appliquée</h2>
           <p className="lead">
-            La manipulation de produits pétroliers et d’énergies nouvelles exige une discipline
-            absolue. Vision Energy fonde chaque geste opérationnel sur des accréditations
-            internationales certifiées par des tiers indépendants.
+            La manipulation des produits pétroliers et du gaz exige une rigueur absolue. Vision Energy
+            applique à chaque station et centre de remplissage des procédures de sécurité, des contrôles
+            qualité et un suivi réglementaire documenté.
           </p>
           <div className="mt-audit">
             <span className="mt-audit-icon">
               <Icon.check />
             </span>
             <div>
-              <b>Audits Trimestriels Non Annoncés</b>
-              <p>Maintien permanent du niveau d’excellence opérationnelle</p>
+              <b>Contrôles Périodiques sur Chaque Site</b>
+              <p>Justesse de distribution, étanchéité des installations et tenue des registres de sécurité</p>
             </div>
           </div>
         </div>
@@ -480,17 +480,17 @@ function Standards() {
 
 /* ------------------------------------------------------------ CTA + form */
 const poleOptions = [
-  'B2B, Industrie Lourde & Mines',
-  'Retail & Stations-Service',
-  'Soutage Maritime (Bunkering)',
-  'Dépôts & Stockage',
-  'Gaz & Lubrifiants',
+  'Gaz Domestique & Lubrifiants',
+  'Stations-Service & Flottes',
+  'Carburants en Gros (Super 95 / Gasoil)',
+  'Travaux & Réhabilitation d’Installations',
+  'Convention Réseau VisionPass',
 ]
 const volumeOptions = [
-  'De 10 m³ à 50 m³ / mois',
-  'De 50 m³ à 500 m³ / mois',
-  'De 500 m³ à 5 000 m³ / mois',
-  'Plus de 5 000 m³ / mois',
+  'De 1 000 L à 5 000 L / mois',
+  'De 5 000 L à 20 000 L / mois',
+  'De 20 000 L à 100 000 L / mois',
+  'Plus de 100 000 L / mois',
 ]
 
 function Cotation() {
@@ -500,36 +500,36 @@ function Cotation() {
         <div className="mt-cta-card">
           <div className="mt-cta-dark">
             <span className="eyebrow mt-ico eyebrow--mint">
-              <Icon.briefcase /> Bureau commercial grands comptes
+              <Icon.briefcase /> Bureau commerciaux professionnels
             </span>
-            <h2 className="h2">Initiez Votre Partenariat Énergétique B2B</h2>
+            <h2 className="h2">Initiez Votre Partenariat avec Notre Réseau</h2>
             <p className="mt-cta-lead">
-              Vous gérez une flotte de camions, une mine, un chantier d’infrastructure ou un navire
-              en escale ? Nos experts commerciaux configurent votre devis sur mesure sous 24 heures
-              ouvrées.
+              Vous gérez une flotte de camions, un garage, un chantier d’infrastructure ou une
+              administration ? Nos équipes configurent votre devis sur mesure sous 24 heures ouvrées,
+              pour les professionnels de Douala et de la Région de l’Ouest.
             </p>
             <div className="mt-cta-items">
               <div className="mt-cta-item">
                 <Icon.rosette />
                 <div>
-                  <b>Formules d’indexation claires</b>
-                  <p>Cotations basées sur Platts FOB MED/ARA ou prix officiels régulés selon le pays d’exploitation.</p>
+                  <b>Grille tarifaire conforme à la réglementation</b>
+                  <p>Carburants distribués aux prix homologués au Cameroun, gaz et lubrifiants au juste prix.</p>
                 </div>
               </div>
               <div className="mt-cta-item">
                 <Icon.truck />
                 <div>
                   <b>Garantie de continuité logistique</b>
-                  <p>Stock dédié alloué contractuellement pour absorber les tensions de marché mondiales.</p>
+                  <p>Tournées planifiées par nos camions-citernes, adossées à nos centres gaz de Douala et Bafoussam.</p>
                 </div>
               </div>
             </div>
             <div className="mt-cta-line">
-              <span>Ligne dédiée grands comptes &amp; bunkering</span>
+              <span>Ligne dédiée clients professionnels</span>
               <b>
-                <Icon.phone /> +221 33 800 20 50
+                <Icon.phone /> Hotline réseau : 800 10 10
               </b>
-              <p>Email : b2b@visionenergy-group.com</p>
+              <p>Email : direction@vision-energy.cm · B.P. 11 480, Douala</p>
             </div>
           </div>
           <div className="mt-cta-form">
@@ -548,19 +548,19 @@ function Cotation() {
             >
               <label>
                 Société / Entité Commerciale *
-                <input required type="text" placeholder="Ex: Eiffage Génie Civil, Dangote..." />
+                <input required type="text" placeholder="Ex: Transports Nkolombe SARL, Garage de la Mfoundi..." />
               </label>
               <label>
                 Nom &amp; Fonction du Contact *
-                <input required type="text" placeholder="Ex: Moussa Diop, Dir. Achats" />
+                <input required type="text" placeholder="Ex: Ngono Alice, Resp. Achats" />
               </label>
               <label>
                 Email Professionnel *
-                <input required type="email" placeholder="m.diop@entreprise.com" />
+                <input required type="email" placeholder="a.ngono@entreprise.cm" />
               </label>
               <label>
                 Téléphone Direct *
-                <input required type="tel" placeholder="+221 77 000 00 00" />
+                <input required type="tel" placeholder="+237 6 00 00 00 00" />
               </label>
               <label>
                 Pôle Métier Concerné *
@@ -580,7 +580,7 @@ function Cotation() {
               </label>
               <label className="mt-form--full">
                 Lieu de livraison &amp; Contraintes logistiques
-                <textarea placeholder="Précisez le port d'escale, le site minier ou la région ciblée..." />
+                <textarea placeholder="Précisez la ville, la zone (Bonabéri, Bassa, Bafoussam, Mbouda…) ou l’adresse de livraison et vos contraintes de stockage..." />
               </label>
               <div className="mt-form-foot mt-form--full">
                 <small>Données sécurisées • Aucune divulgation</small>

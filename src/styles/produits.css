@@ -43,7 +43,7 @@
 }
 
 /* ---------------------------------------------------------------- pills */
-.pill--sq {
+.produits-root .pill--sq {
   border-radius: 8px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -51,43 +51,43 @@
   padding: 7px 12px;
 }
 
-.pill--solid-green {
+.produits-root .pill--solid-green {
   background: var(--g-600);
   color: #fff;
 }
 
-.pill--solid-blue {
+.produits-root .pill--solid-blue {
   background: var(--pro-blue);
   color: #fff;
 }
 
-.pill--solid-slate {
+.produits-root .pill--solid-slate {
   background: #545c72;
   color: #fff;
 }
 
-.pill--mint-solid {
+.produits-root .pill--mint-solid {
   background: var(--pro-mint);
   color: var(--g-700);
   text-transform: none;
   letter-spacing: 0;
 }
 
-.pill--lav {
+.produits-root .pill--lav {
   background: var(--pro-lav);
   color: var(--pro-blue);
   text-transform: none;
   letter-spacing: 0;
 }
 
-.pill--peri {
+.produits-root .pill--peri {
   background: #d9e1f7;
   color: var(--ink-soft);
   text-transform: none;
   letter-spacing: 0;
 }
 
-.pill--cert {
+.produits-root .pill--cert {
   border-radius: 8px;
   background: var(--pro-blue);
   color: #fff;
@@ -99,7 +99,7 @@
   flex: none;
 }
 
-.pill--darkmint {
+.produits-root .pill--darkmint {
   background: rgba(104, 219, 169, 0.14);
   color: var(--mint);
   text-transform: uppercase;
@@ -109,13 +109,17 @@
 }
 
 /* icon tiles variants */
-.icon-tile--mint-solid {
+.produits-root .icon-tile--mint-solid {
   background: var(--pro-mint);
   color: var(--g-700);
 }
 
-.icon-tile--navy {
+.produits-root .icon-tile--navy {
   color: var(--pro-navy);
+}
+
+.produits-root .icon-tile--lav {
+  background: var(--pro-lav);
 }
 
 /* ------------------------------------------------------------------ hero */
@@ -523,6 +527,9 @@
   font-size: 0.72rem;
   padding: 5px 10px;
   white-space: nowrap;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 700;
 }
 
 .pro-lub-meta b {
@@ -534,12 +541,14 @@
 }
 
 .pro-lub-card .h3 {
-  font-size: 1.16rem;
+  font-size: 1.05rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .pro-lub-card .prod-text {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
   color: var(--muted);
   flex: 0 0 auto;
 }
@@ -547,15 +556,15 @@
 .pro-spec-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 7px;
 }
 
 .pro-spec-chips span {
-  padding: 5px 11px;
+  padding: 4px 9px;
   border-radius: 8px;
   background: var(--pro-chip);
   color: var(--ink-soft);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 600;
 }
 

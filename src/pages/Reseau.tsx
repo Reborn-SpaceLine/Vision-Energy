@@ -7,10 +7,10 @@ import { CtaBand } from './Home'
 const services = [
   { icon: <Icon.sliders />, label: 'Tout afficher', on: true },
   { icon: <Icon.drop />, label: 'Lavage Express' },
-  { icon: <Icon.shop />, label: 'Boutique V-Shop' },
-  { icon: <Icon.bolt />, label: 'Borne DC Ultra' },
+  { icon: <Icon.shop />, label: 'Boutique & Café' },
+  { icon: <Icon.gauge />, label: 'Gonflage & Niveaux' },
   { icon: <Icon.flame />, label: 'Gaz Bouteille' },
-  { icon: <Icon.nfc />, label: 'VisionPass & Wave/OM' },
+  { icon: <Icon.nfc />, label: 'VisionPass & Mobile Money' },
   { icon: <Icon.coffee />, label: 'Café / Restauration' },
 ]
 
@@ -32,66 +32,127 @@ type Station = {
 
 const stations: Station[] = [
   {
-    tag: 'Flagship Hub',
+    tag: 'Station Historique',
     tone: 'green',
     dot: true,
     status: 'Ouvert 24/7',
-    name: 'Station Bonanjo Océan',
-    addr: 'Avenue de Verdun, Bonanjo, Douala',
+    name: 'Station Douala – Bonamoussadi',
+    addr: 'Bonamoussadi, Douala, Région du Littoral',
     lead: true,
     prices: [
-      { label: 'Super 95', value: '990', unit: 'CFA/L' },
-      { label: 'Gazole Pro', value: '755', unit: 'CFA/L', tone: 'green' },
-      { label: 'Electrique', value: '150', unit: 'kW DC', tone: 'blue' },
+      { label: 'Super 95', value: '795', unit: 'CFA/L' },
+      { label: 'Gasoil', value: '745', unit: 'CFA/L', tone: 'green' },
+      { label: 'Gaz Bout.', value: 'En stock', tone: 'blue' },
     ],
     svcs: [
-      { icon: <Icon.drop />, label: 'Tunnel Jet' },
-      { icon: <Icon.shop />, label: 'V-Market & Café' },
-      { icon: <Icon.bolt />, label: '2 Bornes DC' },
-      { icon: <Icon.card />, label: 'GAB 24/7' },
-      { icon: <Icon.wifi />, label: 'Wifi Gratuit' },
+      { icon: <Icon.drop />, label: 'Lavage & Gonflage' },
+      { icon: <Icon.shop />, label: 'Boutique & Café' },
+      { icon: <Icon.flame />, label: 'Gaz B6 / B12 / B35' },
+      { icon: <Icon.card />, label: 'Lubrifiants VisionPro' },
+      { icon: <Icon.nfc />, label: 'VisionPass' },
     ],
     dist: 'À 1.4 km de vous',
     time: '4 min',
   },
   {
-    tag: 'Axe Autoroutier',
+    tag: 'Quartier Populaire',
     tone: 'blue',
-    status: 'Ouverture enregistrée',
-    name: 'Station Tobe – Poumougne',
-    addr: "Axe Douala – Yaoundé, Poumougne, Région de l'Ouest",
+    status: 'Ouvert 24/7',
+    name: 'Station Douala – Logbessou PK15',
+    addr: 'Logbessou, PK15, Douala, Région du Littoral',
     prices: [
-      { label: 'Super 95', value: '990', unit: 'CFA/L' },
-      { label: 'Gazole Pro', value: '755', unit: 'CFA/L', tone: 'green' },
+      { label: 'Super 95', value: '795', unit: 'CFA/L' },
+      { label: 'Gasoil', value: '745', unit: 'CFA/L', tone: 'green' },
       { label: 'Gaz Bout.', value: 'En stock' },
     ],
     svcs: [
       { icon: <Icon.flame />, label: 'Gaz B6 / B12' },
-      { icon: <Icon.shop />, label: 'Boutique 24h' },
+      { icon: <Icon.shop />, label: 'Boutique' },
       { icon: <Icon.gauge />, label: 'Gonflage Pneus' },
       { icon: <Icon.nfc />, label: 'VisionPass' },
     ],
-    dist: 'À 4.8 km de vous',
-    time: '9 min',
+    dist: 'À 9.5 km de vous',
+    time: '20 min',
   },
   {
-    tag: 'Zone Portuaire & Fret',
+    tag: 'Chef-lieu Régional',
     tone: 'gray',
     status: 'Ouvert 24/7',
-    name: 'Station Port – Bonabéri',
-    addr: 'Boulevard du Port, Port Autonome, Bonabéri, Douala',
+    name: 'Station Bafoussam – Bamendzi',
+    addr: 'Bamendzi, avant le stade municipal, Bafoussam, Région de l’Ouest',
     prices: [
-      { label: 'Super 95', value: '990', unit: 'CFA/L' },
-      { label: 'Gazole HD', value: '755', unit: 'CFA/L', tone: 'green' },
+      { label: 'Super 95', value: '795', unit: 'CFA/L' },
+      { label: 'Gasoil', value: '745', unit: 'CFA/L', tone: 'green' },
+      { label: 'Gaz Bout.', value: 'En stock' },
+    ],
+    svcs: [
+      { icon: <Icon.flame />, label: 'Centre de remplissage gaz' },
+      { icon: <Icon.shop />, label: 'Boutique' },
+      { icon: <Icon.gauge />, label: 'Gonflage Pneus' },
+      { icon: <Icon.card />, label: 'VisionPass Pro' },
+    ],
+    dist: 'À 295 km de vous',
+    time: '4 h 05',
+  },
+  {
+    tag: 'Nouvelle Ouverture',
+    tone: 'green',
+    status: 'Ouverte le 15/01/2026',
+    name: 'Station Batcham',
+    addr: 'Axe Mbouda – Batcham, Région de l’Ouest',
+    prices: [
+      { label: 'Super 95', value: '795', unit: 'CFA/L' },
+      { label: 'Gasoil', value: '745', unit: 'CFA/L', tone: 'green' },
+      { label: 'Gaz Bout.', value: 'En stock' },
+    ],
+    svcs: [
+      { icon: <Icon.flame />, label: 'Gaz Bouteille' },
+      { icon: <Icon.shop />, label: 'Boutique' },
+      { icon: <Icon.truck />, label: 'Ravitaillement Flottes' },
+      { icon: <Icon.nfc />, label: 'VisionPass' },
+    ],
+    dist: 'À 320 km de vous',
+    time: '4 h 30',
+  },
+  {
+    tag: 'Nouvelle Ouverture',
+    tone: 'blue',
+    status: 'Ouverte le 28/04/2026',
+    name: 'Station Mbouda',
+    addr: 'Mbouda, Département des Bamboutos, Région de l’Ouest',
+    prices: [
+      { label: 'Super 95', value: '795', unit: 'CFA/L' },
+      { label: 'Gasoil', value: '745', unit: 'CFA/L', tone: 'green' },
       { label: 'Lubrifiant', value: 'Pro 15W40' },
     ],
     svcs: [
-      { icon: <Icon.truck />, label: 'Ravitaillement Flottes' },
-      { icon: <Icon.ship />, label: 'Comptoir Vrac' },
-      { icon: <Icon.card />, label: 'VisionPass Pro' },
+      { icon: <Icon.drop />, label: 'Lavage' },
+      { icon: <Icon.shop />, label: 'Boutique' },
+      { icon: <Icon.card />, label: 'Lubrifiants VisionPro' },
+      { icon: <Icon.gauge />, label: 'Gonflage Pneus' },
     ],
-    dist: 'À 6.2 km de vous',
-    time: '12 min',
+    dist: 'À 305 km de vous',
+    time: '4 h 20',
+  },
+  {
+    tag: 'Axe Douala – Yaoundé',
+    tone: 'gray',
+    status: 'Mise en conformité le 27/06/2025',
+    name: 'Station Tobe – Poumougne',
+    addr: 'Tobe, arr. Poumougne, Koung-Khi, Région de l’Ouest',
+    prices: [
+      { label: 'Super 95', value: '795', unit: 'CFA/L' },
+      { label: 'Gasoil', value: '745', unit: 'CFA/L', tone: 'green' },
+      { label: 'Gaz Bout.', value: 'En stock' },
+    ],
+    svcs: [
+      { icon: <Icon.flame />, label: 'Gaz B6 / B12' },
+      { icon: <Icon.shop />, label: 'Boutique' },
+      { icon: <Icon.truck />, label: 'Ravitaillement Flottes' },
+      { icon: <Icon.nfc />, label: 'VisionPass' },
+    ],
+    dist: 'À 250 km de vous',
+    time: '3 h 30',
   },
 ]
 
@@ -152,7 +213,7 @@ const partPoints = [
     icon: <Icon.trendUp />,
     tone: 'blue',
     title: 'Rentabilité & Approvisionnement Garanti',
-    text: "Zéro rupture de stock grâce à notre flotte logistique dédiée et dépôts maritimes propres.",
+    text: "Approvisionnement suivi grâce à notre logistique dédiée et à nos capacités de stockage.",
   },
   {
     icon: <Icon.grad />,
@@ -172,21 +233,21 @@ export default function ReseauPage() {
           <div className="res-hero-top">
             <div>
               <span className="res-hero-pill">
-                <Icon.share /> Maillage Énergétique Régional • 140+ Stations
+                <Icon.share /> Réseau Vision Energy Cameroun • 30 stations d’ici 2028
               </span>
               <h1 className="res-hero-title">
                 Trouvez une Station <span className="res-hero-mint">Vision Energy</span> à
                 Proximité.
               </h1>
               <p className="res-hero-lead">
-                Carburants haute performance additivés, bornes de recharge ultra-rapides, boutiques
-                gourmandes et services de conciergerie automobile en continu.
+                Carburants additivés au prix juste, gaz en bouteille, lubrifiants et boutiques dans
+                nos stations de Douala et de la Région de l’Ouest — la qualité à bon prix.
               </p>
             </div>
             <div className="res-hero-stats">
               <div className="res-stat">
-                <b>99.8%</b>
-                <span>Disponibilité Carburant</span>
+                <b>6</b>
+                <span>Stations en exploitation</span>
               </div>
               <div className="res-stat">
                 <b className="res-stat--white">24h/24</b>
@@ -216,7 +277,6 @@ export default function ReseauPage() {
                     <option value="all">Tous carburants &amp; énergie</option>
                     <option>Carburants (Super 95 / Gasoil)</option>
                     <option>Gaz domestique &amp; bouteilles</option>
-                    <option>Recharge électrique</option>
                     <option>Lubrifiants VisionPro</option>
                   </select>
                   <Icon.chevD className="res-chev" />
@@ -259,7 +319,7 @@ export default function ReseauPage() {
             <div className="res-st-head">
               <div>
                 <h2 className="res-st-h">Stations à proximité</h2>
-                <p className="res-st-count">3 stations identifiées sur votre périmètre</p>
+                <p className="res-st-count">6 stations identifiées au Cameroun • objectif 30 d’ici 2028</p>
               </div>
               <span className="res-live">Réseau Temps Réel</span>
             </div>
@@ -323,9 +383,11 @@ export default function ReseauPage() {
             ))}
 
             <p className="res-note">
-              <Icon.pin /> Réseau en déploiement accéléré : ouvertures déjà enregistrées à Tobe /
-              Poumougne, implantations à Bafoussam (centre de remplissage de gaz) — objectif
-              plusieurs dizaines de stations d'ici 2028. Siège : B.P. 11 480, Douala · Cameroun.
+              <Icon.pin /> Réseau en déploiement accéléré : Tobe / Poumougne mise en conformité le
+              27/06/2025, Batcham ouverte le 15/01/2026 et Mbouda le 28/04/2026, aux côtés de
+              Bonamoussadi, Logbessou PK15 et Bamendzi (Bafoussam) — objectif 30 stations d’ici 2028.
+              Programme de centres de remplissage de gaz à Douala et Bafoussam. Siège : B.P. 11 480,
+              Douala · Cameroun.
             </p>
           </div>
 
@@ -341,7 +403,7 @@ export default function ReseauPage() {
               <div>
                 <span className="res-map-k">Engagement Qualité Totale</span>
                 <h3>Contrôle Métrologique &amp; Pureté 100% Garanti</h3>
-                <p>Pompes électroniques certifiées trimestriellement par les services de l'État.</p>
+                <p>Pompes électroniques vérifiées périodiquement par les services compétents de la métrologie.</p>
               </div>
               <a className="res-tariff" href={href('/produits', 'carburants')}>
                 <Icon.download /> Grille Tarifaire Officielle
@@ -385,7 +447,8 @@ export default function ReseauPage() {
               <p className="res-part-p">
                 Vous possédez un terrain stratégique le long d'un axe majeur ? Vous êtes un
                 entrepreneur aguerri désireux d'exploiter un hub de distribution moderne sous notre
-                enseigne ? Rejoignez le réseau à la plus forte croissance de la région.
+                enseigne ? Rejoignez un réseau camerounais en construction, avec un objectif de 30
+                stations d’ici 2028.
               </p>
               <ul className="res-part-list">
                 {partPoints.map((p) => (
@@ -427,7 +490,7 @@ export default function ReseauPage() {
                     <input
                       className="res-in"
                       type="text"
-                      placeholder="Ex: Saliou Diallo / Diallo Logistique"
+                      placeholder="Ex: Mbarga Pierre / Transports Mbarga SARL"
                     />
                   </div>
                   <div>

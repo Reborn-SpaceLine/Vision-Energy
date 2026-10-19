@@ -3,9 +3,9 @@ import { Icon } from '../components/icons'
 
 /* ------------------------------------------------------------------ hero */
 const heroChecks = [
-  { icon: <Icon.fuel />, label: 'Carburants Haute Performance' },
-  { icon: <Icon.bolt />, label: 'Bornes E-Vision Ultra-Fast' },
-  { icon: <Icon.shield />, label: 'Qualité contrôlée en station' },
+  { icon: <Icon.fuel />, label: 'Carburants Contrôlés en Station' },
+  { icon: <Icon.flame />, label: 'Gaz Domestique en Bouteille' },
+  { icon: <Icon.shield />, label: 'Qualité à Bon Prix' },
 ]
 
 function Hero() {
@@ -22,9 +22,10 @@ function Hero() {
           Vision Energy en <span className="hl--mint">pleine expansion</span>
         </h1>
         <p className="hero-text">
-          Déploiement accéléré de notre réseau de stations-service à travers le Cameroun — Tobe /
-          Poumougne, Bafoussam, Batcham, Mbouda et Douala — avec un objectif de 30 stations d’ici
-          2028. Carburants additivés de haute pureté, gaz butane certifié et hubs multi-énergies.
+          Déploiement accéléré de notre réseau de stations-service à travers le Cameroun — Bonamoussadi,
+          Logbessou PK15 et Bamendzi, Batcham, Mbouda et Tobe — avec un objectif de 30 stations d’ici
+          2028. Carburants additivés, gaz butane en bouteille et lubrifiants VisionPro : la qualité à
+          bon prix.
         </p>
         <div className="btn-row">
           <a className="btn btn--primary" href={href('/groupe')}>
@@ -54,8 +55,8 @@ function Hero() {
 /* ------------------------------------------------------------- gouvernance */
 const govStats = [
   { value: '30', label: 'Stations Visées d’ici 2028' },
-  { value: '5', label: 'Villes Déjà Équipées au Cameroun' },
-  { value: '2', label: 'Centres de Remplissage de Gaz' },
+  { value: '6', label: 'Stations en Exploitation' },
+  { value: '2', label: 'Villes de Centres de Remplissage de Gaz' },
 ]
 
 function Gouvernance() {
@@ -63,11 +64,11 @@ function Gouvernance() {
     <section className="section gov">
       <div className="container gov-grid">
         <div>
-          <span className="eyebrow">Gouvernance &amp; Capitaux Nationaux</span>
+          <span className="eyebrow">Gouvernance &amp; Capital d’Origine Camerounaise</span>
           <h2 className="h2">
-            Fondée avec la volonté de transformer la distribution d’énergie,{' '}
-            <span className="hl">Vision Energy s’impose comme un acteur majeur</span> des
-            hydrocarbures et des énergies de transition.
+            Née à Douala en 2021,{' '}
+            <span className="hl">Vision Energy construit un réseau de stations-service</span> au
+            service des automobilistes, des ménages et des professionnels du Cameroun.
           </h2>
           <p className="lead">
             Acteur industriel camerounais spécialisé dans la commercialisation de produits pétroliers
@@ -89,17 +90,17 @@ function Gouvernance() {
               Découvrir l’histoire du Groupe <Icon.arrowR />
             </a>
             <span className="gov-note">
-              <Icon.check /> Protocole HSE Zéro Incident
+              <Icon.check /> Sécurité &amp; conformité MINMIDT
             </span>
           </div>
         </div>
         <figure className="media gov-media">
-          <img src="/images/acc-tower.jpg" alt="Siège administratif et hub logistique Vision Energy" />
+          <img src="/images/acc-tower.jpg" alt="Siège administratif Vision Energy à Douala" />
           <figcaption className="gov-caption">
             <div>
-              <span>Siège administratif &amp; hub logistique</span>
-              <b>Douala &amp; Bafoussam Regional Centers</b>
-              <p>Coordination de 380 000 m³ de stockage annuel</p>
+              <span>Direction générale &amp; exploitation</span>
+              <b>Douala — Littoral &amp; Ouest</b>
+              <p>Stations et centres de remplissage de gaz en développement</p>
             </div>
             <i className="icon-tile icon-tile--dark">
               <Icon.building />
@@ -117,28 +118,28 @@ const produits = [
     icon: <Icon.fuel />,
     kicker: 'Moteurs & Flottes',
     title: 'Carburants Additivés',
-    text: 'Super 95 et Gasoil formulés avec des additifs détergents de pointe. Réduction prouvée de 4% de la consommation et diminution des émissions de CO₂.',
+    text: 'Super 95 et Gasoil distribués en station avec des additifs détergents, pour garder les moteurs propres et restituer toute leur puissance.',
     link: { label: 'Voir les spécifications', to: '/produits', sec: 'carburants' },
   },
   {
     icon: <Icon.flame />,
     kicker: 'Gaz & Foyers',
-    title: 'Gaz Domestique Certifié',
-    text: 'Bonnes de 6kg et 12,5kg scellées avec vanne de sécurité verrouillable. Nos centres de remplissage de Douala et Bafoussam garantissent un contrôle qualité à chaque bouteille.',
-    link: { label: 'Points de consigne', to: '/produits', sec: 'gaz' },
+    title: 'Gaz Domestique en Bouteille',
+    text: 'Bouteilles B6, B12 et B35 scellées et pesées, contrôlées à chaque remplissage. Nos centres de Douala et Bafoussam sécurisent la disponibilité du gaz pour les familles.',
+    link: { label: 'Points de vente', to: '/produits', sec: 'gaz' },
   },
   {
     icon: <Icon.drop />,
     kicker: 'Gamme haute viscosité',
     title: 'Lubrifiants VisionPro',
-    text: 'Huiles synthétiques et minérales certifiées API & ACEA, formulées par nos ingénieurs lubrifiants pour véhicules légers, engins miniers et poids lourds en climat tropical.',
+    text: 'Huiles synthétiques et minérales sélectionnées par nos ingénieurs lubrifiants pour véhicules légers, poids lourds et engins de chantier en climat tropical.',
     link: { label: 'Guide de graissage', to: '/produits', sec: 'lubrifiants' },
   },
   {
     icon: <Icon.shop />,
     kicker: 'Espaces de détente',
-    title: 'Boutiques Express',
-    text: 'Cafétéria gourmande, supérette de dépannage, aires de lavage éco-responsable et connexion Wi-Fi haut débit offerte en station.',
+    title: 'Boutiques & aires de service',
+    text: 'Boutique de dépannage, espace de rafraîchissement, gonflage et lavage en station : de quoi reprendre la route dans de bonnes conditions.',
     link: { label: 'Services en station', to: '/produits', sec: 'boutiques' },
   },
 ]
@@ -151,8 +152,9 @@ function Produits() {
           <span className="eyebrow eyebrow--center">Offre énergétique intégrée</span>
           <h2 className="h2">Des Produits d’Excellence pour Particuliers &amp; Professionnels</h2>
           <p className="lead">
-            De la pompe jusqu’à l’usine de raffinage, nous assurons des contrôles rigoureux de
-            conformité et des carburants additivés pour prolonger la durée de vie de vos motorisations.
+            Approvisionnés auprès de fournisseurs agréés et contrôlés à chaque réception, nos
+            carburants additivés, nos bouteilles de gaz et nos lubrifiants sont servis au prix juste,
+            du plein quotidien des automobilistes aux besoins des ménages.
           </p>
         </div>
         <div className="grid grid-4">
@@ -250,7 +252,7 @@ function Actualites() {
 }
 
 /* -------------------------------------------------------------- visionpass */
-const wallets = ['Orange Money', 'MTN MoMo', 'Wave Mobile', 'Visa / Mastercard']
+const wallets = ['Orange Money', 'MTN MoMo', 'Visa / Mastercard', 'Espèces en station']
 
 function VisionPass() {
   return (
@@ -345,7 +347,7 @@ function Localisation() {
 
 /* ---------------------------------------------------------------- cta band */
 export function CtaBand({
-  title = 'Vision Pay & Carte Carburant Pro',
+  title = 'VisionPass & Carte Carburant Pro',
   text = 'Réglez sans contact, gérez vos flottes et activez vos remises instantanées en station.',
   primary = { label: "Découvrir l'App", to: '/produits', sec: 'visionpass' },
   secondary = { label: 'Espace Entreprise', to: '/produits', sec: 'flottes' },

@@ -27,9 +27,9 @@ function GasBottle(p: SVGProps<SVGSVGElement>) {
 
 /* --------------------------------------------------------------- hero */
 const heroStats = [
-  { value: '+4.2%', label: 'Économie constatée' },
-  { value: '100%', label: 'Scellés Inviolables' },
-  { value: '< 15 min', label: 'Vidange Express' },
+  { value: '795', label: 'CFA/L Super 95 homologué' },
+  { value: '745', label: 'CFA/L Gasoil homologué' },
+  { value: 'B6 → B35', label: 'Gaz en bouteille, en stock' },
 ]
 
 function Hero() {
@@ -38,7 +38,7 @@ function Hero() {
       <div className="container pro-hero-grid">
         <div>
           <span className="pro-hero-badge">
-            <Icon.shieldPlus /> Normes internationales ISO 9001 &amp; HSE
+            <Icon.shieldPlus /> Conformité réglementaire &amp; sécurité en station
           </span>
           <h1 className="h1">
             Des Produits de Haute Précision, des Services Pensés pour{' '}
@@ -74,9 +74,9 @@ function Hero() {
             </span>
             <div className="pro-hero-float-text">
               <b>Super 95 &amp; Gasoil ProClean™</b>
-              <span>Additivation nouvelle génération</span>
+              <span>Additifs détergents, prix homologués</span>
             </div>
-            <span className="pill pill--cert">Certifié ISO</span>
+            <span className="pill pill--cert">Conforme</span>
           </div>
         </div>
       </div>
@@ -116,10 +116,10 @@ const fuels = [
     icon: <Icon.gauge />,
     tileCls: 'icon-tile--mint-solid',
     title: 'Super 95 ProClean™',
-    desc: "Formule de détergence active éliminant jusqu'à 93% des dépôts sur les soupapes d'admission pour préserver la réactivité moteur d'origine.",
+    desc: "Agent détergent actif qui limite l'encrassement des soupapes d'admission et préserve la réactivité du moteur.",
     stats: [
-      { cls: 'pro-stat--green', icon: <Icon.trendDown />, value: '−4.1%', label: 'Consommation moyenne' },
-      { cls: 'pro-stat--blue', icon: <Icon.shield />, value: '100%', label: 'Protection anti-rouille' },
+      { cls: 'pro-stat--green', icon: <Icon.tag />, value: '795 CFA/L', label: 'Prix homologué' },
+      { cls: 'pro-stat--blue', icon: <Icon.shield />, value: 'Contrôle', label: 'Justesse en station' },
     ],
     ticks: [
       "Molécules anti-friction réduisant l'échauffement interne",
@@ -135,10 +135,10 @@ const fuels = [
     icon: <Icon.wrench />,
     tileCls: 'icon-tile--lav icon-tile--navy',
     title: 'Gasoil ProClean™',
-    desc: 'Conçu pour les moteurs diesel Common Rail haute pression, il prévient le colmatage des injecteurs et espace vos cycles de maintenance.',
+    desc: "Conçu pour les moteurs diesel haute pression, il limite l'encrassement des injecteurs et espace les cycles de maintenance.",
     stats: [
-      { cls: 'pro-stat--green', icon: <Icon.leaf />, value: '−7%', label: 'Émissions CO₂ & suies' },
-      { cls: 'pro-stat--blue', icon: <Icon.hourglass />, value: 'x2', label: 'Longévité des injecteurs' },
+      { cls: 'pro-stat--green', icon: <Icon.tag />, value: '745 CFA/L', label: 'Prix homologué' },
+      { cls: 'pro-stat--blue', icon: <Icon.hourglass />, value: 'Disponible', label: 'Piste & vrac pro' },
     ],
     ticks: [
       'Indice de cétane optimisé pour une combustion plus propre',
@@ -159,15 +159,15 @@ function Carburants() {
             <span className="eyebrow">
               <Icon.drop /> Carburants &amp; Additifs
             </span>
-            <h2 className="h2">Carburants Additivés Haute Performance</h2>
+            <h2 className="h2">Carburants Additivés au Prix Homologué</h2>
             <p className="lead">
-              Nos carburants intègrent des agents détergents et anti-corrosion exclusifs développés
-              pour purifier vos injecteurs et réduire l'empreinte carbone à chaque kilomètre.
+              Nos Super 95 et Gasoil intègrent des agents détergents et anti-corrosion qui maintiennent
+              le circuit d’alimentation propre et préservent les performances moteur, plein après plein.
             </p>
           </div>
           <div className="pro-eff">
-            <span>Efficacité garantie :</span>
-            <span className="pill">+35km / plein</span>
+            <span>Contrôle à chaque livraison :</span>
+            <span className="pill">Produits tracés</span>
           </div>
         </div>
         <div className="grid grid-2">
@@ -247,18 +247,18 @@ const lubes = [
   },
   {
     img: '/images/pro-c.jpg',
-    pill: 'Marine & Turbines',
+    pill: 'Hydraulique & Industrie',
     pillCls: 'pill--sq pill--mint-solid',
     grade: 'ISO VG 46 / 68',
-    title: 'VisionPro Marine & Hydro',
-    desc: "Fluides hydrauliques et huiles pour moteurs marins 4 temps, offrant une résistance exceptionnelle à l'eau de mer.",
-    specs: ['DIN 51524 Part 2', 'Marine Bunkering'],
-    price: 'Vrac & Soutage Port',
+    title: 'VisionPro Hydro & Transmissions',
+    desc: "Huiles hydrauliques et transmissions pour engins de BTP, groupes électrogènes et équipements industriels des sites camerounais.",
+    specs: ['DIN 51524 Part 2', 'ISO L-HM'],
+    price: 'Fût 208L / Bidon 5L',
     priceCls: 'pro-lub-price--blue',
   },
 ]
 
-const lubTags = ['Véhicules Légers', 'Poids Lourds & BTP', 'Marine & Industrie']
+const lubTags = ['Véhicules Légers', 'Poids Lourds & BTP', 'Industrie & Engins']
 
 function Lubrifiants() {
   return (
@@ -271,8 +271,9 @@ function Lubrifiants() {
             </span>
             <h2 className="h2">Lubrifiants VisionPro™ Synthèse &amp; Minéraux</h2>
             <p className="lead">
-              Des formulations rigoureuses homologuées par les plus grands constructeurs mondiaux
-              pour l'automobile, le transport lourd, le transport maritime et l'industrie.
+              Des formulations rigoureuses homologuées par les grands constructeurs, sélectionnées
+              par nos ingénieurs lubrifiants pour l'automobile, le transport lourd, le BTP et
+              l'industrie au Cameroun.
             </p>
           </div>
           <div className="pro-tagpills">
@@ -334,7 +335,7 @@ const cylinders = [
     weight: '12.5 kg',
     title: 'Bouteille B12 "Foyer"',
     desc: 'Autonomie idéale pour la cuisine domestique, compatible avec toutes les gazinières.',
-    footLabel: 'Détendeur Offert à l’abonnement',
+    footLabel: 'Collerette scellée à chaud',
     footValue: 'Consigne + Charge',
     footCls: 'pro-cyl-foot--blue',
   },
@@ -363,7 +364,9 @@ function Gaz() {
           <p className="lead">
             Chaque bouteille de gaz VisionGaz est soumise à un test d'épreuve hydrostatique rigoureux
             et dotée d'une collerette scellée à chaud certifiant la pureté du butane/propane et le
-            poids exact.
+            poids exact. Notre programme industriel de construction et de réhabilitation de centres
+            de remplissage, engagé à Douala et à Bafoussam, renforce la disponibilité du gaz en
+            bouteille sur l'ensemble de nos sites.
           </p>
           <div className="pro-gaz-infos">
             <div className="pro-info">
@@ -381,7 +384,10 @@ function Gaz() {
               </span>
               <div>
                 <h3 className="h3">Échange Express 24/7</h3>
-                <p>Disponible dans l'ensemble de nos 85+ stations et chez nos distributeurs agréés partenaires.</p>
+                <p>
+                  Disponible dans nos stations de Douala, Bafoussam, Mbouda et Batcham ainsi que chez
+                  nos distributeurs agréés partenaires.
+                </p>
               </div>
             </div>
           </div>
@@ -411,14 +417,14 @@ function Gaz() {
 /* ---------------------------------------------------- services (dark) */
 const passSubs = [
   { icon: <Icon.sliders />, title: 'Plafonds Précis', text: 'Kilométrage, horaires et volume par jour.' },
-  { icon: <Icon.receipt />, title: 'Déduction TVA', text: 'Facturation certifiée conforme au fisc.' },
+  { icon: <Icon.receipt />, title: 'Facture Consolidée', text: 'Une facture unique pour tous les pleins de la flotte.' },
   { icon: <Icon.card />, title: 'Recharge Mobile', text: 'Alimentation instantanée via Mobile Money.' },
 ]
 
 const boutTicks = [
-  { icon: <Icon.wifi />, text: 'Zone Wi-Fi Pro & Prises de Recharge' },
-  { icon: <Icon.utensils />, text: 'Snacking frais et boissons réfrigérées' },
-  { icon: <Icon.atm />, text: 'Guichets automatiques (GAB) 24h/24' },
+  { icon: <Icon.coffee />, text: 'Café, boissons fraîches et snacking' },
+  { icon: <Icon.shop />, text: 'Boutique de dépannage et petits besoins du trajet' },
+  { icon: <Icon.gauge />, text: 'Gonflage, niveaux et lavage sur la piste' },
 ]
 
 function Services() {
@@ -426,12 +432,13 @@ function Services() {
     <section className="section pro-services" id="visionpass">
       <div className="container">
         <span className="eyebrow eyebrow--mint">
-          <Icon.share /> Expérience Client &amp; Innovation
+          <Icon.share /> Services en station &amp; paiement
         </span>
-        <h2 className="h2">Services Innovants sur le Réseau</h2>
+        <h2 className="h2">Des Services Utiles, à Côté de la Pompe</h2>
         <p className="lead">
-          Nos stations ne sont plus de simples points de ravitaillement, mais des hubs de services
-          connectés pour optimiser votre temps et fluidifier vos opérations.
+          Nos stations ne sont pas de simples points de ravitaillement : boutique, gaz en bouteille,
+          lubrifiants, lavage et moyens de paiement sans contact pour faciliter le plein comme le
+          quotidien.
         </p>
 
         <div className="pro-svc-grid">
@@ -440,7 +447,7 @@ function Services() {
               <span className="pill pill--darkmint">
                 <Icon.nfc /> Paiement Sécurisé &amp; Flottes Pro
               </span>
-              <span className="wallets">Orange Money&nbsp;&nbsp;•&nbsp;&nbsp;MTN MoMo&nbsp;&nbsp;•&nbsp;&nbsp;Wave</span>
+              <span className="wallets">Orange Money&nbsp;&nbsp;•&nbsp;&nbsp;MTN MoMo&nbsp;&nbsp;•&nbsp;&nbsp;Visa</span>
             </div>
             <h3 className="h3">Carte VisionPass™ : Pilotez vos Dépenses de Carburant au Centime Près</h3>
             <p className="pro-dcard-lead">
@@ -469,10 +476,11 @@ function Services() {
             <span className="icon-tile icon-tile--lav icon-tile--navy">
               <Icon.coffee />
             </span>
-            <h3 className="h3">Boutiques Vision Express &amp; Cafétérias</h3>
+            <h3 className="h3">Boutiques &amp; Espaces de Repos</h3>
             <p className="pro-dcard-lead">
-              Une pause régénérante sur tous vos trajets : viennoiseries chaudes, café torréfié
-              localement, produits de première nécessité et connexion Wi-Fi haut débit gratuite.
+              Une pause utile sur vos trajets : café et boissons fraîches, produits de première
+              nécessité, lubrifiants et petits équipements du véhicule, avec un accueil attentif à
+              chaque visite.
             </p>
             <ul className="pro-ticks-dark">
               {boutTicks.map((t) => (
@@ -492,10 +500,11 @@ function Services() {
             <span className="icon-tile icon-tile--mint-solid">
               <Icon.drop />
             </span>
-            <h3 className="h3">Centres d'Entretien Rapide &amp; Lavage Écologique</h3>
+            <h3 className="h3">Entretien Courant &amp; Lavage en Station</h3>
             <p className="pro-dcard-lead">
-              Prenez soin de votre véhicule sans rendez-vous grâce à nos baies techniques certifiées
-              ISO 14001. Lavage haute pression avec système de filtration et recyclage d'eau à 80%.
+              Prenez soin de votre véhicule sans rendez-vous grâce à nos aires techniques en station :
+              lavage haute pression, niveaux, pressions des pneus et petite vidange réalisés par nos
+              agents.
             </p>
           </div>
           <div className="pro-ent-subs">
@@ -505,24 +514,24 @@ function Services() {
                 <span className="pro-ent-tag pro-ent-tag--mint">Sans RDV</span>
               </div>
               <p>
-                Vidange moteur en 15 minutes, remplacement des filtres d'origine et contrôle gratuit
-                de 15 points de sécurité clés.
+                Vidange réalisée en station pendant que vous faites le plein, avec filtres adaptés et
+                contrôle des niveaux offert.
               </p>
               <span className="pro-ent-note pro-ent-note--mint">
-                <Icon.check /> Huile de synthèse VisionPro incluse
+                <Icon.check /> Huiles VisionPro disponibles en station
               </span>
             </div>
             <div className="pro-ent-sub">
               <div className="pro-ent-sub-top">
-                <b>Lavage Bio–Recyclé</b>
-                <span className="pro-ent-tag pro-ent-tag--gray">Éco-Responsable</span>
+                <b>Lavage &amp; Gonflage</b>
+                <span className="pro-ent-tag pro-ent-tag--gray">Sans RDV</span>
               </div>
               <p>
-                Tunnels à brosses anti-rayures textile douce et pistes haute pression utilisant des
-                mousses végétales biodégradables.
+                Tunnel à brosses textiles et pistes haute pression pour repartir avec un véhicule propre,
+                sans attendre.
               </p>
               <span className="pro-ent-note pro-ent-note--gray">
-                <Icon.recycle /> Recyclage en circuit fermé
+                <Icon.recycle /> Eau et déchets gérés sur site
               </span>
             </div>
           </div>
@@ -559,9 +568,12 @@ function B2B() {
                 <Icon.headset /> Cellule Grands Comptes Dédiée
               </h3>
               <p>
-                Ligne directe : <a href="tel:+221338002020">+221 33 800 20 20</a> (Lun - Sam, 8h à 19h)
+                Ligne directe : <a href="tel:+237699002000">+237 6 99 00 20 00</a> (Lun - Sam, 8h à 19h) ·
+                Hotline réseau : 800 10 10
                 <br />
-                Email : <a href="mailto:b2b-distribution@visionenergy.com">b2b-distribution@visionenergy.com</a>
+                Email : <a href="mailto:direction@vision-energy.cm">direction@vision-energy.cm</a>
+                <br />
+                Siège : B.P. 11 480, Douala · Cameroun
               </p>
             </div>
           </div>
@@ -583,24 +595,24 @@ function B2B() {
           <div className="pro-form-grid">
             <label className="pro-field">
               <span>Raison Sociale / Société</span>
-              <input type="text" placeholder="Ex: Transit Logistics Corp" />
+              <input type="text" placeholder="Ex: Transports Logistiques du Wouri SARL" />
             </label>
             <label className="pro-field">
               <span>Nom du Contact Responsable</span>
-              <input type="text" placeholder="Ex: Fatou Ndiaye" />
+              <input type="text" placeholder="Ex: Mbarga Jean" />
             </label>
             <label className="pro-field">
               <span>Téléphone Professionnel</span>
-              <input type="tel" placeholder="+221 77 000 00 00" />
+              <input type="tel" placeholder="+237 6 00 00 00 00" />
             </label>
             <label className="pro-field">
               <span>Email Professionnel</span>
-              <input type="email" placeholder="achat@entreprise.com" />
+              <input type="email" placeholder="achat@entreprise.cm" />
             </label>
             <label className="pro-field">
               <span>Type de Produit Requis</span>
-              <select defaultValue="Gasoil Excellium Vrac (Camion Citerne)">
-                <option>Gasoil Excellium Vrac (Camion Citerne)</option>
+              <select defaultValue="Gasoil ProClean Vrac (Camion Citerne)">
+                <option>Gasoil ProClean Vrac (Camion Citerne)</option>
                 <option>Super 95 ProClean Vrac</option>
                 <option>Lubrifiants VisionPro (Fût / IBC)</option>
                 <option>Gaz VisionGaz (Palette / Vrac)</option>
@@ -612,7 +624,7 @@ function B2B() {
             </label>
             <label className="pro-field pro-field--full">
               <span>Lieu de Livraison &amp; Spécifications Particulières</span>
-              <textarea placeholder="Indiquez la zone géographique (ex: Plateforme Portuaire Dakar, Diamniadio, Ziguinchor) ou vos contraintes techniques..." />
+              <textarea placeholder="Indiquez la zone géographique (ex: Zone industrielle de Bonabéri ou de Bassa, Douala; Bafoussam; Yaoundé; axe Douala – Yaoundé) ou vos contraintes techniques..." />
             </label>
           </div>
           <div className="pro-form-foot">

@@ -18,10 +18,10 @@ export function TopBar() {
       <div className="container topbar-inner">
         <div className="topbar-left">
           <span className="topbar-item">
-            <Icon.pin /> Siège &amp; Hub Régional, Douala · Cameroun
+            <Icon.pin /> Siège social : Douala · Cameroun
           </span>
           <span className="topbar-item">
-            <Icon.headset /> Assistance 24/7 : +237 6 99 00 20 20
+            <Icon.headset /> Assistance : <a href="tel:+237699002000">+237 6 99 00 20 00</a>
           </span>
         </div>
         <div className="topbar-right">
@@ -46,7 +46,7 @@ export function Header({ path }: { path: string }) {
           <img src="/images/logo-mark.png" alt="" className="brand-img" width="46" height="46" />
           <span className="brand-text">
             <b>VISION ENERGY</b>
-            <span>Transition &amp; Réseau Pétrolier</span>
+            <span>Produits Pétroliers &amp; Gaz Domestique</span>
           </span>
         </a>
         <button
@@ -156,16 +156,16 @@ export function Footer() {
               <a href={href('/produits', 'flottes')}>Carte Carburant Flottes</a>
             </li>
             <li>
-              <a href={href('/metiers', 'stockage')}>Cuves &amp; Ravitaillement sur Site</a>
+              <a href={href('/produits', 'stockage')}>Cuves &amp; Ravitaillement sur Site</a>
             </li>
             <li>
-              <a href={href('/metiers', 'logistique')}>Approvisionnement Vrac</a>
+              <a href={href('/produits', 'logistique')}>Approvisionnement Vrac</a>
             </li>
             <li>
               <a href={href('/carrieres')}>Espace Recrutement &amp; Talents</a>
             </li>
             <li>
-              <a href={href('/reseau', 'contact')}>Devis Grands Comptes</a>
+              <a href={href('/reseau', 'contact')}>Devis Professionnels</a>
             </li>
           </ul>
         </div>

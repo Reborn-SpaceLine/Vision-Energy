@@ -27,17 +27,17 @@ const ShieldBolt = (
 
 /* --------------------------------------------------------------- hero */
 const heroFeats = [
-  { icon: SealCheck, label: 'Normes HSE Niveau 1' },
-  { icon: <Icon.globe />, label: 'Présence Multinationale CEMAC' },
-  { icon: SolarPanel, label: 'Transition Hybride 2030' },
+  { icon: SealCheck, label: 'Conformité Réglementaire MINMIDT' },
+  { icon: <Icon.globe />, label: 'Ancrage National Camerounais' },
+  { icon: SolarPanel, label: 'Gaz Domestique & Lubrifiants' },
 ]
 
 const heroStats = [
-  { icon: <Icon.fuel />, label: 'Stations', value: '120+', sub: 'Réseau moderne maillé' },
-  { icon: <Icon.flag />, label: 'Rayonnement', value: '6 Pays', sub: 'Hubs CEMAC & Ouest', mod: ' grp-stat--blue' },
-  { icon: <Icon.users />, label: 'Capital humain', value: '450+', sub: 'Collaborateurs directs' },
-  { icon: <Icon.server />, label: 'Capacité cuves', value: '380k m³', sub: 'Stockage sous douane' },
-  { icon: <Icon.wifi />, label: 'Taux de service', value: '99.8%', sub: 'Fiabilité logistique B2B', hl: true },
+  { icon: <Icon.fuel />, label: 'Stations', value: '30', sub: 'Objectif réseau d’ici 2028' },
+  { icon: <Icon.flag />, label: 'Terrain', value: '2 Régions', sub: 'Littoral & Ouest', mod: ' grp-stat--blue' },
+  { icon: <Icon.users />, label: 'Expertises', value: '4 Métiers', sub: 'Lubrifiants, élec., automatisme, gaz' },
+  { icon: <Icon.server />, label: 'Centres gaz', value: '2 Villes', sub: 'Douala & Bafoussam' },
+  { icon: <Icon.wifi />, label: 'Stations livrées', value: '6 Repères', sub: 'Ouvertes ou citées depuis 2021', hl: true },
 ]
 
 function Hero() {
@@ -55,12 +55,12 @@ function Hero() {
             <Icon.chevR />
             <span>Vision &amp; Gouvernance</span>
           </nav>
-          <span className="grp-hero-eyebrow">Leadership énergétique régional</span>
-          <h1 className="h1">Bâtir l’avenir énergétique africain avec rigueur et intégrité.</h1>
+          <span className="grp-hero-eyebrow">Acteur énergétique camerounais</span>
+          <h1 className="h1">Bâtir l’avenir énergétique du Cameroun avec rigueur et intégrité.</h1>
           <p className="grp-hero-lead">
-            Pionnier de la distribution de carburants, du trading maritime et des infrastructures
-            critiques en zone CEMAC et Afrique de l’Ouest, Vision Energy accélère l’autonomie
-            stratégique du continent tout en orchestrant sa transition bas-carbone.
+            Distributeur de carburants, de gaz domestique et de lubrifiants à travers un réseau de
+            stations-service en plein développement, Vision Energy sert automobilistes et ménages
+            camerounais sous un principe simple : la qualité à bon prix.
           </p>
           <ul className="grp-hero-feats">
             {heroFeats.map((f) => (
@@ -94,24 +94,24 @@ function Hero() {
 const timeline = [
   {
     num: '01',
-    year: '2008',
-    title: 'Création & Premier Dépôt',
-    text: 'Fondation du consortium de négoce à Douala et mise en service de notre première unité d’avitaillement terrestre de 15 000 m³.',
-    foot: { icon: <Icon.anchor />, label: 'Accords portuaires initiaux' },
+    year: '2021',
+    title: 'Première Station à Douala',
+    text: 'Ouverture de notre première station-service à Bonamoussadi (Douala), devenue un repère local et le point de départ de notre réseau de distribution.',
+    foot: { icon: <Icon.anchor />, label: 'Bonamoussadi, repère depuis 2021' },
   },
   {
     num: '02',
-    year: '2014',
-    title: 'Expansion Régionale CEMAC',
-    text: 'Déploiement des opérations au Gabon, en République du Congo et au Tchad. Création du réseau unifié de transport lourd par rail et route.',
-    foot: { icon: <Icon.truck />, label: 'Flotte propre de 140 citernes' },
+    year: '2025',
+    title: 'Extension du Réseau',
+    text: 'Mise en conformité et accompagnement de la station de Tobe (arr. Poumougne, Région de l’Ouest) le 27 juin 2025, aux côtés de Logbessou PK15 et Bamendzi.',
+    foot: { icon: <Icon.truck />, label: 'Douala, Bafoussam & Ouest' },
   },
   {
     num: '03',
-    year: '2019',
-    title: 'Terminaux Côtiers & Bunkering',
-    text: 'Inauguration du terminal de soutage maritime offshore à Kribi et lancement officiel du carburant additivé de classe mondiale VisionPro.',
-    foot: { icon: <Icon.drop />, label: 'Terminal Kribi Deep Sea' },
+    year: '2026',
+    title: 'Batcham & Mbouda Ouverts',
+    text: 'Ouverture de Batcham sur l’axe Mbouda–Batcham le 15 janvier 2026, puis inauguration officielle de Mbouda le 28 avril 2026.',
+    foot: { icon: <Icon.drop />, label: 'Mbouda, 28 avril 2026' },
     numMod: 'grp-num--blue',
     yearMod: 'grp-year--blue',
     footMod: ' grp-tl-foot--blue',
@@ -119,9 +119,9 @@ const timeline = [
   {
     num: '04',
     year: 'Aujourd’hui & Demain',
-    title: 'Cap Énergie Hybride',
-    text: 'Solarisation massive de 80+ stations-service, déploiement des bornes EV rapides et distribution de GPL conditionné ultra-sécurisé.',
-    foot: { icon: <Icon.leaf />, label: 'Bilan Carbone ISO 14064' },
+    title: 'Cap 30 Stations & Gaz',
+    text: 'Programme de construction et de réhabilitation de centres de remplissage de gaz à Douala et Bafoussam, avec pour objectif 30 stations d’ici 2028.',
+    foot: { icon: <Icon.leaf />, label: 'Objectif : 30 stations en 2028' },
     numMod: 'grp-num--solid',
   },
 ]
@@ -133,11 +133,11 @@ function Trajectoire() {
         <div className="sec-head">
           <div>
             <span className="eyebrow">Trajectoire industrielle</span>
-            <h2 className="h2">Histoire &amp; Genèse d’un Géant Africain</h2>
+            <h2 className="h2">Histoire &amp; Genèse d’un Acteur Camerounais</h2>
           </div>
           <p className="lead">
-            Deux décennies d’expansion structurée, de bravoure logistique et d’investissements
-            stratégiques au cœur de l’économie réelle.
+            Une aventure récente, née à Douala, faite d’ouvertures de stations maîtrisées et
+            d’investissements progressifs au service de l’économie réelle.
           </p>
         </div>
         <div className="grp-tl">
@@ -163,30 +163,30 @@ const values = [
   {
     icon: <Icon.shieldPlus />,
     tile: 'icon-tile icon-tile--red',
-    title: 'HSE & Zéro Incident',
-    text: 'Une culture intransigeante de la sécurité humaine et des installations. Formation systématique et contrôle automatisé de nos dépôts et stations.',
+    title: 'Sécurité & Rigueur',
+    text: 'Une culture exigeante de la sécurité des personnes et des installations aux stations comme dans les centres de remplissage de gaz, avec des procédures strictes.',
     tag: { label: 'Non-négociable', mod: 'grp-tag--red' },
   },
   {
     icon: <Icon.gavel />,
     tile: 'icon-tile icon-tile--blue',
     title: 'Intégrité & Conformité',
-    text: 'Traçabilité totale des flux financiers et des cargaisons de produits raffinés dans le respect strict des réglementations OHADA et internationales.',
-    tag: { label: 'Audit annuel PwC', mod: 'grp-tag--blue' },
+    text: 'Études d’impact, plans d’urgence et dossiers réglementaires MINMIDT suivis avec sérieux pour chaque station du réseau camerounais.',
+    tag: { label: 'Conformité MINMIDT', mod: 'grp-tag--blue' },
   },
   {
     icon: <Icon.cpu />,
     tile: 'icon-tile',
     title: 'Innovation Technologique',
-    text: 'Télémétrie par satellite des citernes, cartes flotte VisionPass RFID, et plateformes intelligentes de réapprovisionnement prédictif.',
-    tag: { label: 'Fintech intégrée', mod: 'grp-tag--green' },
+    text: 'Ingénieurs en lubrifiants, électricité, automatisme et gaz : nos équipes conçoivent, réhabilitent et supervisent nos installations techniques.',
+    tag: { label: '4 spécialités', mod: 'grp-tag--green' },
   },
   {
     icon: <Icon.recycle />,
     tile: 'icon-tile icon-tile--gray',
     title: 'Éco-responsabilité',
-    text: 'Captation des vapeurs en cuve, recyclage à 100% des huiles usagées via notre filière certifiée et reforestation des emprises logistiques.',
-    tag: { label: 'Norme ISO 14001', mod: 'grp-tag--gray' },
+    text: 'Collecte des huiles usagées, gestion responsable des déchets et accompagnement des communautés riveraines de nos stations-service.',
+    tag: { label: 'Gestes responsables', mod: 'grp-tag--gray' },
   },
 ]
 
@@ -225,59 +225,59 @@ function Gouvernance() {
     <section className="section grp-sec">
       <div className="container grp-gov">
         <figure className="grp-director">
-          <img src="/images/grp-director-clean.jpg" alt="Paul-Alain Manga, Directeur Général du Groupe Vision Energy" />
+          <img src="/images/grp-director-clean.jpg" alt="M. Kamdem Youmbi Ngué Tchuchi Ghislain, Directeur Général du Groupe Vision Energy" />
           <figcaption className="grp-director-cap">
             <span>Directeur Général du Groupe</span>
-            <b>Paul-Alain Manga</b>
-            <p>Ancien cadre dirigeant Schlumberger &amp; TotalEnergies Afrique</p>
+            <b>M. Kamdem Youmbi Ngué Tchuchi Ghislain</b>
+            <p>Dirigeant de Vision Energy S.A., capital d’origine camerounaise</p>
           </figcaption>
         </figure>
 
         <div>
           <span className="eyebrow">Gouvernance stratégique</span>
-          <h2 className="h2">Une direction forgée dans l’excellence industrielle mondiale.</h2>
+          <h2 className="h2">Une direction camerounaise, présente sur le terrain depuis 2021.</h2>
           <div className="grp-quote">
             <span className="grp-quote-mark" aria-hidden="true">
               &rdquo;
             </span>
             <p>
-              « L’Afrique ne peut bâtir son développement sur l’improvisation énergétique. Chez Vision
-              Energy, nous marions la rigueur des standards internationaux à une compréhension intime
-              des couloirs de commerce sous-régionaux. »
+              « La qualité à bon prix n’est pas un slogan : c’est l’exigence que nous appliquons à
+              chaque station, à chaque bouteille de gaz et à chaque litre distribué à nos clients
+              camerounais. »
             </p>
-            <cite>— Déclaration du Conseil d’Administration, Session Annuelle 2024</cite>
+            <cite>— Comité de direction, Vision Energy S.A.</cite>
           </div>
 
           <div className="grp-gov-cards">
             <article className="card grp-gov-card">
               <h3>
-                <Icon.building /> Conseil d’Administration
+                <Icon.building /> Direction Générale
               </h3>
               <p>
-                Composé de 7 administrateurs dont 3 indépendants, garantissant l’alignement sur les
-                standards ESG et les intérêts des actionnaires institutionnels.
+                Pilotée par M. Kamdem Youmbi Ngué Tchuchi Ghislain, elle fixe le cap du réseau :
+                30 stations d’ici 2028, avec un capital d’origine camerounaise.
               </p>
             </article>
             <article className="card grp-gov-card">
               <h3>
-                <Icon.users /> Comité Exécutif (COMEX)
+                <Icon.users /> Comité de Direction
               </h3>
               <p>
-                8 directeurs opérationnels supervisant le Trading, les Opérations Maritimes, la
-                Logistique Aval, le HSE et la Stratégie Digitale.
+                Derrick Pavel Bognou Chiwa (direction technique, lubrifiants &amp; gaz), Rhonis Cabrel
+                Pimatchi Sakock (opérations, Douala) et Vanessa Kirro (gestion de projet).
               </p>
             </article>
           </div>
 
           <div className="grp-team">
             <div className="grp-avatars" aria-hidden="true">
-              <i>DA</i>
-              <i>FT</i>
-              <i>SK</i>
-              <i>+5</i>
+              <i>KY</i>
+              <i>DP</i>
+              <i>VK</i>
+              <i>RC</i>
             </div>
             <p>
-              Comité de direction pluridisciplinaire et paritaire (40% de femmes cadres dirigeantes).
+              Direction épaulée par des ingénieurs en lubrifiants, électricité, automatisme et gaz.
             </p>
           </div>
         </div>
@@ -291,40 +291,40 @@ const rse = [
   {
     icon: <Icon.grad />,
     tile: 'icon-tile',
-    title: 'Académie Pétrole & Logistique',
-    text: 'Programme interne certifiant ayant déjà formé 620 jeunes techniciens, chauffeurs ADR et agents de piste issus des communautés riveraines de nos terminaux.',
-    foot: { label: 'Insertion locale :', value: '89% sous 6 mois' },
+    title: 'Emplois & Compétences Locales',
+    text: 'Des équipes camerounaises en poste depuis mars 2023, formées à la sécurité, à la conduite de stations et au service client dans nos différentes villes.',
+    foot: { label: 'Équipes locales :', value: 'En poste depuis 2023' },
   },
   {
     icon: ShieldBolt,
     tile: 'icon-tile icon-tile--gray',
-    title: 'Plan Solaire Stations 2026',
-    text: 'Autonomisation photovoltaïque de l’ensemble de nos auvents et unités de pompage, éliminant plus de 4 800 tonnes de CO₂ générées par les groupes électrogènes de secours.',
-    foot: { label: 'Énergie propre captée :', value: '3.2 MW installés' },
+    title: 'Programme Gaz Domestique',
+    text: 'Construction et réhabilitation de centres de remplissage de gaz, notamment à Douala et Bafoussam, pour rapprocher le GPL ménager des familles.',
+    foot: { label: 'Villes de centres gaz :', value: 'Douala & Bafoussam' },
   },
   {
     icon: <Icon.drop />,
     tile: 'icon-tile',
-    title: 'Préservation des Littoraux',
-    text: 'Protocole de double coque obligatoire pour tous les navires affrétés et mécénat actif de dépollution marine en partenariat avec les ONG côtières d’Afrique centrale.',
-    foot: { label: 'Incidents de déversement :', value: '0 Litre (Historique)' },
+    title: 'Préservation de l’Environnement',
+    text: 'Études d’impact, plans d’urgence et gestion responsable des huiles usagées encadrent chaque nouvelle ouverture et chaque mise en conformité.',
+    foot: { label: 'Dossiers réglementaires :', value: 'Suivis MINMIDT' },
   },
 ]
 
 function Rse() {
   return (
-    <section className="section section--dark grp-sec">
+    <section className="section section--dark grp-sec" id="rse">
       <div className="container">
         <div className="sec-head">
           <div>
-            <span className="eyebrow eyebrow--mint">Pacte d’impact régional</span>
+            <span className="eyebrow eyebrow--mint">Pacte d’impact local</span>
             <h2 className="h2" style={{ color: '#fff' }}>
-              RSE, Talents Locaux &amp; Transition Énergétique
+              RSE, Emplois Locaux &amp; Gaz Domestique
             </h2>
           </div>
           <p className="lead">
-            Chaque litre distribué participe activement au développement des communautés d’accueil et
-            à l’atténuation du changement climatique.
+            Chaque station ouverte, chaque centre de remplissage construit rapproche l’énergie des
+            ménages camerounais et crée des emplois formés dans les villes où nous sommes implantés.
           </p>
         </div>
         <div className="grp-rse">
@@ -353,19 +353,19 @@ function Rapport() {
         <div className="grp-report">
           <div>
             <span className="grp-report-pill">
-              <Icon.doc /> Publication financière &amp; extra-financière
+              <Icon.doc /> Présentation du réseau &amp; des activités
             </span>
-            <h2 className="h2">Téléchargez le Rapport Intégré &amp; RSE 2024–2025</h2>
+            <h2 className="h2">Découvrez le Dossier Réseau &amp; Activités 2026</h2>
             <p className="lead">
-              Consultez l’audit complet certifié de nos activités pétrolières, nos performances
-              financières consolidées, nos investissements d’avenir et notre bilan carbone certifié.
+              Retrouvez la cartographie de nos stations, nos activités gaz et lubrifiants, notre
+              programme de centres de remplissage et notre engagement : la qualité à bon prix.
             </p>
             <div className="grp-report-meta">
               <span>Format PDF interactif</span>
               <i aria-hidden="true">•</i>
-              <span>94 pages</span>
+              <span>Objectif 30 stations d’ici 2028</span>
               <i aria-hidden="true">•</i>
-              <span>Données vérifiées Deloitte &amp; PwC</span>
+              <span>Adresses &amp; repères confirmés</span>
             </div>
           </div>
           <div className="grp-report-actions">
@@ -373,7 +373,7 @@ function Rapport() {
               <Icon.download /> Télécharger le Rapport (PDF)
             </a>
             <a className="btn btn--outline" href={href('/contact')}>
-              <Icon.mail /> Relations Investisseurs
+              <Icon.mail /> Écrire à la direction
             </a>
           </div>
         </div>

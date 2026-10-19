@@ -25,10 +25,10 @@ function IconQuote() {
 
 /* ---------------------------------------------------------------------- hero */
 const heroStats = [
-  { icon: <Icon.briefcase />, value: '15+', label: 'Nouveaux Postes Ouverts', sub: 'Douala, Bafoussam, Kribi', tone: '' },
-  { icon: <Icon.users />, value: '450+', label: 'Collaborateurs Panafriquains', sub: 'Talents ingénierie & flux', tone: 'icon-tile--lav' },
-  { icon: <Icon.tag />, value: '94%', label: 'Taux de Rétention Groupe', sub: 'Engagement & bien-être', tone: '' },
-  { icon: <Icon.rosette />, value: '100%', label: 'Formation Certifiée', sub: 'Normes HSE & Leadership', tone: 'act-tile--gray' },
+  { icon: <Icon.fuel />, value: '6', label: 'Stations en exploitation', sub: 'Douala, Bafoussam, Batcham, Mbouda, Tobe', tone: '' },
+  { icon: <Icon.flame />, value: '2', label: 'Centres de remplissage de gaz', sub: 'Programme Douala & Bafoussam', tone: 'icon-tile--lav' },
+  { icon: <Icon.tag />, value: '30', label: 'Stations visées d’ici 2028', sub: 'Cap de développement du réseau', tone: '' },
+  { icon: <Icon.rosette />, value: '4', label: 'Spécialités d’ingénierie', sub: 'Lubrifiants, électricité, automatisme & gaz', tone: 'act-tile--gray' },
 ]
 
 function Hero() {
@@ -48,8 +48,9 @@ function Hero() {
           L’Actualité du Réseau &amp; Rejoignez l’Aventure <span className="hl">Vision Energy</span>
         </h1>
         <p className="act-hero-lead">
-          Suivez nos derniers développements régionaux, innovations durables, communiqués de presse et
-          découvrez nos opportunités d’emploi pour bâtir l’énergie de demain en Afrique.
+          Suivez les ouvertures de nos stations-service, l’avancement de nos centres de remplissage de
+          gaz à Douala et Bafoussam, et découvrez nos offres d’emploi pour rejoindre une équipe
+          camerounaise en pleine construction.
         </p>
         <div className="btn-row act-hero-cta">
           <a className="btn btn--primary" href={href('/actualites')}>
@@ -81,36 +82,35 @@ function Hero() {
 
 /* -------------------------------------------------------------------- actualités */
 const newsTabs = [
-  { label: 'Tous (24)', on: true },
-  { label: 'Réseau & Ouvertures (8)' },
-  { label: 'Transition Énergétique (6)' },
-  { label: 'Communiqués (5)' },
-  { label: 'B2B & Partenariats (5)' },
+  { label: 'Tous (5)', on: true },
+  { label: 'Réseau & Ouvertures (3)' },
+  { label: 'Gaz & Centres (1)' },
+  { label: 'Conformité (1)' },
 ]
 
 const newsCards = [
   {
     img: '/images/act-n1.jpg',
-    date: '14 Octobre 2025',
+    date: '28 Avril 2026',
     read: '3 min',
-    title: 'Déploiement de 40 nouvelles bornes de recharge ultra-rapide E-Vision sur l’axe Douala–Yaoundé',
-    text: 'Un investissement structurant pour fiabiliser la première autoroute décarbonée de la sous-région, alimentée à 45% par des ombrières…',
+    title: 'Inauguration officielle de la station de Mbouda',
+    text: 'Ouverte le 28 avril 2026 dans le département des Bamboutos, la station rejoint le maillage de l’Ouest engagé depuis Batcham, avec carburants, gaz en bouteille et lubrifiants…',
     tone: '',
   },
   {
     img: '/images/act-n2.jpg',
-    date: '02 Octobre 2025',
+    date: '15 Janvier 2026',
     read: '5 min',
-    title: 'Vision Energy signe un partenariat d’approvisionnement en VLSFO avec les armateurs d’Afrique de l’Ouest',
-    text: 'Accords pluriannuels garantissant la fourniture en fioul marin à très basse teneur en soufre conforme aux normes IMO 2020 sur les ports de…',
+    title: 'Batcham ouverte sur l’axe Mbouda – Batcham',
+    text: 'Treize mois après la mise en conformité de Tobe, notre réseau s’étend sur un nouvel axe de la Région de l’Ouest, confirmant le cap de 30 stations d’ici 2028…',
     tone: ' link-arrow--blue',
   },
   {
     img: '/images/act-n3.jpg',
-    date: '19 Septembre 2025',
+    date: '27 Juin 2025',
     read: '4 min',
-    title: 'Lancement de la gamme Lubrifiants VisionPro™ SynthTech certifiée API SP pour climats tropicaux',
-    text: 'Formulée pour résister aux contraintes de température extrême et de poussière sévère, notre nouvelle gamme réduit la consommation…',
+    title: 'Station de Tobe (Poumougne) : accompagnement vers la mise en conformité',
+    text: 'Étude d’impact, plan d’urgence et dossier technique déposés auprès des services compétents du MINMIDT : la station de Tobe, sur l’axe Douala – Yaoundé, a été accompagnée jusqu’à…',
     tone: '',
   },
 ]
@@ -121,13 +121,13 @@ function News() {
       <div className="container">
         <div className="sec-head act-news-head">
           <div>
-            <span className="eyebrow eyebrow--dot">Magazine d’information énergétique</span>
+            <span className="eyebrow eyebrow--dot">Actualités du réseau Vision Energy</span>
             <h2 className="h2 act-news-title">
-              Les Récentes Réalisations &amp; Événements
+              Ouvertures de Stations &amp; Étapes Réglementaires
             </h2>
             <p className="act-news-lead">
-              Découvrez nos avancées industrielles, investissements logistiques et engagements RSE à
-              travers nos dépêches certifiées.
+              Découvrez nos avancées sur le terrain : mises en service, chantiers de centres de
+              remplissage de gaz et dossiers de conformité déposés auprès des autorités.
             </p>
           </div>
           <div className="act-tabs" role="group" aria-label="Filtrer les actualités par thème">
@@ -141,12 +141,12 @@ function News() {
 
         <article className="card card--pad0 act-feat">
           <div className="act-feat-media">
-            <img src="/images/act-hero.jpg" alt="Inauguration du hub multi-énergies" />
+            <img src="/images/act-hero.jpg" alt="Station-service Vision Energy en exploitation" />
           </div>
           <div className="act-feat-body">
             <div className="act-feat-meta">
               <span>
-                <Icon.calendar /> 28 Octobre 2025
+                <Icon.calendar /> 15 Janvier 2026
               </span>
               <i>•</i>
               <span>
@@ -154,20 +154,19 @@ function News() {
               </span>
             </div>
             <h3 className="act-feat-title">
-              Inauguration du Hub Multi-Énergies de Kribi Deep Sea : Vision Energy renforce son corridor
-              logistique et ses bornes ultra-rapides.
+              Cap 30 stations d’ici 2028 : le réseau poursuit sa croissance entre Littoral et Ouest.
             </h3>
             <p className="act-feat-text">
-              Ce complexe multimodal intègre le premier corridor de recharge haute puissance E-Vision pour
-              le fret routier, 12 pompes haut débit à flux régulé et une station de soutes pour la desserte
-              portuaire maritime, consolidant le transit vers le Bassin du Congo. En appui, le réseau de
-              stations-service s’accélère : ouvertures à Tobe / Poumougne et Bafoussam, cap sur plusieurs
-              dizaines de sites d’ici 2028 et centres de remplissage de gaz à Douala et Bafoussam.
+              Ouverte sur l’axe Mbouda – Batcham, notre nouvelle station prolonge le maillage engagé
+              depuis Bonamoussadi (Douala), premier repère du réseau depuis 2021. En appui, le programme
+              industriel de construction et de réhabilitation de centres de remplissage de gaz se
+              déploie à Douala et à Bafoussam, pour rapprocher le GPL ménager des familles et tenir
+              notre promesse : la qualité à bon prix.
             </p>
             <div className="act-tags">
-              <span>Corridors Logistiques</span>
-              <span>Mobilité Électrique</span>
-              <span>Soutes Maritimes</span>
+              <span>Réseau de stations</span>
+              <span>Gaz domestique</span>
+              <span>Qualité à bon prix</span>
             </div>
             <div className="act-feat-cta">
               <a className="btn btn--primary" href={href('/actualites')}>
@@ -212,7 +211,7 @@ function News() {
           </div>
           <div className="act-press-text">
             <span className="eyebrow eyebrow--mint">Relations médias &amp; journalistes</span>
-            <h3 className="act-press-title">Espace Presse Officiel 2025</h3>
+            <h3 className="act-press-title">Espace Presse &amp; Documentation 2026</h3>
             <p>
               Téléchargez notre kit média complet : logos institutionnels haute résolution, photos libres de
               droits de nos infrastructures, dossier stratégique et charte d’utilisation de marque.
@@ -237,33 +236,33 @@ const values = [
   {
     icon: <Icon.trendUp />,
     tone: '',
-    title: 'Parcours d’Évolution Rapide',
-    text: 'Mobilité interne proactive et passerelles fonctionnelles directes entre opérations terrain, dépôts portuaires, trading et siège stratégique.',
-    link: '+68% de promotions internes',
+    title: 'Grandir avec le Réseau',
+    text: 'Objectif 30 stations d’ici 2028, centres de remplissage de gaz en construction : chaque ouverture crée des postes à responsabilité pour les équipes en place.',
+    link: 'Douala, Bafoussam, Mbouda, Batcham',
     cls: '',
   },
   {
     icon: <Icon.shieldPlus />,
     tone: 'act-tile--gray',
-    title: 'Excellence & Sécurité HSE',
-    text: 'Formations certifiantes continues aux standards mondiaux Seveso II, gestes d’urgence et culture inflexible du zéro accident avec arrêt de travail.',
-    link: 'Certifications ISO 14001 & 45001',
+    title: 'Sécurité & Conformité',
+    text: 'Procédures strictes en station et sur les centres gaz, plans d’urgence par site et dossiers réglementaires MINMIDT suivis par nos équipes.',
+    link: 'Sécurité en station, non négociable',
     cls: ' act-val-link--dark',
   },
   {
     icon: <Icon.leaf />,
     tone: '',
-    title: 'Impact Réel & Transition',
-    text: 'Contribuez concrètement à l’indépendance énergétique et au déploiement des infrastructures solaires, gaz propre et mobilité électrique en Afrique.',
-    link: 'Projets RSE à fort impact',
+    title: 'Compétences Techniques',
+    text: 'Quatre spécialités internes — lubrifiants, électricité, automatisme et gaz — entretenues par nos ingénieurs et transmises aux équipes de terrain.',
+    link: 'Ingénierie camerounaise',
     cls: '',
   },
   {
     icon: <Icon.rosette />,
     tone: 'icon-tile--lav',
-    title: 'Avantages Compétitifs',
-    text: 'Rémunérations stimulantes, couverture santé premium familiale intégrale, intéressement annuel et programmes d’aide à la scolarité.',
-    link: 'Package social de référence',
+    title: 'Ancrage Local',
+    text: 'Une équipe camerounaise en poste depuis mars 2023, formée à la conduite de station, au service client et à la manipulation des bouteilles de gaz.',
+    link: 'Emplois formés localement',
     cls: ' act-val-link--blue',
   },
 ]
@@ -271,65 +270,65 @@ const values = [
 const jobs = [
   {
     contract: 'CDI',
-    level: 'SENIOR',
-    ref: 'RÉF: CM-DEP-042',
-    title: 'Responsable de Dépôt Pétrolier & Logistique Cuves',
+    level: 'CONFIRMÉ',
+    ref: 'RÉF: CM-GAZ-014',
+    title: 'Technicien Centre de Remplissage Gaz',
     city: 'Douala, Cameroun',
-    dept: 'Dépôts & Flux Hydrocarbures',
-    deptIcon: <Icon.building />,
+    dept: 'Centres de Remplissage & Gaz',
+    deptIcon: <Icon.flame />,
     date: 'Publié il y a 2 jours',
-    text: 'Supervision de la chaîne de stockage de 85 000 m³, pilotage des dépotages navires, audit de conformité douanière et gestion d’une équipe de 35 techniciens de piste.',
-  },
-  {
-    contract: 'CDI',
-    level: 'CONFIRMÉ (5 ANS+)',
-    ref: 'RÉF: CM-HSE-118',
-    title: 'Ingénieur HSE & Conformité Seveso II',
-    city: 'Douala, Cameroun',
-    dept: 'Qualité, Sécurité & Environnement',
-    deptIcon: <Icon.shieldPlus />,
-    date: 'Publié il y a 4 jours',
-    text: 'Mise en application des directives HSE groupe, audit annuel des dépôts côtiers, analyse des risques industriels et déploiement du programme mondial "Vision Tolérance Zéro".',
+    text: 'Conduite des lignes de remplissage de bouteilles B6 / B12 / B35, contrôles d’étanchéité et de poids, respect des protocoles de manipulation et tenue des registres de production.',
   },
   {
     contract: 'CDI',
     level: 'CONFIRMÉ',
-    ref: 'RÉF: CM-RET-091',
-    title: 'Chef de Zone Réseau Stations-Service (Territoire Sud)',
+    ref: 'RÉF: CM-OPS-021',
+    title: 'Responsable de Station-Service',
     city: 'Bafoussam, Cameroun',
-    dept: 'Retail & Réseau Forecourt',
-    deptIcon: <Icon.shop />,
+    dept: 'Exploitation & Réseau Stations',
+    deptIcon: <Icon.fuel />,
+    date: 'Publié il y a 4 jours',
+    text: 'Pilotage quotidien de la piste et de la boutique, management de l’équipe de pompage, suivi des stocks de Super 95, Gasoil et gaz en bouteille, service client fidèle à notre promesse : la qualité à bon prix.',
+  },
+  {
+    contract: 'CDI',
+    level: 'SENIOR',
+    ref: 'RÉF: CM-TEC-007',
+    title: 'Ingénieur Électricité & Automatisme (Réseaux & Pompes)',
+    city: 'Douala / Bafoussam, Cameroun',
+    dept: 'Direction Technique',
+    deptIcon: <Icon.bolt />,
     date: 'Publié il y a 6 jours',
-    text: 'Pilotage opérationnel de 22 stations-service : rentabilité des pistes, conformité de marque, animation des gérants, développement des boutiques Express et déploiement Vision Pay.',
+    text: 'Installation, maintenance et supervision des équipements électriques et des automatismes de distribution ; participation à la réhabilitation des îlots et unités de pompage du réseau.',
   },
   {
     contract: 'CDI',
     level: 'INTERMÉDIAIRE',
-    ref: 'RÉF: CM-B2B-015',
-    title: 'Commercial Grands Comptes B2B & Bunkering',
-    city: 'Kribi, Cameroun',
-    dept: 'Trading & Ventes Industrielles',
-    deptIcon: <Icon.ship />,
+    ref: 'RÉF: CM-CON-011',
+    title: 'Chargé de Conformité & Dossiers Réglementaires',
+    city: 'Douala, Cameroun',
+    dept: 'Conformité & Affaires Réglementaires',
+    deptIcon: <Icon.shieldPlus />,
     date: 'Publié il y a 1 semaine',
-    text: 'Négociation de contrats d’approvisionnement en vrac pour flottes minières, forestières et armateurs maritimes. Négociation de contrats de soutes et suivi de livraison par barges.',
+    text: 'Constitution et suivi des études d’impact, plans d’urgence et dossiers MINMIDT pour les nouvelles implantations et les mises en conformité, comme celles accompagnées à Tobe et Mbouda.',
   },
   {
     contract: 'CDI',
     level: 'JUNIOR / INTERMÉDIAIRE',
-    ref: 'RÉF: HQ-FIN-088',
-    title: 'Analyste Financier Trading Hydrocarbures & Hedging',
-    city: 'Siège Régional — Douala',
-    dept: 'Finance & Contrôle des Risques',
-    deptIcon: <Icon.chart />,
+    ref: 'RÉF: CM-COM-018',
+    title: 'Commercial Gaz & Lubrifiants (B2B)',
+    city: 'Yaoundé / Douala, Cameroun',
+    dept: 'Ventes Professionnels & Ménages',
+    deptIcon: <Icon.truck />,
     date: 'Publié il y a 10 jours',
-    text: 'Suivi des cotations Platts, modélisation des marges raffinées, couverture des risques de change et reporting quotidien des positions physiques pour la direction du Trading.',
+    text: 'Développement des livraisons de gaz et de lubrifiants VisionPro auprès des garages, transporteurs et PME des régions du Littoral et de l’Ouest, avec suivi des tournées et des contrats.',
   },
 ]
 
 const steps = [
   { n: '01', tone: '', title: 'Candidature en Ligne', text: 'Étude de votre CV et de l’adéquation technique sous 72h ouvrées par la cellule RH.' },
   { n: '02', tone: '', title: 'Entretien RH Découverte', text: 'Échange en visio ou présentiel de 45 min axé sur vos motivations et valeurs partagées.' },
-  { n: '03', tone: ' act-step--blue', title: 'Cas Métier & HSE', text: 'Mise en situation concrète avec le Manager Opérationnel et le Responsable HSE.' },
+  { n: '03', tone: ' act-step--blue', title: 'Cas Métier & Sécurité', text: 'Mise en situation concrète avec le responsable d’exploitation et le chargé de conformité du site.' },
   { n: '04', tone: '', title: 'Rencontre & Intégration', text: 'Validation finale par la Direction Générale et remise de l’offre d’embauche personnalisée.' },
 ]
 
@@ -342,11 +341,12 @@ function Careers() {
             <Icon.users /> Marque employeur &amp; culture d’entreprise
           </span>
           <h2 className="h2 car-intro-title">
-            Faites grandir votre talent dans un groupe panafricain en pleine expansion.
+            Faites grandir votre talent dans un réseau camerounais en pleine construction.
           </h2>
           <p className="car-intro-lead">
-            Chez Vision Energy, nous formons une communauté d’ingénieurs, gestionnaires de flux, techniciens
-            et stratèges engagés à alimenter l’économie réelle en toute sécurité.
+            Chez Vision Energy, nous formons une équipe d’ingénieurs, de responsables de station et de
+            techniciens gaz engagés à distribuer énergie et services de proximité, en sécurité, à travers
+            le Littoral et l’Ouest du Cameroun.
           </p>
 
           <div className="grid grid-4 car-values">
@@ -363,24 +363,24 @@ function Careers() {
           <article className="card car-testi">
             <div className="car-testi-media">
               <div className="car-testi-photo">
-                <img src="/images/act-testi-clean.jpg" alt="Aminata Touré, sur le terrain" />
+                <img src="/images/act-testi-clean.jpg" alt="Équipe Vision Energy en station" />
               </div>
               <span className="car-testi-badge">
-                <IconQuote /> 8 ans d’ancienneté
+                <IconQuote /> Équipes en poste depuis 2023
               </span>
             </div>
             <div className="car-testi-body">
               <span className="eyebrow car-eyebrow-icon">
-                <Icon.userCheck /> Témoignage collaborateur
+                <Icon.userCheck /> Vu du terrain
               </span>
               <blockquote className="car-quote">
-                « Entrée comme ingénieure stagiaire sur le terminal de Douala, j’ai eu l’opportunité de diriger
-                l’automatisation de nos cuves avant de prendre la tête des opérations réseau pour 3 filiales.
-                Vision Energy offre la confiance et les moyens d’entreprendre. »
+                « Chaque station que nous ouvrons ou remettons aux normes est un métier complet :
+                préparer le site, former l’équipe de piste, tenir la qualité du produit et rassurer le
+                client à chaque visite. Le réseau grandit vite, et les responsabilités suivent. »
               </blockquote>
-              <b className="car-name">Aminata Touré</b>
-              <span className="car-role">Directrice Adjointe des Opérations Réseau &amp; Logistique Régionale</span>
-              <span className="car-committee">Membre du Comité Technique Transition E-Vision</span>
+              <b className="car-name">Exploitation Vision Energy</b>
+              <span className="car-role">Équipes stations &amp; centres de remplissage de gaz</span>
+              <span className="car-committee">Douala · Bafoussam · Mbouda · Batcham</span>
             </div>
           </article>
         </div>
@@ -406,21 +406,22 @@ function Careers() {
               <span>Filtrer par Département</span>
               <select defaultValue="all">
                 <option value="all">Tous les Départements (5)</option>
-                <option>Dépôts &amp; Flux Hydrocarbures</option>
-                <option>Qualité, Sécurité &amp; Environnement</option>
-                <option>Retail &amp; Réseau Forecourt</option>
-                <option>Trading &amp; Ventes Industrielles</option>
-                <option>Finance &amp; Contrôle des Risques</option>
+                <option>Centres de Remplissage &amp; Gaz</option>
+                <option>Exploitation &amp; Réseau Stations</option>
+                <option>Direction Technique</option>
+                <option>Conformité &amp; Affaires Réglementaires</option>
+                <option>Ventes Professionnels &amp; Ménages</option>
               </select>
               <Icon.chevD />
             </label>
             <label className="car-field">
-              <span>Filtrer par Pays / Localisation</span>
+              <span>Filtrer par Ville / Localisation</span>
               <select defaultValue="all">
-                <option value="all">Tous les Sites (Douala, Bafoussam, Kribi)</option>
+                <option value="all">Tous les Sites (Douala, Bafoussam)</option>
                 <option>Douala, Cameroun</option>
                 <option>Bafoussam, Cameroun</option>
-                <option>Kribi, Cameroun</option>
+                <option>Douala / Bafoussam, Cameroun</option>
+                <option>Yaoundé / Douala, Cameroun</option>
               </select>
               <Icon.chevD />
             </label>
@@ -428,7 +429,7 @@ function Careers() {
               <span>Recherche Rapide</span>
               <span className="car-search">
                 <Icon.search />
-                <input type="search" placeholder="Ex: HSE, Cuves, Retail, Trader…" aria-label="Recherche rapide" />
+                <input type="search" placeholder="Ex: Gaz, Station, Automatisme, Conformité…" aria-label="Recherche rapide" />
               </span>
             </label>
           </div>
@@ -497,7 +498,7 @@ function Careers() {
                 </span>
                 <div>
                   <b>Protection des Données RH</b>
-                  <p>Vos informations et CV sont hébergés conformément aux normes de confidentialité panafricaines et RGPD.</p>
+                  <p>Vos informations et CV sont conservés de façon strictement confidentielle et utilisés uniquement pour le recrutement, conformément à la réglementation camerounaise sur la protection des données personnelles.</p>
                 </div>
               </div>
               <div className="car-note car-note--mint">
@@ -505,8 +506,8 @@ function Careers() {
                   <Icon.bolt />
                 </span>
                 <p>
-                  Notre équipe RH recrute continuellement dans les métiers de la mobilité électrique E-Vision
-                  et du Gaz propre (GPL), ainsi que pour la direction technique : ingénieurs spécialisés en
+                  Nous recrutons en continu pour nos stations et nos centres de remplissage de gaz en
+                  construction, ainsi que pour la direction technique : ingénieurs spécialisés en
                   lubrifiants, électricité, automatisme et gaz.
                 </p>
               </div>
@@ -516,24 +517,24 @@ function Careers() {
               <div className="car-form-grid">
                 <label className="car-in">
                   <span>Nom et Prénom *</span>
-                  <input type="text" placeholder="Ex: Moussa Diallo" />
+                  <input type="text" placeholder="Ex: Kamga Larissa" />
                 </label>
                 <label className="car-in">
                   <span>Email Professionnel *</span>
-                  <input type="email" placeholder="moussa.diallo@domaine.com" />
+                  <input type="email" placeholder="prenom.nom@domaine.cm" />
                 </label>
                 <label className="car-in">
                   <span>Téléphone / WhatsApp *</span>
                   <input type="tel" placeholder="+237 6 00 00 00 00" />
                 </label>
                 <label className="car-in">
-                  <span>Pays de résidence souhaité *</span>
+                  <span>Ville d’affectation souhaitée *</span>
                   <select defaultValue="">
-                    <option value="">Sélectionnez un pays</option>
-                    <option>Cameroun</option>
-                    <option>Côte d’Ivoire</option>
-                    <option>Gabon</option>
-                    <option>Autre</option>
+                    <option value="">Sélectionnez une ville</option>
+                    <option>Douala, Cameroun</option>
+                    <option>Bafoussam, Cameroun</option>
+                    <option>Mbouda / Batcham, Cameroun</option>
+                    <option>Yaoundé / Douala, Cameroun</option>
                   </select>
                 </label>
                 <label className="car-in car-in--full">
@@ -541,10 +542,10 @@ function Careers() {
                   <select defaultValue="">
                     <option value="">Choisissez votre expertise principale</option>
                     <option>Exploitation de stations-service</option>
-                    <option>Dépôts &amp; logistique cuves</option>
-                    <option>HSE &amp; conformité</option>
+                    <option>Centres de remplissage de gaz &amp; bouteilles</option>
+                    <option>Conformité &amp; dossiers réglementaires</option>
                     <option>Ingénierie lubrifiants, électricité, automatisme &amp; gaz</option>
-                    <option>Trading, B2B &amp; finance</option>
+                    <option>Ventes gaz &amp; lubrifiants aux professionnels</option>
                   </select>
                 </label>
                 <label className="car-in car-in--full">
