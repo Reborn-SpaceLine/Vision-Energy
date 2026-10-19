@@ -27,8 +27,8 @@ function GasBottle(p: SVGProps<SVGSVGElement>) {
 
 /* --------------------------------------------------------------- hero */
 const heroStats = [
-  { value: '795', label: 'CFA/L Super 95 homologué' },
-  { value: '745', label: 'CFA/L Gasoil homologué' },
+  { value: '840', label: 'CFA/L Super 95 — grille MINMIDT' },
+  { value: '828', label: 'CFA/L Gasoil — grille MINMIDT' },
   { value: 'B6 → B35', label: 'Gaz en bouteille, en stock' },
 ]
 
@@ -118,7 +118,7 @@ const fuels = [
     title: 'Super 95 ProClean™',
     desc: "Agent détergent actif qui limite l'encrassement des soupapes d'admission et préserve la réactivité du moteur.",
     stats: [
-      { cls: 'pro-stat--green', icon: <Icon.tag />, value: '795 CFA/L', label: 'Prix homologué' },
+      { cls: 'pro-stat--green', icon: <Icon.tag />, value: '840 CFA/L', label: 'Grille MINMIDT' },
       { cls: 'pro-stat--blue', icon: <Icon.shield />, value: 'Contrôle', label: 'Justesse en station' },
     ],
     ticks: [
@@ -137,7 +137,7 @@ const fuels = [
     title: 'Gasoil ProClean™',
     desc: "Conçu pour les moteurs diesel haute pression, il limite l'encrassement des injecteurs et espace les cycles de maintenance.",
     stats: [
-      { cls: 'pro-stat--green', icon: <Icon.tag />, value: '745 CFA/L', label: 'Prix homologué' },
+      { cls: 'pro-stat--green', icon: <Icon.tag />, value: '828 CFA/L', label: 'Grille MINMIDT' },
       { cls: 'pro-stat--blue', icon: <Icon.hourglass />, value: 'Disponible', label: 'Piste & vrac pro' },
     ],
     ticks: [

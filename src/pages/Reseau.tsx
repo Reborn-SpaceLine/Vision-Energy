@@ -40,8 +40,8 @@ const stations: Station[] = [
     addr: 'Bonamoussadi, Douala, Région du Littoral',
     lead: true,
     prices: [
-      { label: 'Super 95', value: '795', unit: 'CFA/L' },
-      { label: 'Gasoil', value: '745', unit: 'CFA/L', tone: 'green' },
+      { label: 'Super 95', value: '840', unit: 'CFA/L' },
+      { label: 'Gasoil', value: '828', unit: 'CFA/L', tone: 'green' },
       { label: 'Gaz Bout.', value: 'En stock', tone: 'blue' },
     ],
     svcs: [
@@ -61,8 +61,8 @@ const stations: Station[] = [
     name: 'Station Douala – Logbessou PK15',
     addr: 'Logbessou, PK15, Douala, Région du Littoral',
     prices: [
-      { label: 'Super 95', value: '795', unit: 'CFA/L' },
-      { label: 'Gasoil', value: '745', unit: 'CFA/L', tone: 'green' },
+      { label: 'Super 95', value: '840', unit: 'CFA/L' },
+      { label: 'Gasoil', value: '828', unit: 'CFA/L', tone: 'green' },
       { label: 'Gaz Bout.', value: 'En stock' },
     ],
     svcs: [
@@ -81,8 +81,8 @@ const stations: Station[] = [
     name: 'Station Bafoussam – Bamendzi',
     addr: 'Bamendzi, avant le stade municipal, Bafoussam, Région de l’Ouest',
     prices: [
-      { label: 'Super 95', value: '795', unit: 'CFA/L' },
-      { label: 'Gasoil', value: '745', unit: 'CFA/L', tone: 'green' },
+      { label: 'Super 95', value: '840', unit: 'CFA/L' },
+      { label: 'Gasoil', value: '828', unit: 'CFA/L', tone: 'green' },
       { label: 'Gaz Bout.', value: 'En stock' },
     ],
     svcs: [
@@ -101,8 +101,8 @@ const stations: Station[] = [
     name: 'Station Batcham',
     addr: 'Axe Mbouda – Batcham, Région de l’Ouest',
     prices: [
-      { label: 'Super 95', value: '795', unit: 'CFA/L' },
-      { label: 'Gasoil', value: '745', unit: 'CFA/L', tone: 'green' },
+      { label: 'Super 95', value: '840', unit: 'CFA/L' },
+      { label: 'Gasoil', value: '828', unit: 'CFA/L', tone: 'green' },
       { label: 'Gaz Bout.', value: 'En stock' },
     ],
     svcs: [
@@ -121,8 +121,8 @@ const stations: Station[] = [
     name: 'Station Mbouda',
     addr: 'Mbouda, Département des Bamboutos, Région de l’Ouest',
     prices: [
-      { label: 'Super 95', value: '795', unit: 'CFA/L' },
-      { label: 'Gasoil', value: '745', unit: 'CFA/L', tone: 'green' },
+      { label: 'Super 95', value: '840', unit: 'CFA/L' },
+      { label: 'Gasoil', value: '828', unit: 'CFA/L', tone: 'green' },
       { label: 'Lubrifiant', value: 'Pro 15W40' },
     ],
     svcs: [
@@ -141,8 +141,8 @@ const stations: Station[] = [
     name: 'Station Tobe – Poumougne',
     addr: 'Tobe, arr. Poumougne, Koung-Khi, Région de l’Ouest',
     prices: [
-      { label: 'Super 95', value: '795', unit: 'CFA/L' },
-      { label: 'Gasoil', value: '745', unit: 'CFA/L', tone: 'green' },
+      { label: 'Super 95', value: '840', unit: 'CFA/L' },
+      { label: 'Gasoil', value: '828', unit: 'CFA/L', tone: 'green' },
       { label: 'Gaz Bout.', value: 'En stock' },
     ],
     svcs: [
@@ -319,7 +319,10 @@ export default function ReseauPage() {
             <div className="res-st-head">
               <div>
                 <h2 className="res-st-h">Stations à proximité</h2>
-                <p className="res-st-count">6 stations identifiées au Cameroun • objectif 30 d’ici 2028</p>
+                <p className="res-st-count">
+                  6 stations identifiées au Cameroun • objectif 30 d’ici 2028 • prix affichés : grille
+                  officielle MINMIDT en vigueur
+                </p>
               </div>
               <span className="res-live">Réseau Cameroun</span>
             </div>

@@ -225,9 +225,9 @@ function Gouvernance() {
     <section className="section grp-sec">
       <div className="container grp-gov">
         <figure className="grp-director">
-          <img src="/images/grp-director-clean.jpg" alt="M. Kamdem Youmbi Ngué Tchuchi Ghislain, Directeur Général du Groupe Vision Energy" />
+          <img src="/images/grp-director-clean.jpg" alt="M. Kamdem Youmbi Ngué Tchuchi Ghislain, Président-Directeur Général de Vision Energy S.A." />
           <figcaption className="grp-director-cap">
-            <span>Directeur Général du Groupe</span>
+            <span>Président-Directeur Général</span>
             <b>M. Kamdem Youmbi Ngué Tchuchi Ghislain</b>
             <p>Dirigeant de Vision Energy S.A., capital d’origine camerounaise</p>
           </figcaption>
