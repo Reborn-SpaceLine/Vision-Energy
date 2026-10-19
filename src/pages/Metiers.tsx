@@ -7,7 +7,7 @@ import '../styles/metiers.css'
 /* ------------------------------------------------------------------- hero */
 const heroStats = [
   { value: '30', label: 'Stations visées d’ici 2028' },
-  { value: '6', label: 'Stations livrées ou citées' },
+  { value: '6', label: 'Stations en exploitation' },
   { value: '2', label: 'Villes de centres gaz — Douala & Bafoussam' },
   { value: '4', label: 'Spécialités d’ingénierie' },
 ]
