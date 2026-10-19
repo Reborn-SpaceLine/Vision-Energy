@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { href } from '../router'
+import { href, parseHash } from '../router'
 import { Icon } from '../components/icons'
 import { CtaBand } from './Home'
 import '../styles/act.css'
@@ -213,16 +213,19 @@ function News() {
             <span className="eyebrow eyebrow--mint">Relations médias &amp; journalistes</span>
             <h3 className="act-press-title">Espace Presse &amp; Documentation 2026</h3>
             <p>
-              Téléchargez notre kit média complet : logos institutionnels haute résolution, photos libres de
-              droits de nos infrastructures, dossier stratégique et charte d’utilisation de marque.
+              Logo institutionnel, photos de nos stations et repères du réseau : nous communiquons les
+              éléments presse sur demande, en précisant le support et le délai souhaités.
             </p>
           </div>
           <div className="btn-row act-press-cta">
-            <a className="btn btn--primary act-press-btn" href={href('/actualites', 'presse')}>
-              <Icon.download /> Télécharger le Kit Média (.ZIP 48Mo)
+            <a
+              className="btn btn--primary act-press-btn"
+              href="mailto:direction@vision-energy.cm?subject=Demande%20de%20kit%20m%C3%A9dia"
+            >
+              <Icon.mail /> Demander le kit média
             </a>
-            <a className="btn act-press-btn2" href={href('/groupe', 'contact')}>
-              <Icon.mail /> Contact Presse Groupe
+            <a className="btn act-press-btn2" href={href('/reseau', 'contact')}>
+              <Icon.phone /> Contacter le réseau
             </a>
           </div>
         </div>
@@ -596,21 +599,21 @@ function Careers() {
 
 /* ---------------------------------------------------------------------- page */
 export default function ActualitesPage() {
-  const [path, setPath] = useState(() => window.location.hash.replace(/^#/, '').split('#')[0] || '/')
+  const [route, setRoute] = useState(() => parseHash())
 
   useEffect(() => {
-    const onChange = () => setPath(window.location.hash.replace(/^#/, '').split('#')[0] || '/')
+    const onChange = () => setRoute(parseHash())
     window.addEventListener('hashchange', onChange)
     return () => window.removeEventListener('hashchange', onChange)
   }, [])
 
   useEffect(() => {
-    if (path !== '/carrieres') return
+    if (route.path !== '/carrieres' || route.section) return
     const t = window.setTimeout(() => {
       document.getElementById('carrieres')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }, 80)
     return () => window.clearTimeout(t)
-  }, [path])
+  }, [route.path, route.section])
 
   return (
     <>

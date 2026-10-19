@@ -1174,6 +1174,7 @@
 
   .act-press-cta {
     margin-left: 0;
+    flex: 1 1 auto;
   }
 
   .car-testi,

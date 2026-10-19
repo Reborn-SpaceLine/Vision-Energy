@@ -200,8 +200,8 @@ function Valeurs() {
           </span>
           <h2 className="h2">Vision, Mission &amp; Engagements</h2>
           <p className="lead">
-            Notre boussole stratégique oriente chaque mètre cube distribué et chaque partenariat
-            industriel scellé.
+            Nos principes guident chaque geste du réseau : la sécurité des sites, la traçabilité des
+            produits et la qualité à bon prix pour chaque client.
           </p>
         </div>
         <div className="grid grid-4">
@@ -361,7 +361,7 @@ function Rapport() {
               programme de centres de remplissage et notre engagement : la qualité à bon prix.
             </p>
             <div className="grp-report-meta">
-              <span>Format PDF interactif</span>
+              <span>Stations, gaz &amp; lubrifiants</span>
               <i aria-hidden="true">•</i>
               <span>Objectif 30 stations d’ici 2028</span>
               <i aria-hidden="true">•</i>
@@ -369,10 +369,10 @@ function Rapport() {
             </div>
           </div>
           <div className="grp-report-actions">
-            <a className="btn btn--primary" href={href('/actualites')}>
-              <Icon.download /> Télécharger le Rapport (PDF)
+            <a className="btn btn--primary" href={href('/reseau')}>
+              <Icon.pin /> Localiser nos stations
             </a>
-            <a className="btn btn--outline" href={href('/contact')}>
+            <a className="btn btn--outline" href={href('/reseau', 'contact')}>
               <Icon.mail /> Écrire à la direction
             </a>
           </div>

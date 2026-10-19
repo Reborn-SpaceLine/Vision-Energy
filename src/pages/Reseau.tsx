@@ -178,26 +178,26 @@ const experiences = [
   {
     icon: <PisteIcon />,
     tile: 'mint',
-    title: 'Pisteurs Dédiés & Formés',
-    text: "Accueil chaleureux, contrôle visuel de pression de vos pneumatiques, nettoyage gratuit du pare-brise et vérification des niveaux d'huile sur simple demande.",
+    title: 'Équipes de Piste en Station',
+    text: "Accueil à la pompe, coup d'œil sur la pression des pneumatiques et les niveaux, halte propre avant de repartir : le service qui fait la différence au quotidien.",
     img: '/images/res-a.jpg',
-    alt: 'Pisteur Vision Energy au service d’un client en station',
+    alt: 'Équipe de piste Vision Energy au service d’un client en station',
   },
   {
     icon: <Icon.shield />,
     tile: 'blue',
-    title: 'Sécurité Nocturne Renforcée',
-    text: "Éclairage LED à haute intensité sur 100% de la piste, présence constante d'agents certifiés et surveillance vidéo HD connectée au centre opérationnel 24h/24.",
+    title: 'Stations Éclairées et Surveillées',
+    text: "Pistes éclairées la nuit, présence constante d’agents et procédures de sécurité affichées sur chaque site, y compris à côté des aires de remplissage gaz.",
     img: '/images/res-b.jpg',
     alt: 'Station Vision Energy éclairée de nuit',
   },
   {
     icon: <Icon.shop />,
     tile: 'dark',
-    title: 'Boutiques V-Shop & Espaces Café',
-    text: 'Café fraîchement moulu, viennoiseries du matin, sélection soignée de produits de dépannage, sanitaires inspectés toutes les 30 minutes et wifi très haut débit.',
+    title: 'Boutiques & Espaces Café',
+    text: 'Boissons fraîches, produits de dépannage, lubrifiants et accessoires : de quoi reprendre la route sans détour, dans un espace entretenu pendant l’attente.',
     img: '/images/res-c.jpg',
-    alt: 'Intérieur de boutique V-Shop Vision Energy',
+    alt: 'Intérieur de boutique Vision Energy',
   },
 ]
 
@@ -206,8 +206,8 @@ const partPoints = [
   {
     icon: <Icon.check />,
     tone: 'green',
-    title: 'Financement & Aménagement',
-    text: 'Prise en charge intégrale des cuves double paroi, auvents et totems certifiés HSE.',
+    title: 'Aménagement & Enseigne',
+    text: 'Îlots de distribution, signalétique et équipements repris par nos équipes techniques, comme lors de la mise en conformité de Tobe.',
   },
   {
     icon: <Icon.trendUp />,
@@ -218,8 +218,8 @@ const partPoints = [
   {
     icon: <Icon.grad />,
     tone: 'green',
-    title: 'Académie Vision Energy',
-    text: 'Cycles complets de formation pour vos gérants, caissiers et techniciens de piste.',
+    title: 'Formation de Vos Équipes',
+    text: 'Accompagnement de vos gérants et agents de piste sur la sécurité, la manipulation du gaz et l’accueil client.',
   },
 ]
 
@@ -321,7 +321,7 @@ export default function ReseauPage() {
                 <h2 className="res-st-h">Stations à proximité</h2>
                 <p className="res-st-count">6 stations identifiées au Cameroun • objectif 30 d’ici 2028</p>
               </div>
-              <span className="res-live">Réseau Temps Réel</span>
+              <span className="res-live">Réseau Cameroun</span>
             </div>
 
             {stations.map((st) => (
@@ -401,12 +401,12 @@ export default function ReseauPage() {
                 <Icon.rosette />
               </span>
               <div>
-                <span className="res-map-k">Engagement Qualité Totale</span>
-                <h3>Contrôle Métrologique &amp; Pureté 100% Garanti</h3>
+                <span className="res-map-k">Engagement Qualité</span>
+                <h3>Contrôle Métrologique des Pompes</h3>
                 <p>Pompes électroniques vérifiées périodiquement par les services compétents de la métrologie.</p>
               </div>
               <a className="res-tariff" href={href('/produits', 'carburants')}>
-                <Icon.download /> Grille Tarifaire Officielle
+                <Icon.fuel /> Consulter nos carburants
               </a>
             </div>
           </div>
@@ -419,8 +419,8 @@ export default function ReseauPage() {
           <span className="res-eyebrow">Standards &amp; Confort</span>
           <h2 className="res-exp-h">Une Expérience en Station Repensée pour Chaque Conducteur</h2>
           <p className="res-exp-lead">
-            Chez Vision Energy, faire le plein n'est plus une contrainte. Nos pistes obéissent aux
-            protocoles HSE les plus stricts pour votre tranquillité d'esprit.
+            Chez Vision Energy, faire le plein doit rester simple. Nos pistes suivent des procédures
+            de sécurité et de contrôle appliquées sur chaque station du réseau.
           </p>
           <div className="grid grid-3 res-exp-grid">
             {experiences.map((c) => (
@@ -559,7 +559,7 @@ export default function ReseauPage() {
               <Icon.phone /> Service Clientèle
             </a>
             <a className="btn btn--primary" href={href('/produits', 'visionpass')}>
-              Consulter la FAQ Réseau
+              Découvrir la carte VisionPass
             </a>
           </div>
         </div>
