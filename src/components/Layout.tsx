@@ -42,12 +42,15 @@ export function Header({ path }: { path: string }) {
   return (
     <header className="header">
       <div className="container header-inner">
-        <a className="brand" href={href('/')} aria-label="Vision Energy — accueil">
-          <img src="/images/logo-mark.png" alt="" className="brand-img" width="46" height="46" />
-          <span className="brand-text">
-            <b>VISION ENERGY</b>
-            <span>Produits Pétroliers &amp; Gaz Domestique</span>
-          </span>
+        <a className="brand" href={href('/')} aria-label="Vision Energy S.A. — accueil">
+          <img src="/images/logo-roundel.png" alt="" className="brand-img" width="46" height="44" />
+          <img
+            src="/images/logo-wordmark.png"
+            alt="Vision Energy SA"
+            className="brand-logo"
+            width="196"
+            height="25"
+          />
         </a>
         <button
           type="button"
@@ -96,8 +99,8 @@ export function Footer() {
       <div className="container footer-grid">
         <div className="footer-intro">
           <div className="footer-brand">
-            <img src="/images/logo-mark.png" alt="" width="38" height="38" />
-            <b>Vision Energy</b>
+            <img src="/images/logo-roundel.png" alt="" width="38" height="36" />
+            <b>Vision Energy S.A.</b>
           </div>
           <p>
             Vision Energy S.A. — société anonyme camerounaise des produits pétroliers, du gaz et des
@@ -172,12 +175,11 @@ export function Footer() {
       </div>
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
-          <span>© 2026 Vision Energy S.A. Tous droits réservés.</span>
-          <nav aria-label="Liens légaux">
-            <a href={href('/')}>Mentions Légales</a>
-            <a href={href('/')}>Politique de Confidentialité</a>
-            <a href={href('/')}>Charte HSE</a>
-            <a href={href('/')}>Conditions Générales</a>
+          <span>© 2026 Vision Energy S.A. — Société anonyme camerounaise · B.P. 11 480, Douala. Tous droits réservés.</span>
+          <nav aria-label="Liens du groupe">
+            <a href={href('/groupe', 'rse')}>RSE &amp; Éthique</a>
+            <a href={href('/carrieres')}>Recrutement</a>
+            <a href={href('/reseau', 'contact')}>Nous écrire</a>
           </nav>
         </div>
       </div>

@@ -605,29 +605,14 @@ ul {
 
 .brand-img {
   width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #fff;
+  height: 44px;
+  object-fit: contain;
 }
 
-.brand-text {
-  display: grid;
-  line-height: 1.05;
-}
-
-.brand-text b {
-  font-family: var(--font-head);
-  font-size: 1.06rem;
-  letter-spacing: 0.02em;
-  color: var(--ink);
-}
-
-.brand-text span {
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--g-700);
+.brand-logo {
+  width: 196px;
+  height: 25px;
+  object-fit: contain;
 }
 
 .nav {
@@ -879,8 +864,8 @@ ul {
   .header-inner {
     gap: 14px;
   }
-  .brand-text span {
-    display: none;
+  .brand-logo {
+    width: 150px;
   }
   .topbar-left .topbar-item:first-child,
   .topbar-right .topbar-item.lang {
@@ -906,6 +891,12 @@ ul {
   .topbar-inner {
     justify-content: center;
     gap: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-logo {
+    width: 118px;
   }
 }
 
