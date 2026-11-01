@@ -29,7 +29,7 @@
 .mt-hero-bg {
   position: absolute;
   inset: 0;
-  background: url('/images/grp-hero-clean.jpg') right 20% center / cover no-repeat;
+  background: url('/images/station-aerial.jpg') right 20% center / cover no-repeat;
 }
 
 .mt-hero-bg::after {

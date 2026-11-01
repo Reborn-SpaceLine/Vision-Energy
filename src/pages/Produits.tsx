@@ -67,17 +67,7 @@ function Hero() {
           </div>
         </div>
         <div className="pro-hero-media">
-          <img src="/images/pro-hero-photo.jpg" alt="Station-service Vision Energy de nuit" />
-          <div className="pro-hero-float">
-            <span className="icon-tile">
-              <Icon.fuel />
-            </span>
-            <div className="pro-hero-float-text">
-              <b>Super 95 &amp; Gasoil ProClean™</b>
-              <span>Additifs détergents, prix homologués</span>
-            </div>
-            <span className="pill pill--cert">Conforme</span>
-          </div>
+          <img src="/images/station-gaz-carbu.png" alt="Carburants et Gaz Domestique Vision Energy" />
         </div>
       </div>
     </section>
@@ -213,7 +203,7 @@ function Carburants() {
 /* --------------------------------------------------------- lubrifiants */
 const lubes = [
   {
-    img: '/images/pro-a.jpg',
+    img: '/images/station-graissage.jpg',
     pill: 'Synthèse 100%',
     pillCls: 'pill--sq pill--mint-solid',
     grade: '5W-30',
@@ -224,7 +214,7 @@ const lubes = [
     priceCls: 'pro-lub-price--green',
   },
   {
-    img: '/images/pro-lub2.jpg',
+    img: '/images/station-graissage.jpg',
     pill: 'Semi-Synthèse',
     pillCls: 'pill--sq pill--lav',
     grade: '10W-40',
@@ -235,7 +225,7 @@ const lubes = [
     priceCls: 'pro-lub-price--blue',
   },
   {
-    img: '/images/pro-b.jpg',
+    img: '/images/station-graissage.jpg',
     pill: 'Haute Endurance',
     pillCls: 'pill--sq pill--peri',
     grade: '15W-40',
@@ -246,7 +236,7 @@ const lubes = [
     priceCls: 'pro-lub-price--green',
   },
   {
-    img: '/images/pro-c.jpg',
+    img: '/images/station-graissage.jpg',
     pill: 'Hydraulique & Industrie',
     pillCls: 'pill--sq pill--mint-solid',
     grade: 'ISO VG 46 / 68',
@@ -490,7 +480,7 @@ function Services() {
               ))}
             </ul>
             <div className="media pro-bout-media">
-              <img src="/images/pro-cafe.jpg" alt="Cafétéria Vision Express" />
+              <img src="/images/station-boutique.jpg" alt="Cafétéria et Boutique Vision Express" />
             </div>
           </article>
         </div>

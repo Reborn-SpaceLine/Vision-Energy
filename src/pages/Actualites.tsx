@@ -90,7 +90,7 @@ const newsTabs = [
 
 const newsCards = [
   {
-    img: '/images/act-n1.jpg',
+    img: '/images/station-aerial.jpg',
     date: '28 Avril 2026',
     read: '3 min',
     title: 'Inauguration officielle de la station de Mbouda',
@@ -98,7 +98,7 @@ const newsCards = [
     tone: '',
   },
   {
-    img: '/images/act-n2.jpg',
+    img: '/images/station-clean.png',
     date: '15 Janvier 2026',
     read: '5 min',
     title: 'Batcham ouverte sur l’axe Mbouda – Batcham',
@@ -106,7 +106,7 @@ const newsCards = [
     tone: ' link-arrow--blue',
   },
   {
-    img: '/images/act-n3.jpg',
+    img: '/images/station-modern-2.png',
     date: '27 Juin 2025',
     read: '4 min',
     title: 'Station de Tobe (Poumougne) : accompagnement vers la mise en conformité',
@@ -141,7 +141,7 @@ function News() {
 
         <article className="card card--pad0 act-feat">
           <div className="act-feat-media">
-            <img src="/images/act-hero.jpg" alt="Station-service Vision Energy en exploitation" />
+            <img src="/images/station-panoramic.jpg" alt="Station-service Vision Energy en exploitation" />
           </div>
           <div className="act-feat-body">
             <div className="act-feat-meta">
@@ -366,7 +366,7 @@ function Careers() {
           <article className="card car-testi">
             <div className="car-testi-media">
               <div className="car-testi-photo">
-                <img src="/images/act-testi-clean.jpg" alt="Équipe Vision Energy en station" />
+                <img src="/images/station-ve-real.jpg" alt="Équipe Vision Energy en station" />
               </div>
               <span className="car-testi-badge">
                 <IconQuote /> Équipes en poste depuis 2023

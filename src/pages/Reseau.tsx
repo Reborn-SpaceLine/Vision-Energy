@@ -180,7 +180,7 @@ const experiences = [
     tile: 'mint',
     title: 'Équipes de Piste en Station',
     text: "Accueil à la pompe, coup d'œil sur la pression des pneumatiques et les niveaux, halte propre avant de repartir : le service qui fait la différence au quotidien.",
-    img: '/images/res-a.jpg',
+    img: '/images/station-clean.png',
     alt: 'Équipe de piste Vision Energy au service d’un client en station',
   },
   {
@@ -188,16 +188,16 @@ const experiences = [
     tile: 'blue',
     title: 'Stations Éclairées et Surveillées',
     text: "Pistes éclairées la nuit, présence constante d’agents et procédures de sécurité affichées sur chaque site, y compris à côté des aires de remplissage gaz.",
-    img: '/images/res-b.jpg',
-    alt: 'Station Vision Energy éclairée de nuit',
+    img: '/images/station-panoramic.jpg',
+    alt: 'Station Vision Energy éclairée et surveillée',
   },
   {
     icon: <Icon.shop />,
     tile: 'dark',
     title: 'Boutiques & Espaces Café',
     text: 'Boissons fraîches, produits de dépannage, lubrifiants et accessoires : de quoi reprendre la route sans détour, dans un espace entretenu pendant l’attente.',
-    img: '/images/res-c.jpg',
-    alt: 'Intérieur de boutique Vision Energy',
+    img: '/images/station-boutique.jpg',
+    alt: 'Intérieur de boutique Vision Express',
   },
 ]
 

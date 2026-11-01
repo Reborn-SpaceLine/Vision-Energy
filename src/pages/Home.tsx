@@ -12,24 +12,21 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-media">
-        <img className="hero-img" src="/images/acc-hero.jpg" alt="Station-service Vision Energy" />
+        <img className="hero-img" src="/images/station-3d-modern.png" alt="Station-service moderne Vision Energy S.A." />
       </div>
       <div className="hero-card">
         <span className="eyebrow eyebrow--dot eyebrow--mint">
           Réseau en pleine expansion • Cameroun
         </span>
         <h1 className="hero-title">
-          Vision Energy en <span className="hl--mint">pleine expansion</span>
+          Carburants de Qualité &amp; <span className="hl--mint">Gaz Domestique</span>
         </h1>
         <p className="hero-text">
-          Déploiement accéléré de notre réseau de stations-service à travers le Cameroun — Bonamoussadi,
-          Logbessou PK15 et Bamendzi, Batcham, Mbouda et Tobe — avec un objectif de 30 stations d’ici
-          2028. Carburants additivés, gaz butane en bouteille et lubrifiants VisionPro : la qualité à
-          bon prix.
+          Vision Energy déploie son réseau de stations-service et ses centres de remplissage de gaz à travers le Cameroun — Douala, Bafoussam, Bamendzi, Batcham, Mbouda et Tobe — avec un objectif de 30 stations d’ici 2028. Carburants additivés contrôlés, gaz butane en bouteille sécurisé et lubrifiants VisionPro : la qualité à bon prix.
         </p>
         <div className="btn-row">
-          <a className="btn btn--primary" href={href('/groupe')}>
-            En savoir plus <Icon.arrowR />
+          <a className="btn btn--primary" href={href('/produits')}>
+            Découvrir nos produits <Icon.arrowR />
           </a>
           <a className="btn btn--ghost" href={href('/reseau')}>
             <Icon.navigate /> Trouver une station
@@ -95,7 +92,7 @@ function Gouvernance() {
           </div>
         </div>
         <figure className="media gov-media">
-          <img src="/images/acc-tower.jpg" alt="Siège administratif Vision Energy à Douala" />
+          <img src="/images/station-ve-real.jpg" alt="Station-service Vision Energy en exploitation au Cameroun" />
           <figcaption className="gov-caption">
             <div>
               <span>Direction générale &amp; exploitation</span>
@@ -178,7 +175,7 @@ function Produits() {
 /* -------------------------------------------------------------- actualites */
 const news = [
   {
-    img: '/images/acc-news-1.jpg',
+    img: '/images/station-clean.png',
     badge: 'Expansion réseau',
     date: '28 Avril 2026',
     place: 'Mbouda, Cameroun',
@@ -187,7 +184,7 @@ const news = [
     link: 'Lire le communiqué',
   },
   {
-    img: '/images/acc-news-2.jpg',
+    img: '/images/station-aerial.jpg',
     badge: 'Réseau & stations',
     date: '15 Janvier 2026',
     place: 'Batcham, Cameroun',
@@ -196,7 +193,7 @@ const news = [
     link: 'Retour sur l’inauguration',
   },
   {
-    img: '/images/acc-news-3.jpg',
+    img: '/images/station-gaz-carbu.png',
     badge: 'Conformité & environnement',
     date: '27 Juin 2025',
     place: 'Tobe (Poumougne), Cameroun',

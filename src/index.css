@@ -8,13 +8,13 @@
   --g-900: #06382a;
   --g-800: #075440;
   --g-700: #006948;
-  --g-600: #00855d;
-  --g-500: #0f9d6e;
-  --mint: #68dba9;
-  --mint-soft: #a8ecd0;
-  --mint-wash: #eafaf2;
-  --blue: #2f8fd6;
-  --blue-700: #1f6fae;
+  --g-600: #1ba338;
+  --g-500: #20a028;
+  --mint: #1ba338;
+  --mint-soft: #70d885;
+  --mint-wash: #eafaf0;
+  --blue: #2890d8;
+  --blue-700: #1a74b0;
   --red: #e0344f;
   --amber: #f2c14e;
 
@@ -895,29 +895,44 @@ ul {
   position: relative;
   background: var(--g-950);
   overflow: hidden;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
 }
 
 .hero-media {
-  position: relative;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 80% center;
   display: block;
 }
 
-.hero-card {
+.hero::before {
+  content: "";
   position: absolute;
-  left: 4.6%;
-  top: 15.5%;
-  width: 55%;
-  min-height: 64%;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(4, 25, 20, 0.95) 0%, rgba(4, 30, 24, 0.84) 45%, rgba(4, 30, 35, 0.42) 100%);
+  z-index: 1;
+}
+
+.hero-card {
+  position: relative;
+  z-index: 2;
+  width: min(1240px, 92%);
+  margin-inline: auto;
+  padding: 60px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 14px;
-  padding: 2.6% 3.2%;
-  border-radius: var(--r-xl);
+  gap: 16px;
   color: #fff;
 }
 
@@ -1403,34 +1418,18 @@ ul {
 }
 
 @media (max-width: 900px) {
-  .hero-media {
-    position: absolute;
-    inset: 0;
+  .hero {
+    min-height: 520px;
+    padding: 24px 0;
   }
   .hero-img {
-    height: 100%;
-    object-fit: cover;
-    object-position: 72% center;
-  }
-  .hero {
-    min-height: 560px;
-    display: flex;
-    align-items: center;
-    padding: 46px 0;
+    object-position: 70% center;
   }
   .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(100deg, rgba(4, 25, 18, 0.92), rgba(4, 25, 18, 0.62));
+    background: linear-gradient(100deg, rgba(4, 25, 18, 0.94), rgba(4, 25, 18, 0.72));
   }
   .hero-card {
-    position: relative;
-    inset: auto;
-    width: min(1240px, 92%);
-    margin-inline: auto;
-    padding: 0;
-    min-height: 0;
+    padding: 24px 0;
   }
   .hero-dots {
     display: none;
