@@ -3,9 +3,9 @@ import { Icon } from '../components/icons'
 
 /* ------------------------------------------------------------------ hero */
 const heroChecks = [
-  { icon: <Icon.fuel />, label: 'Carburants Contrôlés en Station' },
-  { icon: <Icon.flame />, label: 'Gaz Domestique en Bouteille' },
-  { icon: <Icon.shield />, label: 'Qualité à Bon Prix' },
+  { icon: <Icon.fuel />, label: 'Super 95 (840 CFA) & Gasoil (828 CFA)' },
+  { icon: <Icon.flame />, label: 'Gaz Butane B6, B12.5 & B35' },
+  { icon: <Icon.shield />, label: 'Qualité Contrôlée & Bon Prix' },
 ]
 
 function Hero() {
@@ -114,30 +114,30 @@ const produits = [
   {
     icon: <Icon.fuel />,
     kicker: 'Moteurs & Flottes',
-    title: 'Carburants Additivés',
-    text: 'Super 95 et Gasoil distribués en station avec des additifs détergents, pour garder les moteurs propres et restituer toute leur puissance.',
-    link: { label: 'Voir les spécifications', to: '/produits', sec: 'carburants' },
+    title: 'Carburants Additivés ProClean™',
+    text: 'Super 95 (840 CFA/L) et Gasoil (828 CFA/L) distribués en station avec des additifs détergents pour préserver les injecteurs et réduire la consommation.',
+    link: { label: 'Tarifs & Spécifications', to: '/produits', sec: 'carburants' },
   },
   {
     icon: <Icon.flame />,
-    kicker: 'Gaz & Foyers',
-    title: 'Gaz Domestique en Bouteille',
-    text: 'Bouteilles B6, B12 et B35 scellées et pesées, contrôlées à chaque remplissage. Nos centres de Douala et Bafoussam sécurisent la disponibilité du gaz pour les familles.',
-    link: { label: 'Points de vente', to: '/produits', sec: 'gaz' },
+    kicker: 'Gaz Domestique & Foyers',
+    title: 'VisionGaz B6, B12.5 & B35',
+    text: 'Bouteilles scellées à chaud et pesées avec exactitude. Approvisionnement garanti par nos centres de remplissage de Douala et Bafoussam.',
+    link: { label: 'Formats & Points de Vente', to: '/produits', sec: 'gaz' },
   },
   {
     icon: <Icon.drop />,
-    kicker: 'Gamme haute viscosité',
-    title: 'Lubrifiants VisionPro',
-    text: 'Huiles synthétiques et minérales sélectionnées par nos ingénieurs lubrifiants pour véhicules légers, poids lourds et engins de chantier en climat tropical.',
-    link: { label: 'Guide de graissage', to: '/produits', sec: 'lubrifiants' },
+    kicker: 'Gamme Haute Viscosité',
+    title: 'Lubrifiants VisionPro™',
+    text: 'Huiles synthétiques et minérales (5W-30, 10W-40, 15W-40) sélectionnées par nos ingénieurs pour moteurs essence, diesel et engins de chantier.',
+    link: { label: 'Guide de Graissage', to: '/produits', sec: 'lubrifiants' },
   },
   {
     icon: <Icon.shop />,
-    kicker: 'Espaces de détente',
-    title: 'Boutiques & aires de service',
-    text: 'Boutique de dépannage, espace de rafraîchissement, gonflage et lavage en station : de quoi reprendre la route dans de bonnes conditions.',
-    link: { label: 'Services en station', to: '/produits', sec: 'boutiques' },
+    kicker: 'Services & Confort en Station',
+    title: 'Boutiques Vision Express & Lavage',
+    text: 'Boutique de dépannage, boissons fraîches, baie de vidange express et lavage pour reprendre la route dans les meilleures conditions.',
+    link: { label: 'Services en Station', to: '/produits', sec: 'boutiques' },
   },
 ]
 
