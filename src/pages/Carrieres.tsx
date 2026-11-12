@@ -135,7 +135,12 @@ function MarqueEmployeur() {
         <article className="card car-testi">
           <div className="car-testi-media">
             <div className="car-testi-photo">
-              <img src="/assets/images/station-ve-real.jpg" alt="Équipe Vision Energy en station" />
+              <img
+                src="/assets/images/station-ve-real.jpg"
+                alt="Équipe Vision Energy en station"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <span className="car-testi-badge">
               <IconQuote /> Équipes en poste depuis 2023

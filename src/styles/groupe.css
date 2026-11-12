@@ -10,7 +10,7 @@
 /* -------------------------------------------------------------- hero band */
 .grp-hero {
   position: relative;
-  background: var(--dark);
+  background: var(--color-primary-strong);
   color: #fff;
   padding: 60px 0 130px;
   overflow: hidden;
@@ -61,7 +61,7 @@
 }
 
 .grp-crumb .cur {
-  color: var(--mint);
+  color: var(--color-secondary);
 }
 
 .grp-crumb svg {
@@ -77,7 +77,7 @@
   border-radius: 999px;
   background: rgba(104, 219, 169, 0.12);
   border: 1px solid rgba(104, 219, 169, 0.28);
-  color: var(--mint);
+  color: var(--color-secondary);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -89,7 +89,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--mint);
+  background: var(--color-secondary);
   box-shadow: 0 0 0 3px rgba(104, 219, 169, 0.25);
 }
 
@@ -126,7 +126,7 @@
 
 .grp-hero-feats svg {
   font-size: 1.35rem;
-  color: var(--mint);
+  color: var(--color-secondary);
 }
 
 /* ------------------------------------------------------- overlapping stats */
@@ -141,7 +141,7 @@
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 18px;
   background: #fff;
-  border: 1px solid var(--line);
+  border: 1px solid var(--color-border-soft);
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-md);
   padding: 26px;
@@ -150,18 +150,18 @@
 .grp-stat {
   border-radius: var(--r-md);
   padding: 16px 18px;
-  background: var(--bg);
+  background: var(--color-bg);
 }
 
 .grp-stat--hl {
-  background: var(--mint-wash);
+  background: var(--color-secondary-soft);
 }
 
 .grp-stat-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: var(--muted);
+  color: var(--color-text-muted);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -170,15 +170,15 @@
 
 .grp-stat-top svg {
   font-size: 1.05rem;
-  color: var(--g-600);
+  color: var(--color-secondary);
 }
 
 .grp-stat--hl .grp-stat-top {
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .grp-stat--hl .grp-stat-top svg {
-  color: var(--g-600);
+  color: var(--color-secondary);
 }
 
 .grp-stat--blue .grp-stat-top svg {
@@ -192,19 +192,19 @@
   font-size: 2.05rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--ink);
+  color: var(--color-text);
   line-height: 1;
 }
 
 .grp-stat--hl b {
-  color: var(--g-600);
+  color: var(--color-secondary);
 }
 
 .grp-stat span {
   display: block;
   margin-top: 9px;
   font-size: 0.82rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 /* -------------------------------------------------------------- timeline */
@@ -231,8 +231,8 @@
   font-family: var(--font-head);
   font-weight: 600;
   font-size: 0.95rem;
-  background: var(--mint-wash);
-  color: var(--g-700);
+  background: var(--color-secondary-soft);
+  color: var(--color-primary);
 }
 
 .grp-num--blue {
@@ -241,15 +241,15 @@
 }
 
 .grp-num--solid {
-  background: var(--mint);
-  color: var(--g-950);
+  background: var(--color-secondary);
+  color: var(--color-primary-strong);
 }
 
 .grp-year {
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: var(--g-600);
+  color: var(--color-secondary);
 }
 
 .grp-year--blue {
@@ -263,7 +263,7 @@
 
 .grp-tl-card p {
   font-size: 0.84rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
   flex: 1 1 auto;
 }
 
@@ -273,15 +273,15 @@
   gap: 9px;
   padding: 10px 13px;
   border-radius: 12px;
-  background: var(--bg);
+  background: var(--color-bg);
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
   white-space: nowrap;
 }
 
 .grp-tl-foot svg {
-  color: var(--g-600);
+  color: var(--color-secondary);
   font-size: 1.05rem;
 }
 
@@ -306,12 +306,12 @@
 
 .grp-val .icon-tile--red {
   background: #fdecee;
-  color: var(--red);
+  color: var(--color-state-error);
 }
 
 .grp-val .icon-tile--gray {
-  background: var(--bg-2);
-  color: var(--ink-soft);
+  background: var(--color-bg-alt);
+  color: var(--color-text-muted);
 }
 
 .grp-val .h3 {
@@ -321,7 +321,7 @@
 
 .grp-val p {
   font-size: 0.83rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
   flex: 1 1 auto;
 }
 
@@ -333,7 +333,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 .grp-tag::before {
@@ -341,11 +341,11 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--g-600);
+  background: var(--color-secondary);
 }
 
 .grp-tag--red::before {
-  background: var(--red);
+  background: var(--color-state-error);
 }
 
 .grp-tag--blue {
@@ -357,15 +357,15 @@
 }
 
 .grp-tag--green {
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .grp-tag--gray {
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .grp-tag--gray::before {
-  background: var(--muted);
+  background: var(--color-text-muted);
 }
 
 /* ------------------------------------------------------------- governance */
@@ -403,7 +403,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--mint);
+  color: var(--color-secondary);
 }
 
 .grp-director-cap b {
@@ -425,8 +425,8 @@
   margin-top: 26px;
   padding: 28px 30px;
   border-radius: var(--r-md);
-  background: var(--bg);
-  border: 1px solid var(--line);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-soft);
 }
 
 .grp-quote-mark {
@@ -436,14 +436,14 @@
   font-family: var(--font-head);
   font-size: 3.4rem;
   line-height: 1;
-  color: var(--mint-soft);
+  color: var(--color-secondary-soft);
 }
 
 .grp-quote p {
   font-style: italic;
   font-size: 1.02rem;
   line-height: 1.6;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
   max-width: 60ch;
 }
 
@@ -453,7 +453,7 @@
   font-style: normal;
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .grp-gov-cards {
@@ -482,7 +482,7 @@
 .grp-gov-card p {
   margin-top: 12px;
   font-size: 0.86rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .grp-team {
@@ -507,7 +507,7 @@
   font-size: 0.74rem;
   font-weight: 700;
   color: #fff;
-  background: var(--muted);
+  background: var(--color-text-muted);
   border: 2px solid #fff;
   margin-left: -10px;
 }
@@ -515,11 +515,11 @@
 .grp-avatars i:first-child {
   margin-left: 0;
   background: #e6e9ec;
-  color: var(--ink);
+  color: var(--color-text);
 }
 
 .grp-avatars i:nth-child(2) {
-  background: var(--g-700);
+  background: var(--color-primary);
 }
 
 .grp-avatars i:nth-child(3) {
@@ -527,12 +527,12 @@
 }
 
 .grp-avatars i:nth-child(4) {
-  background: var(--dark-2);
+  background: var(--color-primary-strong);
 }
 
 .grp-team p {
   font-size: 0.84rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
   max-width: 46ch;
 }
 
@@ -556,7 +556,7 @@
 
 .grp-rse-card .icon-tile {
   background: rgba(104, 219, 169, 0.14);
-  color: var(--mint);
+  color: var(--color-secondary);
 }
 
 .grp-rse-card .icon-tile--gray {
@@ -588,7 +588,7 @@
 }
 
 .grp-rse-foot b {
-  color: var(--mint);
+  color: var(--color-secondary);
   font-weight: 700;
   text-align: right;
   white-space: nowrap;
@@ -602,7 +602,7 @@
 .grp-report {
   border-radius: var(--r-xl);
   background: linear-gradient(135deg, #ffffff 0%, #f1f7f3 60%, #e7f4ec 100%);
-  border: 1px solid var(--line);
+  border: 1px solid var(--color-border-soft);
   box-shadow: var(--shadow-md);
   padding: 48px 52px;
   display: grid;
@@ -617,9 +617,9 @@
   gap: 9px;
   padding: 8px 15px;
   border-radius: 999px;
-  background: var(--bg-2);
-  border: 1px solid var(--line);
-  color: var(--g-700);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border-soft);
+  color: var(--color-primary);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -642,7 +642,7 @@
   margin-top: 22px;
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 .grp-report-meta i {
@@ -664,13 +664,13 @@
 }
 
 .grp-report-actions .btn--outline {
-  background: var(--bg-2);
-  border-color: var(--bg-2);
-  color: var(--ink);
+  background: var(--color-bg-alt);
+  border-color: var(--color-bg-alt);
+  color: var(--color-text);
 }
 
 /* ------------------------------------------------------------- responsive */
-@media (max-width: 1020px) {
+@media (max-width: 1024px) {
   .grp-hero-inner {
     max-width: 100%;
   }
@@ -694,7 +694,7 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .grp-stats,
   .grp-tl,
   .grp-rse,

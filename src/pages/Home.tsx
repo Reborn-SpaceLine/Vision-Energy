@@ -17,6 +17,8 @@ function Hero() {
           className="hero-img"
           src="/assets/images/station-panoramic.jpg"
           alt="Station-service Vision Energy au Cameroun"
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
 
@@ -68,6 +70,7 @@ function Hero() {
                   <img
                     src="/assets/images/gaz-agent.jpg"
                     alt="Agent Vision Energy présentant les bouteilles de gaz VisionGaz"
+                    decoding="async"
                   />
                   <span className="hero-prod-pill hero-prod-pill--mint">Gaz Domestique</span>
                 </div>
@@ -92,6 +95,7 @@ function Hero() {
                   <img
                     src="/assets/images/pump.jpg"
                     alt="Distributeur de carburants Super 95 et Gasoil Vision Energy"
+                    decoding="async"
                   />
                   <span className="hero-prod-pill hero-prod-pill--blue">Carburants Additivés</span>
                 </div>
@@ -168,7 +172,7 @@ function Produits() {
           {produits.map((p) => (
             <article className="card card-hover prod-card" key={p.title}>
               <div className="prod-card-media">
-                <img src={p.img} alt={p.title} />
+                <img src={p.img} alt={p.title} loading="lazy" decoding="async" />
                 <span className="icon-tile">{p.icon}</span>
               </div>
               <div className="prod-card-body">
@@ -230,6 +234,8 @@ function Gouvernance() {
           <img
             src="/assets/images/station-panoramic.jpg"
             alt="Station-service Vision Energy moderne au Cameroun"
+            loading="lazy"
+            decoding="async"
           />
           <figcaption className="gov-caption">
             <div>
@@ -292,7 +298,7 @@ function Actualites() {
           {news.map((n) => (
             <article className="card card-hover news-card" key={n.title}>
               <div className="media news-media">
-                <img src={n.img} alt="" />
+                <img src={n.img} alt="" loading="lazy" decoding="async" />
                 <span className="news-badge">{n.badge}</span>
               </div>
               <div className="news-body">

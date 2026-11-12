@@ -5,8 +5,8 @@
 
 /* ---------- helpers (composés pour gagner en spécificité sur index.css) --- */
 .icon-tile.act-tile--gray {
-  background: var(--bg-2);
-  color: var(--ink-soft);
+  background: var(--color-bg-alt);
+  color: var(--color-text-muted);
 }
 
 /* ==========================================================================
@@ -25,16 +25,16 @@
   align-items: center;
   gap: 9px;
   font-size: 0.82rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .act-crumb svg {
   font-size: 15px;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 .act-crumb a:hover {
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .act-crumb i {
@@ -43,7 +43,7 @@
 }
 
 .act-crumb b {
-  color: var(--ink);
+  color: var(--color-text);
   font-weight: 700;
 }
 
@@ -77,7 +77,7 @@
 }
 
 .act-hero-title .hl {
-  color: var(--g-600);
+  color: var(--color-secondary);
 }
 
 .act-hero-lead {
@@ -130,7 +130,7 @@
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: var(--ink);
+  color: var(--color-text);
 }
 
 .act-stat span {
@@ -138,7 +138,7 @@
   margin-top: 6px;
   font-size: 0.82rem;
   line-height: 1.35;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .act-stat em {
@@ -147,22 +147,22 @@
   font-style: normal;
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--g-600);
+  color: var(--color-secondary);
 }
 
 .act-stat:nth-child(2) em {
-  color: var(--blue-700);
+  color: var(--color-primary);
 }
 
 .act-stat:nth-child(4) em {
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 /* ==========================================================================
    2. ACTUALITÉS
    ========================================================================== */
 .act-news {
-  background: var(--bg);
+  background: var(--color-bg);
   padding: 82px 0 84px;
 }
 
@@ -180,7 +180,7 @@
   max-width: 520px;
   font-size: 0.95rem;
   line-height: 1.75;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .act-tabs {
@@ -204,16 +204,16 @@
   padding: 5px 11px;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
   cursor: pointer;
 }
 
 .act-tab:hover {
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .act-tab--on {
-  background: var(--g-700);
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -231,7 +231,7 @@
 .act-feat-media {
   position: relative;
   overflow: hidden;
-  background: var(--bg-2);
+  background: var(--color-bg-alt);
   min-height: 100%;
 }
 
@@ -255,7 +255,7 @@
   align-items: center;
   gap: 10px;
   font-size: 0.82rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .act-feat-meta span {
@@ -266,7 +266,7 @@
 
 .act-feat-meta svg {
   font-size: 15px;
-  color: var(--g-600);
+  color: var(--color-secondary);
 }
 
 .act-feat-meta i {
@@ -287,7 +287,7 @@
   margin-top: 14px;
   font-size: 0.93rem;
   line-height: 1.7;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .act-tags {
@@ -298,12 +298,12 @@
 }
 
 .act-tags span {
-  background: var(--bg-2);
+  background: var(--color-bg-alt);
   border-radius: 9px;
   padding: 7px 13px;
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 .act-feat-cta {
@@ -312,16 +312,18 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .act-share {
   width: 44px;
   height: 44px;
+  min-width: 44px;
   flex: none;
   border: 0;
   border-radius: 12px;
-  background: var(--bg-2);
-  color: var(--ink);
+  background: var(--color-bg-alt);
+  color: var(--color-text);
   font-size: 18px;
   display: grid;
   place-items: center;
@@ -347,7 +349,7 @@
   position: relative;
   overflow: hidden;
   aspect-ratio: 380 / 198;
-  background: var(--bg-2);
+  background: var(--color-bg-alt);
 }
 
 .act-card-media img {
@@ -380,7 +382,7 @@
 .act-card-text {
   font-size: 0.88rem;
   line-height: 1.62;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .act-card-body .link-arrow {
@@ -391,7 +393,7 @@
 /* ---------- espace presse */
 .act-press {
   margin-top: 40px;
-  background: var(--dark);
+  background: var(--color-primary-strong);
   color: #fff;
   border-radius: var(--r-lg);
   padding: 24px 28px;
@@ -404,8 +406,8 @@
   width: 48px;
   height: 48px;
   border-radius: 13px;
-  background: var(--g-700);
-  color: var(--mint);
+  background: var(--color-primary);
+  color: var(--color-secondary);
   font-size: 22px;
 }
 
@@ -435,12 +437,12 @@
 }
 
 .act-press-btn {
-  background: var(--g-700);
+  background: var(--color-primary);
   box-shadow: none;
 }
 
 .act-press-btn:hover {
-  background: var(--g-600);
+  background: var(--color-secondary);
 }
 
 .act-press-btn2 {
@@ -483,7 +485,7 @@
   max-width: 690px;
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .car-values {
@@ -501,7 +503,7 @@
   margin-top: 12px;
   font-size: 0.85rem;
   line-height: 1.65;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .car-val-title {
@@ -517,15 +519,15 @@
   padding-top: 14px;
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .car-val-link--dark {
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 .car-val-link--blue {
-  color: var(--blue-700);
+  color: var(--color-primary);
 }
 
 /* ---------- témoignage */
@@ -547,7 +549,7 @@
   overflow: hidden;
   border-radius: 14px;
   aspect-ratio: 340 / 334;
-  background: var(--bg-2);
+  background: var(--color-bg-alt);
 }
 
 .car-testi-photo img {
@@ -565,7 +567,7 @@
   gap: 8px;
   padding: 7px 14px;
   border-radius: 10px;
-  background: var(--g-700);
+  background: var(--color-primary);
   color: #fff;
   font-size: 0.8rem;
   font-weight: 600;
@@ -574,7 +576,7 @@
 
 .car-testi-badge svg {
   font-size: 13px;
-  color: var(--mint);
+  color: var(--color-secondary);
 }
 
 .car-quote {
@@ -583,7 +585,7 @@
   font-size: 1.45rem;
   font-weight: 500;
   line-height: 1.6;
-  color: var(--ink);
+  color: var(--color-text);
 }
 
 .car-name {
@@ -598,7 +600,7 @@
   display: block;
   margin-top: 4px;
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .car-committee {
@@ -606,14 +608,14 @@
   margin-top: 6px;
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 /* ==========================================================================
    4. OFFRES
    ========================================================================== */
 .car-jobs {
-  background: var(--bg);
+  background: var(--color-bg);
   padding: 82px 0 84px;
 }
 
@@ -629,7 +631,7 @@
 .car-jobs-lead {
   margin-top: 10px;
   font-size: 0.95rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .car-jobs-count {
@@ -638,12 +640,12 @@
   align-items: center;
   gap: 12px;
   font-size: 0.82rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
   padding-bottom: 4px;
 }
 
 .car-jobs-pill {
-  background: var(--g-700);
+  background: var(--color-primary);
   color: #fff;
   border-radius: 999px;
   padding: 8px 16px;
@@ -668,7 +670,7 @@
 .car-field > span:first-child {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 .car-field select {
@@ -680,12 +682,12 @@
   padding: 8px 34px 8px 14px;
   font: inherit;
   font-size: 0.9rem;
-  color: var(--ink);
+  color: var(--color-text);
   outline: 0;
 }
 
 .car-field select:focus {
-  border-color: var(--g-600);
+  border-color: var(--color-secondary);
 }
 
 .car-field > svg {
@@ -693,7 +695,7 @@
   right: 14px;
   bottom: 12px;
   font-size: 14px;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
   pointer-events: none;
 }
 
@@ -705,7 +707,7 @@
   border: 1px solid transparent;
   border-radius: 10px;
   padding: 10px 14px;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .car-search input {
@@ -714,7 +716,7 @@
   background: transparent;
   font: inherit;
   font-size: 0.9rem;
-  color: var(--ink);
+  color: var(--color-text);
   width: 100%;
 }
 
@@ -748,8 +750,8 @@
   align-items: center;
   padding: 5px 10px;
   border-radius: 7px;
-  background: var(--bg-2);
-  color: var(--ink-soft);
+  background: var(--color-bg-alt);
+  color: var(--color-text-muted);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -758,7 +760,7 @@
 
 .car-tag--mint {
   background: #c2fbe1;
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .car-ref {
@@ -781,7 +783,7 @@
   gap: 8px 22px;
   margin-top: 8px;
   font-size: 0.82rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .car-job-meta span {
@@ -792,7 +794,7 @@
 
 .car-job-meta svg {
   font-size: 15px;
-  color: var(--g-600);
+  color: var(--color-secondary);
 }
 
 .car-job-text {
@@ -800,7 +802,7 @@
   max-width: 1010px;
   font-size: 0.87rem;
   line-height: 1.52;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .car-job-cta {
@@ -810,8 +812,8 @@
 }
 
 .btn.car-job-btn {
-  background: var(--bg-2);
-  color: var(--ink);
+  background: var(--color-bg-alt);
+  color: var(--color-text);
   border: 0;
   padding: 12px 18px;
   font-size: 0.86rem;
@@ -823,12 +825,12 @@
 }
 
 .btn.car-job-btn--go {
-  background: var(--g-700);
+  background: var(--color-primary);
   color: #fff;
 }
 
 .btn.car-job-btn--go:hover {
-  background: var(--g-600);
+  background: var(--color-secondary);
 }
 
 /* ==========================================================================
@@ -855,13 +857,13 @@
   margin-top: 14px;
   font-size: 0.95rem;
   line-height: 1.7;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .car-recruit {
   margin-top: 24px;
   background: #fff;
-  border: 1px solid var(--line);
+  border: 1px solid var(--color-border-soft);
   border-radius: 14px;
   padding: 18px;
   display: flex;
@@ -876,8 +878,8 @@
   border-radius: 11px;
   display: grid;
   place-items: center;
-  background: var(--mint-wash);
-  color: var(--g-700);
+  background: var(--color-secondary-soft);
+  color: var(--color-primary);
   font-size: 19px;
 }
 
@@ -893,7 +895,7 @@
   margin-top: 4px;
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .car-recruit a:hover {
@@ -904,7 +906,7 @@
   display: block;
   margin-top: 4px;
   font-size: 0.8rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .car-note {
@@ -918,22 +920,22 @@
 
 .car-note--gray {
   background: #fff;
-  border: 1px solid var(--line);
+  border: 1px solid var(--color-border-soft);
 }
 
 .car-note--mint {
-  background: var(--mint-wash);
+  background: var(--color-secondary-soft);
 }
 
 .car-note-icon {
   flex: none;
   font-size: 21px;
-  color: var(--g-600);
+  color: var(--color-secondary);
   margin-top: 2px;
 }
 
 .car-note-icon--blue {
-  color: var(--blue-700);
+  color: var(--color-primary);
 }
 
 .car-note b {
@@ -947,12 +949,12 @@
   margin-top: 4px;
   font-size: 0.82rem;
   line-height: 1.6;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .car-note--mint p {
   font-size: 0.85rem;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 .car-form {
@@ -971,9 +973,9 @@
 }
 
 .car-in > span:first-child {
-  font-size: 0.82rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--color-text);
 }
 
 .car-in--full {
@@ -989,8 +991,9 @@
   border-radius: 10px;
   padding: 11px 14px;
   font: inherit;
-  font-size: 0.9rem;
-  color: var(--ink);
+  font-size: 1rem;
+  min-height: 44px;
+  color: var(--color-text);
   outline: 0;
   resize: vertical;
 }
@@ -1007,8 +1010,15 @@
 .car-in input:focus,
 .car-in select:focus,
 .car-in textarea:focus {
-  border-color: var(--g-600);
+  border-color: var(--color-secondary);
   background: #fff;
+}
+
+.car-in input:focus-visible,
+.car-in select:focus-visible,
+.car-in textarea:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .car-upload {
@@ -1025,7 +1035,7 @@
 
 .car-upload svg {
   font-size: 26px;
-  color: var(--g-600);
+  color: var(--color-secondary);
 }
 
 .car-upload b {
@@ -1034,13 +1044,13 @@
 }
 
 .car-upload u {
-  color: var(--g-700);
+  color: var(--color-primary);
   text-underline-offset: 3px;
 }
 
 .car-upload > span {
   font-size: 0.76rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .car-upload input {
@@ -1061,7 +1071,7 @@
    6. PROCESSUS DE SÉLECTION
    ========================================================================== */
 .car-process {
-  background: var(--bg);
+  background: var(--color-bg);
   padding: 16px 0 52px;
 }
 
@@ -1072,7 +1082,7 @@
 .car-proc-lead {
   margin-top: 12px;
   font-size: 0.95rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .car-steps {
@@ -1111,13 +1121,13 @@
   margin-top: 8px;
   font-size: 0.85rem;
   line-height: 1.55;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 /* ==========================================================================
    Responsive
    ========================================================================== */
-@media (max-width: 1180px) {
+@media (max-width: 1280px) {
   .act-feat {
     grid-template-columns: 1.1fr 1fr;
   }
@@ -1132,7 +1142,7 @@
   }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1024px) {
   .act-hero {
     padding: 24px 0 54px;
   }
@@ -1187,7 +1197,7 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .act-hero-title {
     font-size: 2.1rem;
   }
@@ -1195,6 +1205,17 @@
   .act-feat-title,
   .car-quote {
     font-size: 1.25rem;
+  }
+
+  .act-feat-body {
+    padding: 24px 20px;
+  }
+  .act-feat-cta {
+    align-items: stretch;
+  }
+  .act-feat-cta > .btn {
+    flex: 1 1 180px;
+    min-width: 0;
   }
 
   .act-stats,

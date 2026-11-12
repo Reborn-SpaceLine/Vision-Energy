@@ -2,13 +2,6 @@
    Nos Métiers — page-specific styles (mockup: 1296 CSS px design width)
    ========================================================================== */
 
-.mt-page {
-  --mt-blue: #1d4ed8;
-  --mt-blue-ink: #1e40af;
-  --mt-gray: #eef2f4;
-  --mt-gray-2: #e7ebed;
-}
-
 /* hide the shared eyebrow dash when an icon is provided */
 .mt-page .eyebrow.mt-ico::before {
   display: none;
@@ -21,7 +14,7 @@
 /* ------------------------------------------------------------------- hero */
 .mt-hero {
   position: relative;
-  background: var(--dark);
+  background: var(--color-primary-strong);
   color: #fff;
   overflow: hidden;
 }
@@ -62,7 +55,7 @@
   gap: 8px;
   padding: 8px 15px;
   border-radius: 999px;
-  background: var(--g-700);
+  background: var(--color-primary);
   color: #fff;
   font-size: 0.68rem;
   font-weight: 800;
@@ -88,20 +81,21 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--mint);
+  background: var(--color-secondary);
 }
 
 .mt-hero-title {
   margin-top: 26px;
-  font-size: clamp(2.3rem, 4.1vw, 3.25rem);
+  font-size: clamp(1.8rem, 4.1vw, 3.25rem);
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.13;
   max-width: 890px;
+  overflow-wrap: anywhere;
 }
 
 .mt-hero-title .hl--mint {
-  color: var(--mint);
+  color: var(--color-secondary);
 }
 
 .mt-hero-lead {
@@ -138,7 +132,7 @@
 }
 
 .mt-stat:nth-child(odd) b {
-  color: var(--mint);
+  color: var(--color-secondary);
 }
 
 .mt-stat span {
@@ -172,8 +166,8 @@
   gap: 8px;
   padding: 9px 15px;
   border-radius: 999px;
-  background: var(--mt-gray);
-  color: var(--ink-soft);
+  background: var(--color-bg-alt);
+  color: var(--color-text-muted);
   font-size: 0.78rem;
   font-weight: 700;
   white-space: nowrap;
@@ -184,7 +178,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--g-600);
+  background: var(--color-secondary);
 }
 
 .mt-steps {
@@ -199,13 +193,13 @@
   gap: 12px;
   padding: 24px;
   background: #fff;
-  border: 1px solid var(--line);
+  border: 1px solid var(--color-border-soft);
   border-radius: var(--r-md);
   box-shadow: var(--shadow-sm);
 }
 
 .mt-step .icon-tile {
-  background: var(--mt-gray);
+  background: var(--color-bg-alt);
 }
 
 .mt-step-label {
@@ -216,16 +210,16 @@
   font-weight: 800;
   letter-spacing: 0.11em;
   text-transform: uppercase;
-  color: var(--mt-blue);
+  color: var(--color-primary);
 }
 
 .mt-step-label i {
   font-style: normal;
-  color: var(--g-600);
+  color: var(--color-secondary);
 }
 
 .mt-step-label.is-green {
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .mt-step .h3 {
@@ -236,11 +230,11 @@
 .mt-step-text {
   flex: 1 1 auto;
   font-size: 0.855rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .mt-note {
-  background: var(--mt-gray);
+  background: var(--color-bg-alt);
   border-radius: var(--r-sm);
   padding: 12px 14px;
 }
@@ -251,14 +245,14 @@
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .mt-note b {
   display: block;
   margin-top: 3px;
   font-size: 0.82rem;
-  color: var(--ink);
+  color: var(--color-text);
   line-height: 1.35;
 }
 
@@ -271,7 +265,7 @@
   gap: 18px 28px;
   padding: 18px 26px;
   border-radius: var(--r-md);
-  background: var(--mt-gray);
+  background: var(--color-bg-alt);
 }
 
 .mt-band-title {
@@ -280,12 +274,12 @@
   gap: 12px;
   font-size: 0.94rem;
   font-weight: 700;
-  color: var(--ink);
+  color: var(--color-text);
 }
 
 .mt-band-title svg {
   font-size: 20px;
-  color: var(--g-600);
+  color: var(--color-secondary);
 }
 
 .mt-legend {
@@ -295,7 +289,7 @@
   flex-wrap: wrap;
   font-size: 0.79rem;
   font-weight: 600;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .mt-legend li {
@@ -308,11 +302,11 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: var(--g-700);
+  background: var(--color-primary);
 }
 
 .mt-legend .l-blue i {
-  background: var(--mt-blue);
+  background: var(--color-primary);
 }
 
 .mt-legend .l-gray i {
@@ -378,7 +372,7 @@
   z-index: 2;
   padding: 8px 15px;
   border-radius: 999px;
-  background: var(--g-700);
+  background: var(--color-primary);
   color: #fff;
   font-size: 0.68rem;
   font-weight: 800;
@@ -387,7 +381,7 @@
 }
 
 .mt-pole--blue {
-  background: var(--mt-blue);
+  background: var(--color-primary);
 }
 
 .mt-pole--tr {
@@ -408,7 +402,7 @@
 .mt-pillar-intro {
   margin-top: 16px;
   font-size: 0.95rem;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 .mt-feats {
@@ -431,7 +425,7 @@
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.3;
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .mt-feat-title svg {
@@ -441,13 +435,13 @@
 }
 
 .mt-feat-title.is-blue {
-  color: var(--mt-blue);
+  color: var(--color-primary);
 }
 
 .mt-feat p {
   margin-top: 8px;
   font-size: 0.835rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .mt-pillar-foot {
@@ -459,7 +453,7 @@
 
 .mt-pillar-foot p {
   font-size: 0.835rem;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 .mt-pillar-foot .link-arrow {
@@ -467,15 +461,15 @@
 }
 
 .mt-pillar-foot .link-arrow--blue {
-  color: var(--mt-blue);
+  color: var(--color-primary);
 }
 
 .mt-page .eyebrow.mt-eyebrow-green {
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .mt-page .eyebrow.mt-eyebrow-blue {
-  color: var(--mt-blue);
+  color: var(--color-primary);
 }
 
 .mt-page .sec-head--stack .eyebrow::before {
@@ -512,7 +506,7 @@
   flex: none;
   display: grid;
   place-items: center;
-  background: var(--g-700);
+  background: var(--color-primary);
   color: #fff;
   font-size: 20px;
 }
@@ -520,12 +514,12 @@
 .mt-audit b {
   display: block;
   font-size: 0.92rem;
-  color: var(--ink);
+  color: var(--color-text);
 }
 
 .mt-audit p {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .mt-std-cards {
@@ -551,7 +545,7 @@
   display: grid;
   place-items: center;
   background: #e2f3ea;
-  color: var(--g-600);
+  color: var(--color-secondary);
   font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
   font-size: 0.95rem;
   font-weight: 700;
@@ -559,7 +553,7 @@
 
 .mt-std-tile--blue {
   background: #e3e9fd;
-  color: var(--mt-blue);
+  color: var(--color-primary);
 }
 
 .mt-std-label {
@@ -567,11 +561,11 @@
   font-weight: 800;
   letter-spacing: 0.11em;
   text-transform: uppercase;
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .mt-std-label--blue {
-  color: var(--mt-blue);
+  color: var(--color-primary);
 }
 
 .mt-std-card .h3 {
@@ -593,7 +587,7 @@
 }
 
 .mt-cta-dark {
-  background: var(--dark);
+  background: var(--color-primary-strong);
   color: #fff;
   padding: 44px 40px;
 }
@@ -623,7 +617,7 @@
 }
 
 .mt-cta-item svg {
-  color: var(--mint);
+  color: var(--color-secondary);
   font-size: 20px;
   margin-top: 2px;
   flex: none;
@@ -654,7 +648,7 @@
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--mint);
+  color: var(--color-secondary);
 }
 
 .mt-cta-line b {
@@ -669,7 +663,7 @@
 }
 
 .mt-cta-line b svg {
-  color: var(--mint);
+  color: var(--color-secondary);
   font-size: 20px;
 }
 
@@ -690,7 +684,7 @@
 .mt-cta-form > p {
   margin-top: 8px;
   font-size: 0.875rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .mt-form {
@@ -703,22 +697,23 @@
 .mt-form label {
   display: grid;
   gap: 7px;
-  font-size: 0.78rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--ink);
+  color: var(--color-text);
 }
 
 .mt-form input,
 .mt-form select,
 .mt-form textarea {
   width: 100%;
-  background: var(--mt-gray);
+  background: var(--color-bg-alt);
   border: 1px solid transparent;
   border-radius: var(--r-sm);
   padding: 12px 14px;
   font: inherit;
-  font-size: 0.875rem;
-  color: var(--ink);
+  font-size: 1rem;
+  min-height: 44px;
+  color: var(--color-text);
   outline: none;
 }
 
@@ -730,8 +725,15 @@
 .mt-form input:focus,
 .mt-form select:focus,
 .mt-form textarea:focus {
-  border-color: var(--g-600);
+  border-color: var(--color-secondary);
   background: #fff;
+}
+
+.mt-form input:focus-visible,
+.mt-form select:focus-visible,
+.mt-form textarea:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .mt-form textarea {
@@ -754,11 +756,11 @@
 
 .mt-form-foot small {
   font-size: 0.8rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 /* ------------------------------------------------------------ responsive */
-@media (max-width: 1020px) {
+@media (max-width: 1024px) {
   .mt-steps {
     grid-template-columns: 1fr 1fr;
   }
@@ -784,7 +786,7 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .mt-steps,
   .mt-feats,
   .mt-form {
@@ -796,5 +798,14 @@
   }
   .mt-stats {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .mt-hero .container {
+    padding-block: 56px 48px;
+  }
+  .mt-hero-title {
+    font-size: clamp(1.8rem, 7.5vw, 2.25rem);
   }
 }

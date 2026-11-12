@@ -68,7 +68,14 @@ function Hero() {
           </div>
         </div>
         <div className="pro-hero-media">
-          <img src="/assets/images/station-gaz-carbu.png" alt="Carburants et Gaz Domestique Vision Energy" />
+           <img
+             src="/assets/images/station-gaz-carbu.png"
+             alt="Carburants et Gaz Domestique Vision Energy"
+             width="1254"
+             height="1254"
+             fetchPriority="high"
+             decoding="async"
+           />
         </div>
       </div>
     </section>
@@ -307,7 +314,7 @@ function Lubrifiants() {
           {visibleLubes.map((l) => (
             <article className="card card-hover pro-lub-card" key={l.title}>
               <div className="media pro-lub-media">
-                <img src={l.img} alt={l.title} />
+                <img src={l.img} alt={l.title} loading="lazy" decoding="async" />
               </div>
               <div className="pro-lub-meta">
                 <span className={`pill ${l.pillCls}`}>{l.pill}</span>
@@ -509,7 +516,12 @@ function Services() {
               ))}
             </ul>
             <div className="media pro-bout-media">
-              <img src="/assets/images/station-boutique.jpg" alt="Cafétéria et Boutique Vision Express" />
+              <img
+                src="/assets/images/station-boutique.jpg"
+                alt="Cafétéria et Boutique Vision Express"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </article>
         </div>

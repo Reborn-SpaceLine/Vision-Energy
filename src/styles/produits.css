@@ -14,18 +14,7 @@
 
 .pro-carburants .eyebrow,
 .pro-gaz .eyebrow {
-  color: var(--g-700);
-}
-
-/* page-local palette measured on the mockup */
-.produits-root {
-  --pro-blue: #1d4ed8; /* vivid blue used for pills, stats, links, eyebrows */
-  --pro-navy: #16256b; /* dark navy icons / callout title */
-  --pro-mint: #85f8c4; /* solid mint fills */
-  --pro-lav: #dce1ff; /* lavender icon tiles */
-  --pro-bg: #f7f9fb; /* light section background */
-  --pro-bg2: #f2f4f6; /* alternate light section background */
-  --pro-chip: #eceef0; /* neutral chips / tiles on light bg */
+  color: var(--color-primary);
 }
 
 /* mockup container is 1184px (content 56 -> 1240 at 1296 viewport) */
@@ -52,12 +41,12 @@
 }
 
 .produits-root .pill--solid-green {
-  background: var(--g-600);
+  background: var(--color-secondary);
   color: #fff;
 }
 
 .produits-root .pill--solid-blue {
-  background: var(--pro-blue);
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -67,29 +56,29 @@
 }
 
 .produits-root .pill--mint-solid {
-  background: var(--pro-mint);
-  color: var(--g-700);
+  background: var(--color-secondary);
+  color: var(--color-primary);
   text-transform: none;
   letter-spacing: 0;
 }
 
 .produits-root .pill--lav {
-  background: var(--pro-lav);
-  color: var(--pro-blue);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
   text-transform: none;
   letter-spacing: 0;
 }
 
 .produits-root .pill--peri {
   background: #d9e1f7;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
   text-transform: none;
   letter-spacing: 0;
 }
 
 .produits-root .pill--cert {
   border-radius: 8px;
-  background: var(--pro-blue);
+  background: var(--color-primary);
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -101,7 +90,7 @@
 
 .produits-root .pill--darkmint {
   background: rgba(104, 219, 169, 0.14);
-  color: var(--mint);
+  color: var(--color-secondary);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-size: 0.68rem;
@@ -110,21 +99,21 @@
 
 /* icon tiles variants */
 .produits-root .icon-tile--mint-solid {
-  background: var(--pro-mint);
-  color: var(--g-700);
+  background: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .produits-root .icon-tile--navy {
-  color: var(--pro-navy);
+  color: var(--color-primary-strong);
 }
 
 .produits-root .icon-tile--lav {
-  background: var(--pro-lav);
+  background: var(--color-primary-soft);
 }
 
 /* ------------------------------------------------------------------ hero */
 .pro-hero {
-  background: var(--dark);
+  background: var(--color-primary-strong);
   color: #e7eeeb;
   padding: 76px 0 72px;
   position: relative;
@@ -160,7 +149,7 @@
   border-radius: 999px;
   background: rgba(104, 219, 169, 0.12);
   border: 1px solid rgba(104, 219, 169, 0.28);
-  color: var(--mint);
+  color: var(--color-secondary);
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -178,7 +167,7 @@
 .btn--onlight {
   background: #fff;
   border-color: #fff;
-  color: var(--ink);
+  color: var(--color-text);
 }
 
 .btn--onlight:hover {
@@ -210,7 +199,7 @@
 }
 
 .pro-hero-stat:first-child b {
-  color: var(--mint);
+  color: var(--color-secondary);
 }
 
 .pro-hero-stat span {
@@ -251,7 +240,7 @@
 }
 
 .pro-hero-float .icon-tile {
-  background: var(--g-700);
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -270,13 +259,13 @@
 .pro-hero-float-text span {
   display: block;
   font-size: 0.82rem;
-  color: var(--mint);
+  color: var(--color-secondary);
   margin-top: 2px;
 }
 
 /* --------------------------------------------------------- filter toolbar */
 .pro-filter {
-  background: var(--pro-bg);
+  background: var(--color-bg);
   padding: 24px 0 0;
 }
 
@@ -286,7 +275,7 @@
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  background: var(--pro-chip);
+  background: var(--color-bg-alt);
   border-radius: 14px;
   padding: 12px 20px;
 }
@@ -298,11 +287,11 @@
   font-family: var(--font-head);
   font-size: 1.02rem;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--color-text);
 }
 
 .pro-filter-label svg {
-  color: var(--g-700);
+  color: var(--color-primary);
   font-size: 1.1em;
 }
 
@@ -319,17 +308,17 @@
   background: transparent;
   font-size: 0.86rem;
   font-weight: 600;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 .pro-fchip--on {
-  background: var(--g-700);
+  background: var(--color-primary);
   color: #fff;
 }
 
 /* ------------------------------------------------------ carburant cards */
 .pro-carburants {
-  background: var(--pro-bg);
+  background: var(--color-bg);
   padding: 72px 0 52px;
 }
 
@@ -353,12 +342,12 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .pro-eff .pill {
-  background: var(--pro-mint);
-  color: var(--g-950);
+  background: var(--color-secondary);
+  color: var(--color-primary-strong);
   text-transform: none;
   letter-spacing: 0;
   border-radius: 10px;
@@ -389,7 +378,7 @@
 
 .pro-card-desc {
   font-size: 0.92rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .pro-stat-row {
@@ -399,7 +388,7 @@
 }
 
 .pro-stat {
-  background: var(--pro-bg2);
+  background: var(--color-bg-alt);
   border-radius: var(--r-md);
   padding: 12px 14px;
 }
@@ -419,18 +408,18 @@
 }
 
 .pro-stat--green b {
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .pro-stat--blue b {
-  color: var(--pro-blue);
+  color: var(--color-primary);
 }
 
 .pro-stat span {
   display: block;
   margin-top: 8px;
   font-size: 0.82rem;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 .pro-card-foot {
@@ -440,7 +429,7 @@
   gap: 16px;
   margin-top: 4px;
   padding-top: 16px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--color-border-soft);
 }
 
 .pro-card-foot .kicker {
@@ -451,25 +440,25 @@
 }
 
 .kicker--green {
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .kicker--blue {
-  color: var(--pro-blue);
+  color: var(--color-primary);
 }
 
 .pro-card-foot .link-arrow--blue {
-  color: var(--pro-blue);
+  color: var(--color-primary);
 }
 
 /* ------------------------------------------------------ lubrifiant cards */
 .pro-lub {
-  background: var(--pro-bg2);
+  background: var(--color-bg-alt);
   padding: 60px 0 52px;
 }
 
 .pro-lub .eyebrow {
-  color: var(--pro-blue);
+  color: var(--color-primary);
 }
 
 .pro-lub .sec-head .lead {
@@ -493,13 +482,13 @@
   padding: 8px 16px;
   border-radius: 999px;
   background: #e0e3e5;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
   font-size: 0.84rem;
   font-weight: 600;
 }
 
 .pro-tagpill--on {
-  background: var(--pro-blue);
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -521,6 +510,8 @@
   justify-content: space-between;
   gap: 8px;
   margin-top: 4px;
+  min-width: 0;
+  flex-wrap: wrap;
 }
 
 .pro-lub-meta .pill {
@@ -536,8 +527,8 @@
   font-family: var(--font-head);
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--ink);
-  white-space: nowrap;
+  color: var(--color-text);
+  overflow-wrap: anywhere;
 }
 
 .pro-lub-card .h3 {
@@ -549,7 +540,7 @@
 .pro-lub-card .prod-text {
   font-size: 0.8rem;
   line-height: 1.45;
-  color: var(--muted);
+  color: var(--color-text-muted);
   flex: 0 0 auto;
 }
 
@@ -562,8 +553,8 @@
 .pro-spec-chips span {
   padding: 4px 9px;
   border-radius: 8px;
-  background: var(--pro-chip);
-  color: var(--ink-soft);
+  background: var(--color-bg-alt);
+  color: var(--color-text-muted);
   font-size: 0.68rem;
   font-weight: 600;
 }
@@ -581,11 +572,11 @@
 }
 
 .pro-lub-price--green {
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .pro-lub-price--blue {
-  color: var(--pro-blue);
+  color: var(--color-primary);
 }
 
 .pro-dl {
@@ -594,20 +585,20 @@
   border-radius: 9px;
   display: grid;
   place-items: center;
-  background: var(--pro-chip);
-  color: var(--ink);
+  background: var(--color-bg-alt);
+  color: var(--color-text);
   font-size: 16px;
   flex: none;
 }
 
 .pro-dl:hover {
-  background: var(--g-700);
+  background: var(--color-primary);
   color: #fff;
 }
 
 /* ------------------------------------------------------------- gaz cards */
 .pro-gaz {
-  background: var(--pro-bg);
+  background: var(--color-bg);
   padding: 60px 0 40px;
 }
 
@@ -630,7 +621,7 @@
   display: flex;
   gap: 14px;
   align-items: flex-start;
-  background: var(--pro-bg2);
+  background: var(--color-bg-alt);
   border-radius: 14px;
   padding: 15px 18px;
 }
@@ -653,7 +644,7 @@
 
 .pro-info p {
   font-size: 0.88rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .pro-cyl {
@@ -715,13 +706,13 @@
 
 .pro-cyl p {
   font-size: 0.84rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
   flex: 1 1 auto;
 }
 
 .pro-cyl-foot {
   width: 100%;
-  background: var(--pro-bg2);
+  background: var(--color-bg-alt);
   border-radius: 10px;
   padding: 12px 10px;
 }
@@ -733,11 +724,11 @@
 }
 
 .pro-cyl-foot--green span {
-  color: var(--g-600);
+  color: var(--color-secondary);
 }
 
 .pro-cyl-foot--blue span {
-  color: var(--pro-blue);
+  color: var(--color-primary);
 }
 
 .pro-cyl-foot--slate span {
@@ -750,12 +741,12 @@
   font-size: 0.95rem;
   font-weight: 600;
   margin-top: 3px;
-  color: var(--ink);
+  color: var(--color-text);
 }
 
 /* --------------------------------------------------------- services dark */
 .pro-services {
-  background: var(--dark);
+  background: var(--color-primary-strong);
   color: #e7eeeb;
   padding: 72px 0;
 }
@@ -827,7 +818,7 @@
 }
 
 .pro-svc-sub svg {
-  color: var(--mint);
+  color: var(--color-secondary);
   font-size: 20px;
 }
 
@@ -861,8 +852,8 @@
 
 /* boutique card */
 .pro-bout .icon-tile {
-  background: var(--pro-lav);
-  color: var(--pro-navy);
+  background: var(--color-primary-soft);
+  color: var(--color-primary-strong);
   width: 52px;
   height: 52px;
   font-size: 24px;
@@ -892,7 +883,7 @@
 }
 
 .pro-ticks-dark svg {
-  color: var(--mint);
+  color: var(--color-secondary);
   font-size: 1.15em;
   flex: none;
 }
@@ -913,8 +904,8 @@
 }
 
 .pro-entretien .icon-tile {
-  background: var(--pro-mint);
-  color: var(--g-950);
+  background: var(--color-secondary);
+  color: var(--color-primary-strong);
   width: 52px;
   height: 52px;
   font-size: 24px;
@@ -941,6 +932,7 @@
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: var(--r-md);
   padding: 22px;
+  min-width: 0;
 }
 
 .pro-ent-sub-top {
@@ -948,6 +940,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  flex-wrap: wrap;
   margin-bottom: 12px;
 }
 
@@ -956,7 +949,7 @@
   font-size: 1.06rem;
   font-weight: 600;
   color: #fff;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .pro-ent-tag {
@@ -968,7 +961,7 @@
 }
 
 .pro-ent-tag--mint {
-  color: var(--mint);
+  color: var(--color-secondary);
 }
 
 .pro-ent-tag--gray {
@@ -994,7 +987,7 @@
 }
 
 .pro-ent-note--mint {
-  color: var(--mint);
+  color: var(--color-secondary);
 }
 
 .pro-ent-note--gray {
@@ -1003,7 +996,7 @@
 
 /* ------------------------------------------------------------------ B2B */
 .pro-b2b {
-  background: var(--pro-bg);
+  background: var(--color-bg);
   padding: 72px 0 56px;
 }
 
@@ -1015,7 +1008,7 @@
 }
 
 .pro-b2b .eyebrow {
-  color: var(--pro-blue);
+  color: var(--color-primary);
 }
 
 .pro-b2b .h2 {
@@ -1038,7 +1031,7 @@
 }
 
 .pro-b2b-callout .h3 {
-  color: var(--pro-navy);
+  color: var(--color-primary-strong);
   font-size: 1.2rem;
   display: flex;
   align-items: center;
@@ -1047,12 +1040,12 @@
 
 .pro-b2b-callout p {
   font-size: 0.9rem;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
   margin-top: 8px;
 }
 
 .pro-b2b-callout a {
-  color: var(--pro-blue);
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -1072,8 +1065,8 @@
 }
 
 .pro-form > p {
-  color: var(--muted);
-  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  font-size: 1rem;
   margin-top: 10px;
 }
 
@@ -1094,23 +1087,24 @@
 }
 
 .pro-field > span {
-  font-size: 0.74rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
 }
 
 .pro-field input,
 .pro-field select,
 .pro-field textarea {
   font: inherit;
-  font-size: 0.88rem;
-  color: var(--ink);
-  background: var(--pro-bg);
-  border: 1px solid var(--line);
+  font-size: 1rem;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-soft);
   border-radius: 10px;
   padding: 11px 14px;
   outline: none;
   width: 100%;
+  min-height: 44px;
 }
 
 .pro-field textarea {
@@ -1121,7 +1115,7 @@
 .pro-field input:focus,
 .pro-field select:focus,
 .pro-field textarea:focus {
-  border-color: var(--g-600);
+  border-color: var(--color-secondary);
   background: #fff;
 }
 
@@ -1134,20 +1128,26 @@
   margin-top: 24px;
 }
 
+.pro-form-foot .btn {
+  flex: 1 1 240px;
+  min-width: 0;
+  white-space: normal;
+}
+
 .pro-form-foot .note {
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 /* ------------------------------------------------------------------ FAQ */
 .pro-faq {
-  background: var(--pro-bg2);
+  background: var(--color-bg-alt);
   padding: 64px 0 56px;
 }
 
 .pro-faq .eyebrow {
-  color: var(--g-700);
+  color: var(--color-primary);
 }
 
 .pro-faq-list {
@@ -1159,7 +1159,7 @@
 
 .pro-acc {
   background: #fff;
-  border: 1px solid var(--line);
+  border: 1px solid var(--color-border-soft);
   border-radius: var(--r-md);
   box-shadow: var(--shadow-sm);
   overflow: hidden;
@@ -1176,7 +1176,7 @@
   font-family: var(--font-head);
   font-size: 1.06rem;
   font-weight: 500;
-  color: var(--ink);
+  color: var(--color-text);
 }
 
 .pro-acc summary::-webkit-details-marker {
@@ -1184,7 +1184,7 @@
 }
 
 .pro-acc summary svg {
-  color: var(--g-700);
+  color: var(--color-primary);
   font-size: 20px;
   flex: none;
   transition: transform 0.2s ease;
@@ -1197,11 +1197,11 @@
 .pro-acc-body {
   padding: 0 24px 20px;
   font-size: 0.92rem;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 /* -------------------------------------------------------------- responsive */
-@media (max-width: 1020px) {
+@media (max-width: 1024px) {
   .pro-hero-grid,
   .pro-gaz-grid,
   .pro-b2b-grid,
@@ -1215,11 +1215,11 @@
   }
   .pro-svc-subs,
   .pro-ent-subs {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .pro-stat-row,
   .pro-form-grid {
     grid-template-columns: 1fr;
@@ -1227,5 +1227,8 @@
   .pro-filter-bar {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .pro-form-foot .btn {
+    flex-basis: 100%;
   }
 }

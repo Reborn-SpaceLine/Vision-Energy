@@ -351,7 +351,7 @@ function PoleCard({ p }: { p: Pole }) {
         <span className={`mt-pole ${p.poleTone === 'blue' ? 'mt-pole--blue' : ''} ${p.polePos === 'tr' ? 'mt-pole--tr' : ''}`}>
           {p.n}
         </span>
-        <img src={p.img} alt={p.alt} />
+        <img src={p.img} alt={p.alt} loading="lazy" decoding="async" />
       </div>
       <div className="mt-pillar-body">
         <span

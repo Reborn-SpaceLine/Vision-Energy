@@ -141,7 +141,12 @@ function News() {
 
         <article className="card card--pad0 act-feat">
           <div className="act-feat-media">
-            <img src="/assets/images/station-panoramic.jpg" alt="Station-service Vision Energy en exploitation" />
+            <img
+              src="/assets/images/station-panoramic.jpg"
+              alt="Station-service Vision Energy en exploitation"
+              fetchPriority="high"
+              decoding="async"
+            />
           </div>
           <div className="act-feat-body">
             <div className="act-feat-meta">
@@ -183,7 +188,7 @@ function News() {
           {newsCards.map((c) => (
             <article className="card card--pad0 card-hover act-card" key={c.title}>
               <div className="act-card-media">
-                <img src={c.img} alt="" />
+                <img src={c.img} alt="" loading="lazy" decoding="async" />
               </div>
               <div className="act-card-body">
                 <div className="news-meta">
@@ -366,7 +371,12 @@ function Careers() {
           <article className="card car-testi">
             <div className="car-testi-media">
               <div className="car-testi-photo">
-                <img src="/assets/images/station-ve-real.jpg" alt="Équipe Vision Energy en station" />
+                <img
+                  src="/assets/images/station-ve-real.jpg"
+                  alt="Équipe Vision Energy en station"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <span className="car-testi-badge">
                 <IconQuote /> Équipes en poste depuis 2023

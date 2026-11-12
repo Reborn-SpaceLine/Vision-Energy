@@ -8,7 +8,7 @@
   position: relative;
   overflow: hidden;
   padding: 36px 0 72px;
-  background: var(--dark);
+  background: var(--color-primary-strong);
   color: #fff;
 }
 
@@ -18,7 +18,7 @@
   background:
     radial-gradient(ellipse 80% 60% at 70% -10%, rgba(27, 163, 56, 0.28) 0%, transparent 60%),
     radial-gradient(ellipse 60% 50% at 10% 100%, rgba(40, 144, 216, 0.14) 0%, transparent 60%),
-    var(--dark);
+    var(--color-primary-strong);
   pointer-events: none;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .car-page-stats .act-stat em {
-  color: var(--mint-soft);
+  color: var(--color-secondary-soft);
 }
 
 /* ---------------------------------------------------------------- empty state */
@@ -97,24 +97,24 @@
   margin-top: 32px;
   padding: 56px 32px;
   border-radius: var(--r-lg);
-  background: var(--bg);
-  border: 1.5px dashed var(--line);
+  background: var(--color-bg);
+  border: 1.5px dashed var(--color-border-soft);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   text-align: center;
-  color: var(--muted);
+  color: var(--color-text-muted);
 }
 
 .car-empty svg {
   font-size: 36px;
-  color: var(--line);
+  color: var(--color-border-soft);
 }
 
 .car-empty b {
   font-size: 1.1rem;
-  color: var(--ink-soft);
+  color: var(--color-text-muted);
   margin-top: 4px;
 }
 
@@ -128,7 +128,7 @@
 }
 
 /* ---------------------------------------------------------------- responsive */
-@media (max-width: 860px) {
+@media (max-width: 768px) {
   .car-page-title {
     font-size: 2.4rem;
   }
@@ -139,7 +139,7 @@
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 640px) {
   .car-page-title {
     font-size: 1.9rem;
   }

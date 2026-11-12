@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { href } from '../router'
 import { Icon } from './icons'
 
@@ -39,20 +39,50 @@ export function TopBar() {
 
 export function Header({ path }: { path: string }) {
   const [open, setOpen] = useState(false)
+  const headerRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    if (!open) return
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpen(false)
+    }
+    const closeOnOutsidePointer = (event: PointerEvent) => {
+      if (event.target instanceof Node && !headerRef.current?.contains(event.target)) {
+        setOpen(false)
+      }
+    }
+
+    document.addEventListener('keydown', closeOnEscape)
+    document.addEventListener('pointerdown', closeOnOutsidePointer)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      document.removeEventListener('keydown', closeOnEscape)
+      document.removeEventListener('pointerdown', closeOnOutsidePointer)
+    }
+  }, [open])
+
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <div className="container header-inner">
         <a className="brand" href={href('/')} aria-label="Vision Energy S.A. — accueil">
           <img
-            src="/assets/images/logo-wordmark.svg"
+            src="/images/logo-wordmark.png"
             alt="Vision Energy SA"
             className="brand-logo"
-            width="200"
-            height="26"
+            width="210"
+            height="27"
           />
         </a>
 
-        <nav className={`nav${open ? ' open' : ''}`} aria-label="Navigation principale">
+        <nav
+          id="primary-navigation"
+          className={`nav${open ? ' open' : ''}`}
+          aria-label="Navigation principale"
+        >
           <ul>
             {navItems.map((n) => {
               const active = n.path === path
@@ -100,6 +130,7 @@ export function Header({ path }: { path: string }) {
             type="button"
             className="nav-burger"
             aria-expanded={open}
+            aria-controls="primary-navigation"
             aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
             onClick={() => setOpen((o) => !o)}
           >
@@ -117,7 +148,7 @@ export function Footer() {
       <div className="container footer-grid">
         <div className="footer-intro">
           <div className="footer-brand">
-            <img src="/assets/images/logo-wordmark.svg" alt="Vision Energy SA" width="186" height="24" />
+            <img src="/images/logo-wordmark.png" alt="Vision Energy SA" width="186" height="24" />
           </div>
           <p>
             Vision Energy S.A. — société anonyme camerounaise des produits pétroliers, du gaz et des

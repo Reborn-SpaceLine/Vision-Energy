@@ -580,7 +580,7 @@ export default function ReseauPage() {
                 <h3 className="res-exp-title">{c.title}</h3>
                 <p className="res-exp-text">{c.text}</p>
                 <div className="media res-exp-media">
-                  <img src={c.img} alt={c.alt} loading="lazy" />
+                  <img src={c.img} alt={c.alt} loading="lazy" decoding="async" />
                 </div>
               </article>
             ))}
@@ -637,46 +637,58 @@ export default function ReseauPage() {
                 </div>
                 <div className="res-form-grid">
                   <div>
-                    <span className="res-flabel">Nom complet ou raison sociale</span>
+                    <label className="res-flabel" htmlFor="partner-name">
+                      Nom complet ou raison sociale
+                    </label>
                     <input
+                      id="partner-name"
                       className="res-in"
                       type="text"
                       placeholder="Ex: Mbarga Pierre / Transports Mbarga SARL"
                     />
                   </div>
                   <div>
-                    <span className="res-flabel">Numéro de téléphone</span>
-                    <input className="res-in" type="tel" placeholder="+237 6 00 00 00 00" />
+                    <label className="res-flabel" htmlFor="partner-phone">Numéro de téléphone</label>
+                    <input id="partner-phone" className="res-in" type="tel" placeholder="+237 6 00 00 00 00" />
                   </div>
                   <div>
-                    <span className="res-flabel">Adresse email professionnelle</span>
-                    <input className="res-in" type="email" placeholder="contact@domaine.com" />
+                    <label className="res-flabel" htmlFor="partner-email">
+                      Adresse email professionnelle
+                    </label>
+                    <input id="partner-email" className="res-in" type="email" placeholder="contact@domaine.com" />
                   </div>
                   <div>
-                    <span className="res-flabel">Localisation du bien / ville</span>
+                    <label className="res-flabel" htmlFor="partner-location">
+                      Localisation du bien / ville
+                    </label>
                     <input
+                      id="partner-location"
                       className="res-in"
                       type="text"
                       placeholder="Ex: Bafoussam – Axe Douala / Yaoundé"
                     />
                   </div>
                   <div>
-                    <span className="res-flabel">Superficie estimée (m²)</span>
-                    <input className="res-in" type="text" placeholder="Ex: 2500" />
+                    <label className="res-flabel" htmlFor="partner-area">Superficie estimée (m²)</label>
+                    <input id="partner-area" className="res-in" type="text" placeholder="Ex: 2500" />
                   </div>
                   <div>
-                    <span className="res-flabel">Statut juridique du foncier</span>
+                    <label className="res-flabel" htmlFor="partner-title">
+                      Statut juridique du foncier
+                    </label>
                     <input
+                      id="partner-title"
                       className="res-in"
                       type="text"
                       defaultValue="Titre Foncier (TF) disponible"
                     />
                   </div>
                   <div className="res-form-full">
-                    <span className="res-flabel">
+                    <label className="res-flabel" htmlFor="partner-details">
                       Détails complémentaires sur le flux routier ou le projet
-                    </span>
+                    </label>
                     <textarea
+                      id="partner-details"
                       className="res-in res-in--area"
                       rows={3}
                       placeholder="Précisez la façade sur route (en mètres), les commerces riverains ou vos antécédents dans la distribution…"

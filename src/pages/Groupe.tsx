@@ -195,7 +195,7 @@ function Valeurs() {
     <section className="section section--bg2 grp-sec">
       <div className="container">
         <div className="sec-head sec-head--stack">
-          <span className="eyebrow" style={{ color: 'var(--blue)' }}>
+          <span className="eyebrow" style={{ color: 'var(--color-primary)' }}>
             Fondations morales &amp; opérationnelles
           </span>
           <h2 className="h2">Vision, Mission &amp; Engagements</h2>
@@ -225,7 +225,14 @@ function Gouvernance() {
     <section className="section grp-sec">
       <div className="container grp-gov">
         <figure className="grp-director">
-          <img src="/assets/images/grp-director-clean.jpg" alt="M. Kamdem Youmbi Ngué Tchuchi Ghislain, Président-Directeur Général de Vision Energy S.A." />
+          <img
+            src="/assets/images/grp-director-clean.jpg"
+            alt="M. Kamdem Youmbi Ngué Tchuchi Ghislain, Président-Directeur Général de Vision Energy S.A."
+            width="954"
+            height="1212"
+            loading="lazy"
+            decoding="async"
+          />
           <figcaption className="grp-director-cap">
             <span>Président-Directeur Général</span>
             <b>M. Kamdem Youmbi Ngué Tchuchi Ghislain</b>
