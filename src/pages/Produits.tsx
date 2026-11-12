@@ -1,5 +1,6 @@
 import '../styles/produits.css'
 import type { SVGProps } from 'react'
+import { useState } from 'react'
 import { href } from '../router'
 import { Icon } from '../components/icons'
 
@@ -67,7 +68,7 @@ function Hero() {
           </div>
         </div>
         <div className="pro-hero-media">
-          <img src="/images/station-gaz-carbu.png" alt="Carburants et Gaz Domestique Vision Energy" />
+          <img src="/assets/images/station-gaz-carbu.png" alt="Carburants et Gaz Domestique Vision Energy" />
         </div>
       </div>
     </section>
@@ -75,9 +76,13 @@ function Hero() {
 }
 
 /* ---------------------------------------------------------- filter bar */
-const filters = ['Tous les Produits', 'Particuliers & Familles', 'Flottes & Grands Comptes']
+const filterDefs = [
+  { label: 'Tous les Produits', scrollTo: 'carburants' },
+  { label: 'Particuliers & Familles', scrollTo: 'gaz' },
+  { label: 'Flottes & Grands Comptes', scrollTo: 'flottes' },
+]
 
-function FilterBar() {
+function FilterBar({ active, onSelect }: { active: number; onSelect: (i: number) => void }) {
   return (
     <div className="pro-filter">
       <div className="container">
@@ -86,9 +91,19 @@ function FilterBar() {
             <Icon.funnel /> Afficher l’offre adaptée :
           </span>
           <div className="pro-filter-chips">
-            {filters.map((f, i) => (
-              <button key={f} className={i === 0 ? 'pro-fchip pro-fchip--on' : 'pro-fchip'} type="button">
-                {f}
+            {filterDefs.map((f, i) => (
+              <button
+                key={f.label}
+                className={i === active ? 'pro-fchip pro-fchip--on' : 'pro-fchip'}
+                type="button"
+                aria-pressed={i === active}
+                onClick={() => {
+                  onSelect(i)
+                  const el = document.getElementById(f.scrollTo)
+                  if (el) requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }))
+                }}
+              >
+                {f.label}
               </button>
             ))}
           </div>
@@ -128,14 +143,14 @@ const fuels = [
     desc: "Conçu pour les moteurs diesel haute pression, il limite l'encrassement des injecteurs et espace les cycles de maintenance.",
     stats: [
       { cls: 'pro-stat--green', icon: <Icon.tag />, value: '828 CFA/L', label: 'Grille MINMIDT' },
-      { cls: 'pro-stat--blue', icon: <Icon.hourglass />, value: 'Disponible', label: 'Piste & vrac pro' },
+      { cls: 'pro-stat--blue', icon: <Icon.hourglass />, value: 'Disponible', label: 'Disponible en citerne' },
     ],
     ticks: [
       'Indice de cétane optimisé pour une combustion plus propre',
       "Désémulsion rapide pour protéger contre l'eau de condensation",
       'Idéal pour véhicules utilitaires légers, SUV et flottes lourdes',
     ],
-    kicker: 'Option vrac & cuve entreprise',
+    kicker: 'Livraison citerne & cuve sur site',
     kickerCls: 'kicker--blue',
   },
 ]
@@ -203,7 +218,7 @@ function Carburants() {
 /* --------------------------------------------------------- lubrifiants */
 const lubes = [
   {
-    img: '/images/station-graissage.jpg',
+    img: '/assets/images/lub-canister-synth.jpg',
     pill: 'Synthèse 100%',
     pillCls: 'pill--sq pill--mint-solid',
     grade: '5W-30',
@@ -214,7 +229,7 @@ const lubes = [
     priceCls: 'pro-lub-price--green',
   },
   {
-    img: '/images/station-graissage.jpg',
+    img: '/assets/images/lub-graissage-bay.jpg',
     pill: 'Semi-Synthèse',
     pillCls: 'pill--sq pill--lav',
     grade: '10W-40',
@@ -225,7 +240,7 @@ const lubes = [
     priceCls: 'pro-lub-price--blue',
   },
   {
-    img: '/images/station-graissage.jpg',
+    img: '/assets/images/lub-drum-heavyduty.jpg',
     pill: 'Haute Endurance',
     pillCls: 'pill--sq pill--peri',
     grade: '15W-40',
@@ -236,7 +251,7 @@ const lubes = [
     priceCls: 'pro-lub-price--green',
   },
   {
-    img: '/images/station-graissage.jpg',
+    img: '/assets/images/lub-industrial-fluid.jpg',
     pill: 'Hydraulique & Industrie',
     pillCls: 'pill--sq pill--mint-solid',
     grade: 'ISO VG 46 / 68',
@@ -248,9 +263,17 @@ const lubes = [
   },
 ]
 
-const lubTags = ['Véhicules Légers', 'Poids Lourds & BTP', 'Industrie & Engins']
+const lubTagDefs = [
+  { label: 'Véhicules Légers', keys: ['SynthTech', 'MultiDrive'] },
+  { label: 'Poids Lourds & BTP', keys: ['HeavyDuty', 'MultiDrive'] },
+  { label: 'Industrie & Engins', keys: ['Hydro'] },
+]
 
 function Lubrifiants() {
+  const [activeTag, setActiveTag] = useState(0)
+  const visibleLubes = activeTag === 0
+    ? lubes
+    : lubes.filter((l) => lubTagDefs[activeTag].keys.some((k) => l.title.includes(k)))
   return (
     <section className="section pro-lub" id="lubrifiants">
       <div className="container">
@@ -267,15 +290,21 @@ function Lubrifiants() {
             </p>
           </div>
           <div className="pro-tagpills">
-            {lubTags.map((t, i) => (
-              <span key={t} className={i === 0 ? 'pro-tagpill pro-tagpill--on' : 'pro-tagpill'}>
-                {t}
-              </span>
+            {lubTagDefs.map((t, i) => (
+              <button
+                key={t.label}
+                type="button"
+                className={i === activeTag ? 'pro-tagpill pro-tagpill--on' : 'pro-tagpill'}
+                onClick={() => setActiveTag(i)}
+                aria-pressed={i === activeTag}
+              >
+                {t.label}
+              </button>
             ))}
           </div>
         </div>
         <div className="grid grid-4">
-          {lubes.map((l) => (
+          {visibleLubes.map((l) => (
             <article className="card card-hover pro-lub-card" key={l.title}>
               <div className="media pro-lub-media">
                 <img src={l.img} alt={l.title} />
@@ -480,7 +509,7 @@ function Services() {
               ))}
             </ul>
             <div className="media pro-bout-media">
-              <img src="/images/station-boutique.jpg" alt="Cafétéria et Boutique Vision Express" />
+              <img src="/assets/images/station-boutique.jpg" alt="Cafétéria et Boutique Vision Express" />
             </div>
           </article>
         </div>
@@ -546,7 +575,7 @@ function B2B() {
           <span className="eyebrow">
             <Icon.briefcase /> Espace B2B &amp; Partenaires
           </span>
-          <h2 className="h2">Commandes en Vrac, Cuves Dédiées &amp; Flottes Pro</h2>
+          <h2 className="h2">Approvisionnement Citerne, Cuves Dédiées &amp; Flottes Pro</h2>
           <p className="lead">
             Vous gérez une entreprise logistique, un chantier BTP ou un site agro-industriel ? Nos
             conseillers commerciaux élaborent des solutions sur mesure avec approvisionnement garanti
@@ -601,11 +630,11 @@ function B2B() {
             </label>
             <label className="pro-field">
               <span>Type de Produit Requis</span>
-              <select defaultValue="Gasoil ProClean Vrac (Camion Citerne)">
-                <option>Gasoil ProClean Vrac (Camion Citerne)</option>
-                <option>Super 95 ProClean Vrac</option>
+              <select defaultValue="Gasoil ProClean — Livraison Citerne">
+                <option>Gasoil ProClean — Livraison Citerne</option>
+                <option>Super 95 ProClean — Livraison Citerne</option>
                 <option>Lubrifiants VisionPro (Fût / IBC)</option>
-                <option>Gaz VisionGaz (Palette / Vrac)</option>
+                <option>Gaz VisionGaz (Palette / Conteneur)</option>
               </select>
             </label>
             <label className="pro-field">
@@ -718,10 +747,11 @@ function ProCtaBand({
 
 /* --------------------------------------------------------------- page */
 export default function ProduitsPage() {
+  const [activeFilter, setActiveFilter] = useState(0)
   return (
     <div className="produits-root">
       <Hero />
-      <FilterBar />
+      <FilterBar active={activeFilter} onSelect={setActiveFilter} />
       <Carburants />
       <Lubrifiants />
       <Gaz />

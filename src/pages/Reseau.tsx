@@ -1,17 +1,18 @@
 import '../styles/res.css'
+import { useState } from 'react'
 import { Icon } from '../components/icons'
 import { href } from '../router'
 import { CtaBand } from './Home'
 
 /* --------------------------------------------------------------- hero */
 const services = [
-  { icon: <Icon.sliders />, label: 'Tout afficher', on: true },
-  { icon: <Icon.drop />, label: 'Lavage Express' },
-  { icon: <Icon.shop />, label: 'Boutique & Café' },
-  { icon: <Icon.gauge />, label: 'Gonflage & Niveaux' },
-  { icon: <Icon.flame />, label: 'Gaz Bouteille' },
-  { icon: <Icon.nfc />, label: 'VisionPass & Mobile Money' },
-  { icon: <Icon.coffee />, label: 'Café / Restauration' },
+  { icon: <Icon.sliders />, label: 'Tout afficher', key: '' },
+  { icon: <Icon.drop />, label: 'Lavage Express', key: 'lavage' },
+  { icon: <Icon.shop />, label: 'Boutique & Café', key: 'boutique' },
+  { icon: <Icon.gauge />, label: 'Gonflage & Niveaux', key: 'gonflage' },
+  { icon: <Icon.flame />, label: 'Gaz Bouteille', key: 'gaz' },
+  { icon: <Icon.nfc />, label: 'VisionPass & Mobile Money', key: 'visionpass' },
+  { icon: <Icon.coffee />, label: 'Café / Restauration', key: 'cafe' },
 ]
 
 /* ----------------------------------------------------------- stations */
@@ -25,6 +26,7 @@ type Station = {
   addr: string
   prices: Price[]
   svcs: { icon: React.ReactNode; label: string }[]
+  svcKeys: string[]
   dist: string
   time: string
   lead?: boolean
@@ -51,6 +53,7 @@ const stations: Station[] = [
       { icon: <Icon.card />, label: 'Lubrifiants VisionPro' },
       { icon: <Icon.nfc />, label: 'VisionPass' },
     ],
+    svcKeys: ['lavage', 'boutique', 'gaz', 'visionpass', 'cafe'],
     dist: 'À 1.4 km de vous',
     time: '4 min',
   },
@@ -71,6 +74,7 @@ const stations: Station[] = [
       { icon: <Icon.gauge />, label: 'Gonflage Pneus' },
       { icon: <Icon.nfc />, label: 'VisionPass' },
     ],
+    svcKeys: ['gaz', 'boutique', 'gonflage', 'visionpass'],
     dist: 'À 9.5 km de vous',
     time: '20 min',
   },
@@ -91,6 +95,7 @@ const stations: Station[] = [
       { icon: <Icon.gauge />, label: 'Gonflage Pneus' },
       { icon: <Icon.card />, label: 'VisionPass Pro' },
     ],
+    svcKeys: ['gaz', 'boutique', 'gonflage', 'visionpass'],
     dist: 'À 295 km de vous',
     time: '4 h 05',
   },
@@ -111,6 +116,7 @@ const stations: Station[] = [
       { icon: <Icon.truck />, label: 'Ravitaillement Flottes' },
       { icon: <Icon.nfc />, label: 'VisionPass' },
     ],
+    svcKeys: ['gaz', 'boutique', 'visionpass'],
     dist: 'À 320 km de vous',
     time: '4 h 30',
   },
@@ -131,6 +137,7 @@ const stations: Station[] = [
       { icon: <Icon.card />, label: 'Lubrifiants VisionPro' },
       { icon: <Icon.gauge />, label: 'Gonflage Pneus' },
     ],
+    svcKeys: ['lavage', 'boutique', 'gonflage'],
     dist: 'À 305 km de vous',
     time: '4 h 20',
   },
@@ -151,6 +158,7 @@ const stations: Station[] = [
       { icon: <Icon.truck />, label: 'Ravitaillement Flottes' },
       { icon: <Icon.nfc />, label: 'VisionPass' },
     ],
+    svcKeys: ['gaz', 'boutique', 'visionpass'],
     dist: 'À 250 km de vous',
     time: '3 h 30',
   },
@@ -180,7 +188,7 @@ const experiences = [
     tile: 'mint',
     title: 'Équipes de Piste en Station',
     text: "Accueil à la pompe, coup d'œil sur la pression des pneumatiques et les niveaux, halte propre avant de repartir : le service qui fait la différence au quotidien.",
-    img: '/images/station-clean.png',
+    img: '/assets/images/station-clean.png',
     alt: 'Équipe de piste Vision Energy au service d’un client en station',
   },
   {
@@ -188,7 +196,7 @@ const experiences = [
     tile: 'blue',
     title: 'Stations Éclairées et Surveillées',
     text: "Pistes éclairées la nuit, présence constante d’agents et procédures de sécurité affichées sur chaque site, y compris à côté des aires de remplissage gaz.",
-    img: '/images/station-panoramic.jpg',
+    img: '/assets/images/station-panoramic.jpg',
     alt: 'Station Vision Energy éclairée et surveillée',
   },
   {
@@ -196,7 +204,7 @@ const experiences = [
     tile: 'dark',
     title: 'Boutiques & Espaces Café',
     text: 'Boissons fraîches, produits de dépannage, lubrifiants et accessoires : de quoi reprendre la route sans détour, dans un espace entretenu pendant l’attente.',
-    img: '/images/station-boutique.jpg',
+    img: '/assets/images/station-boutique.jpg',
     alt: 'Intérieur de boutique Vision Express',
   },
 ]
@@ -225,6 +233,16 @@ const partPoints = [
 
 /* ------------------------------------------------------------------ page */
 export default function ReseauPage() {
+  const [activeSvc, setActiveSvc] = useState(0)
+  const [searchQuery, setSearchQuery] = useState('')
+
+  const filteredStations = stations.filter((st) => {
+    const svcMatch = activeSvc === 0 || st.svcKeys.includes(services[activeSvc].key)
+    const q = searchQuery.toLowerCase().trim()
+    const textMatch = !q || st.name.toLowerCase().includes(q) || st.addr.toLowerCase().includes(q) || st.tag.toLowerCase().includes(q)
+    return svcMatch && textMatch
+  })
+
   return (
     <>
       {/* ===== hero + recherche ===== */}
@@ -264,7 +282,9 @@ export default function ReseauPage() {
                   <Icon.navigate />
                   <input
                     type="text"
-                    defaultValue="Douala, Cameroun"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Douala, Cameroun…"
                     aria-label="Ville, quartier ou axe routier"
                   />
                 </label>
@@ -302,8 +322,14 @@ export default function ReseauPage() {
             </div>
             <div className="res-services">
               <span className="res-services-lbl">Services prioritaires :</span>
-              {services.map((s) => (
-                <button key={s.label} type="button" className={'res-svc' + (s.on ? ' on' : '')}>
+              {services.map((s, i) => (
+                <button
+                  key={s.label}
+                  type="button"
+                  className={'res-svc' + (i === activeSvc ? ' on' : '')}
+                  onClick={() => setActiveSvc(i)}
+                  aria-pressed={i === activeSvc}
+                >
                   {s.icon} {s.label}
                 </button>
               ))}
@@ -327,7 +353,8 @@ export default function ReseauPage() {
               <span className="res-live">Réseau Cameroun</span>
             </div>
 
-            {stations.map((st) => (
+            {filteredStations.length > 0 ? (
+              filteredStations.map((st) => (
               <article
                 key={st.name}
                 className={'res-station' + (st.lead ? ' res-station--lead' : '')}
@@ -383,8 +410,17 @@ export default function ReseauPage() {
                   </span>
                 </div>
               </article>
-            ))}
-
+              ))
+            ) : (
+              <div className="res-empty">
+                <Icon.search />
+                <b>Aucune station ne correspond à votre recherche.</b>
+                <p>Essayez un autre service ou effacez le filtre.</p>
+                <button type="button" className="res-btn-search" style={{marginTop: 12}} onClick={() => { setActiveSvc(0); setSearchQuery('') }}>
+                  <Icon.sliders /> Réinitialiser
+                </button>
+              </div>
+            )}
             <p className="res-note">
               <Icon.pin /> Réseau en déploiement accéléré : Tobe / Poumougne mise en conformité le
               27/06/2025, Batcham ouverte le 15/01/2026 et Mbouda le 28/04/2026, aux côtés de

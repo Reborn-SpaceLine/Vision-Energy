@@ -1,0 +1,154 @@
+/* ==========================================================================
+   carrieres.css — styles spécifiques à la page /carrieres
+   Les classes .car-* génériques viennent de act.css (partagé avec Actualités).
+   ========================================================================== */
+
+/* ---------------------------------------------------------------- hero page */
+.car-page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 36px 0 72px;
+  background: var(--dark);
+  color: #fff;
+}
+
+.car-page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% -10%, rgba(27, 163, 56, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 10% 100%, rgba(40, 144, 216, 0.14) 0%, transparent 60%),
+    var(--dark);
+  pointer-events: none;
+}
+
+.car-page-hero .act-crumb {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.car-page-hero .act-crumb a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.car-page-hero .act-crumb a:hover {
+  color: #fff;
+}
+
+.car-page-hero .act-crumb b {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.car-page-hero .act-crumb svg {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.car-pill {
+  background: rgba(27, 163, 56, 0.2) !important;
+  color: #7efda4 !important;
+  border: 1px solid rgba(27, 163, 56, 0.35);
+  margin-top: 20px;
+}
+
+.car-page-title {
+  font-family: var(--font-head);
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+  margin-top: 18px;
+  max-width: 820px;
+  color: #fff;
+}
+
+.car-page-lead {
+  margin-top: 20px;
+  max-width: 760px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.car-page-hero .btn-row {
+  margin-top: 28px;
+}
+
+.car-page-stats {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--r-lg);
+  padding: 22px 38px;
+}
+
+.car-page-stats .act-stat b {
+  color: #fff;
+}
+
+.car-page-stats .act-stat span {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.car-page-stats .act-stat em {
+  color: var(--mint-soft);
+}
+
+/* ---------------------------------------------------------------- empty state */
+.car-empty {
+  margin-top: 32px;
+  padding: 56px 32px;
+  border-radius: var(--r-lg);
+  background: var(--bg);
+  border: 1.5px dashed var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.car-empty svg {
+  font-size: 36px;
+  color: var(--line);
+}
+
+.car-empty b {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+.car-empty p {
+  font-size: 0.9rem;
+  max-width: 380px;
+}
+
+.car-empty .btn {
+  margin-top: 10px;
+}
+
+/* ---------------------------------------------------------------- responsive */
+@media (max-width: 860px) {
+  .car-page-title {
+    font-size: 2.4rem;
+  }
+
+  .car-page-stats {
+    padding: 18px 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .car-page-title {
+    font-size: 1.9rem;
+  }
+
+  .car-page-hero {
+    padding: 24px 0 54px;
+  }
+
+  .car-page-stats {
+    grid-template-columns: 1fr;
+  }
+}

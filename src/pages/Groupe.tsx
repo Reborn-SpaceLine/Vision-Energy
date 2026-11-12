@@ -225,7 +225,7 @@ function Gouvernance() {
     <section className="section grp-sec">
       <div className="container grp-gov">
         <figure className="grp-director">
-          <img src="/images/grp-director-clean.jpg" alt="M. Kamdem Youmbi Ngué Tchuchi Ghislain, Président-Directeur Général de Vision Energy S.A." />
+          <img src="/assets/images/grp-director-clean.jpg" alt="M. Kamdem Youmbi Ngué Tchuchi Ghislain, Président-Directeur Général de Vision Energy S.A." />
           <figcaption className="grp-director-cap">
             <span>Président-Directeur Général</span>
             <b>M. Kamdem Youmbi Ngué Tchuchi Ghislain</b>

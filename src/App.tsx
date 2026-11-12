@@ -6,6 +6,7 @@ import Metiers from './pages/Metiers'
 import Produits from './pages/Produits'
 import Reseau from './pages/Reseau'
 import Actualites from './pages/Actualites'
+import Carrieres from './pages/Carrieres'
 
 const routes: Record<string, () => React.JSX.Element> = {
   '/': Home,
@@ -14,7 +15,7 @@ const routes: Record<string, () => React.JSX.Element> = {
   '/produits': Produits,
   '/reseau': Reseau,
   '/actualites': Actualites,
-  '/carrieres': Actualites,
+  '/carrieres': Carrieres,
 }
 
 export default function App() {

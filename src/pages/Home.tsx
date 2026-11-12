@@ -3,47 +3,185 @@ import { Icon } from '../components/icons'
 
 /* ------------------------------------------------------------------ hero */
 const heroChecks = [
-  { icon: <Icon.fuel />, label: 'Super 95 (840 CFA) & Gasoil (828 CFA)' },
-  { icon: <Icon.flame />, label: 'Gaz Butane B6, B12.5 & B35' },
-  { icon: <Icon.shield />, label: 'Qualité Contrôlée & Bon Prix' },
+  { icon: <Icon.fuel />, label: 'Super 95 : 840 CFA/L' },
+  { icon: <Icon.fuel />, label: 'Gasoil : 828 CFA/L' },
+  { icon: <Icon.flame />, label: 'Gaz B6, B12.5 & B35' },
+  { icon: <Icon.shield />, label: 'Certifié MINMIDT' },
 ]
 
 function Hero() {
   return (
     <section className="hero">
       <div className="hero-media">
-        <img className="hero-img" src="/images/station-3d-modern.png" alt="Station-service moderne Vision Energy S.A." />
+        <img
+          className="hero-img"
+          src="/assets/images/station-panoramic.jpg"
+          alt="Station-service Vision Energy au Cameroun"
+        />
       </div>
-      <div className="hero-card">
-        <span className="eyebrow eyebrow--dot eyebrow--mint">
-          Réseau en pleine expansion • Cameroun
-        </span>
-        <h1 className="hero-title">
-          Carburants de Qualité &amp; <span className="hl--mint">Gaz Domestique</span>
-        </h1>
-        <p className="hero-text">
-          Vision Energy déploie son réseau de stations-service et ses centres de remplissage de gaz à travers le Cameroun — Douala, Bafoussam, Bamendzi, Batcham, Mbouda et Tobe — avec un objectif de 30 stations d’ici 2028. Carburants additivés contrôlés, gaz butane en bouteille sécurisé et lubrifiants VisionPro : la qualité à bon prix.
-        </p>
-        <div className="btn-row">
-          <a className="btn btn--primary" href={href('/produits')}>
-            Découvrir nos produits <Icon.arrowR />
-          </a>
-          <a className="btn btn--ghost" href={href('/reseau')}>
-            <Icon.navigate /> Trouver une station
-          </a>
+
+      <div className="container hero-container">
+        <div className="hero-grid">
+          {/* Colonne Gauche : Titre, Lead & Actions */}
+          <div className="hero-card">
+            <span className="eyebrow eyebrow--dot eyebrow--mint">
+              Réseau de Stations-Service · Cameroun
+            </span>
+            <h1 className="hero-title">
+              Carburants Additivés &amp; Gaz Domestique{' '}
+              <span className="hl--mint">au Meilleur Prix</span>
+            </h1>
+            <p className="hero-text">
+              Super 95, Gasoil ProClean™, bouteilles VisionGaz scellées et lubrifiants VisionPro™
+              servis au prix juste homologué à Douala, Bafoussam et dans l'Ouest.
+            </p>
+            <div className="btn-row">
+              <a className="btn btn--primary" href={href('/produits')}>
+                Nos Produits &amp; Tarifs <Icon.arrowR />
+              </a>
+              <a className="btn btn--ghost" href={href('/reseau')}>
+                <Icon.navigate /> Trouver une station
+              </a>
+            </div>
+            <ul className="hero-checks">
+              {heroChecks.map((c) => (
+                <li key={c.label}>
+                  {c.icon} {c.label}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Colonne Droite : Vitrine Produits & Services en 1ère Scroll (Gaz & Carburant) */}
+          <div className="hero-showcase">
+            <div className="hero-showcase-head">
+              <span className="hero-showcase-badge">
+                <Icon.bolt /> En Première Ligne
+              </span>
+              <span className="hero-showcase-title">Produits &amp; Services Phares</span>
+            </div>
+
+            <div className="hero-showcase-grid">
+              {/* Carte Gaz Domestique */}
+              <a className="hero-prod-card hero-prod-card--gaz" href={href('/produits', 'gaz')}>
+                <div className="hero-prod-media">
+                  <img
+                    src="/assets/images/gaz-agent.jpg"
+                    alt="Agent Vision Energy présentant les bouteilles de gaz VisionGaz"
+                  />
+                  <span className="hero-prod-pill hero-prod-pill--mint">Gaz Domestique</span>
+                </div>
+                <div className="hero-prod-body">
+                  <div className="hero-prod-top">
+                    <span className="hero-prod-ico"><Icon.flame /></span>
+                    <div>
+                      <h3 className="hero-prod-title">VisionGaz B6, B12.5 &amp; B35</h3>
+                      <p className="hero-prod-desc">Bouteilles scellées, poids garanti, recharge express.</p>
+                    </div>
+                  </div>
+                  <div className="hero-prod-foot">
+                    <span className="hero-prod-tag">Dès 3 400 CFA</span>
+                    <span className="hero-prod-link">Voir l'offre <Icon.arrowR /></span>
+                  </div>
+                </div>
+              </a>
+
+              {/* Carte Carburants */}
+              <a className="hero-prod-card hero-prod-card--carbu" href={href('/produits', 'carburants')}>
+                <div className="hero-prod-media">
+                  <img
+                    src="/assets/images/pump.jpg"
+                    alt="Distributeur de carburants Super 95 et Gasoil Vision Energy"
+                  />
+                  <span className="hero-prod-pill hero-prod-pill--blue">Carburants Additivés</span>
+                </div>
+                <div className="hero-prod-body">
+                  <div className="hero-prod-top">
+                    <span className="hero-prod-ico"><Icon.fuel /></span>
+                    <div>
+                      <h3 className="hero-prod-title">Super 95 &amp; Gasoil ProClean™</h3>
+                      <p className="hero-prod-desc">Additifs détergents, protection injecteurs et moteurs.</p>
+                    </div>
+                  </div>
+                  <div className="hero-prod-foot">
+                    <span className="hero-prod-tag">Super 840 F · Gasoil 828 F</span>
+                    <span className="hero-prod-link">Tarifs &amp; specs <Icon.arrowR /></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
-        <ul className="hero-checks">
-          {heroChecks.map((c) => (
-            <li key={c.label}>
-              {c.icon} {c.label}
-            </li>
-          ))}
-        </ul>
       </div>
-      <div className="hero-dots" aria-hidden="true">
-        <i className="on" />
-        <i />
-        <i />
+    </section>
+  )
+}
+
+/* ---------------------------------------------------------------- produits */
+const produits = [
+  {
+    icon: <Icon.fuel />,
+    img: '/assets/images/pump.jpg',
+    kicker: 'Moteurs & Flottes',
+    title: 'Carburants Additivés ProClean™',
+    text: 'Super 95 (840 F/L) et Gasoil (828 F/L) additivés pour préserver vos injecteurs.',
+    link: { label: 'Tarifs & Spécifications', to: '/produits', sec: 'carburants' },
+  },
+  {
+    icon: <Icon.flame />,
+    img: '/assets/images/gaz-agent.jpg',
+    kicker: 'Gaz Domestique & Ménages',
+    title: 'VisionGaz B6, B12.5 & B35',
+    text: 'Bouteilles scellées et pesées avec exactitude. Recharge express en station.',
+    link: { label: 'Formats & Points de Vente', to: '/produits', sec: 'gaz' },
+  },
+  {
+    icon: <Icon.drop />,
+    img: '/assets/images/pro-a.jpg',
+    kicker: 'Moteurs & Industrie',
+    title: 'Lubrifiants VisionPro™',
+    text: 'Huiles synthétiques (5W-30, 10W-40, 15W-40) pour véhicules et engins.',
+    link: { label: 'Guide de Graissage', to: '/produits', sec: 'lubrifiants' },
+  },
+  {
+    icon: <Icon.shop />,
+    img: '/assets/images/station-boutique.jpg',
+    kicker: 'Services en Station',
+    title: 'Boutiques Express & Vidange',
+    text: 'Espace café, rafraîchissements, baies de vidange rapide et lavage.',
+    link: { label: 'Services en Station', to: '/produits', sec: 'boutiques' },
+  },
+]
+
+function Produits() {
+  return (
+    <section className="section section--bg produits">
+      <div className="container">
+        <div className="sec-head sec-head--stack">
+          <span className="eyebrow eyebrow--center">Gamme intégrée</span>
+          <h2 className="h2">Produits &amp; Services de Proximité</h2>
+          <p className="lead">
+            Carburants de haute qualité, gaz domestique sécurisé et lubrifiants certifiés servis au juste prix.
+          </p>
+        </div>
+        <div className="grid grid-4">
+          {produits.map((p) => (
+            <article className="card card-hover prod-card" key={p.title}>
+              <div className="prod-card-media">
+                <img src={p.img} alt={p.title} />
+                <span className="icon-tile">{p.icon}</span>
+              </div>
+              <div className="prod-card-body">
+                <span className="prod-kicker">{p.kicker}</span>
+                <h3 className="h3">{p.title}</h3>
+                <p className="prod-text">{p.text}</p>
+                <a className="link-arrow" href={href(p.link.to, p.link.sec)}>
+                  {p.link.label} <Icon.arrowR />
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )
@@ -51,9 +189,9 @@ function Hero() {
 
 /* ------------------------------------------------------------- gouvernance */
 const govStats = [
-  { value: '30', label: 'Stations Visées d’ici 2028' },
-  { value: '6', label: 'Stations en Exploitation' },
-  { value: '2', label: 'Villes de Centres de Remplissage de Gaz' },
+  { value: '30', label: 'Stations visées d\'ici 2028' },
+  { value: '6', label: 'Stations en exploitation' },
+  { value: '2', label: 'Centres gaz — Douala & Bafoussam' },
 ]
 
 function Gouvernance() {
@@ -61,18 +199,15 @@ function Gouvernance() {
     <section className="section gov">
       <div className="container gov-grid">
         <div>
-          <span className="eyebrow">Gouvernance &amp; Capital d’Origine Camerounaise</span>
+          <span className="eyebrow">Capital &amp; Ingénierie camerounais</span>
           <h2 className="h2">
-            Née à Douala en 2021,{' '}
-            <span className="hl">Vision Energy construit un réseau de stations-service</span> au
-            service des automobilistes, des ménages et des professionnels du Cameroun.
+            Un réseau moderne et responsable{' '}
+            <span className="hl">au service de l'économie locale.</span>
           </h2>
           <p className="lead">
-            Acteur industriel camerounais spécialisé dans la commercialisation de produits pétroliers
-            de haute technicité, notre groupe exploite des stations-service à Douala, Bafoussam,
-            Batcham, Mbouda et Tobe, et poursuit la construction et la réhabilitation de centres de
-            remplissage de gaz à Douala et à Bafoussam. La direction technique est assurée par des
-            ingénieurs spécialisés en lubrifiants, électricité, automatisme et gaz.
+            Fondée à Douala, Vision Energy déploie des stations-service modernes et des centres de
+            remplissage de gaz sécurisés. Notre priorité : la traçabilité des produits et la satisfaction
+            quotidienne des automobilistes et ménages.
           </p>
           <div className="gov-stats">
             {govStats.map((s) => (
@@ -84,20 +219,23 @@ function Gouvernance() {
           </div>
           <div className="gov-foot">
             <a className="btn btn--primary" href={href('/groupe')}>
-              Découvrir l’histoire du Groupe <Icon.arrowR />
+              Découvrir le Groupe <Icon.arrowR />
             </a>
             <span className="gov-note">
-              <Icon.check /> Sécurité &amp; conformité MINMIDT
+              <Icon.check /> Homologation MINMIDT
             </span>
           </div>
         </div>
         <figure className="media gov-media">
-          <img src="/images/station-ve-real.jpg" alt="Station-service Vision Energy en exploitation au Cameroun" />
+          <img
+            src="/assets/images/station-panoramic.jpg"
+            alt="Station-service Vision Energy moderne au Cameroun"
+          />
           <figcaption className="gov-caption">
             <div>
-              <span>Direction générale &amp; exploitation</span>
-              <b>Douala — Littoral &amp; Ouest</b>
-              <p>Stations et centres de remplissage de gaz en développement</p>
+              <span>Réseau &amp; infrastructures</span>
+              <b>Douala, Bafoussam &amp; Région Ouest</b>
+              <p>Stations modernes et centres gaz opérationnels</p>
             </div>
             <i className="icon-tile icon-tile--dark">
               <Icon.building />
@@ -109,96 +247,33 @@ function Gouvernance() {
   )
 }
 
-/* ---------------------------------------------------------------- produits */
-const produits = [
-  {
-    icon: <Icon.fuel />,
-    kicker: 'Moteurs & Flottes',
-    title: 'Carburants Additivés ProClean™',
-    text: 'Super 95 (840 CFA/L) et Gasoil (828 CFA/L) distribués en station avec des additifs détergents pour préserver les injecteurs et réduire la consommation.',
-    link: { label: 'Tarifs & Spécifications', to: '/produits', sec: 'carburants' },
-  },
-  {
-    icon: <Icon.flame />,
-    kicker: 'Gaz Domestique & Foyers',
-    title: 'VisionGaz B6, B12.5 & B35',
-    text: 'Bouteilles scellées à chaud et pesées avec exactitude. Approvisionnement garanti par nos centres de remplissage de Douala et Bafoussam.',
-    link: { label: 'Formats & Points de Vente', to: '/produits', sec: 'gaz' },
-  },
-  {
-    icon: <Icon.drop />,
-    kicker: 'Gamme Haute Viscosité',
-    title: 'Lubrifiants VisionPro™',
-    text: 'Huiles synthétiques et minérales (5W-30, 10W-40, 15W-40) sélectionnées par nos ingénieurs pour moteurs essence, diesel et engins de chantier.',
-    link: { label: 'Guide de Graissage', to: '/produits', sec: 'lubrifiants' },
-  },
-  {
-    icon: <Icon.shop />,
-    kicker: 'Services & Confort en Station',
-    title: 'Boutiques Vision Express & Lavage',
-    text: 'Boutique de dépannage, boissons fraîches, baie de vidange express et lavage pour reprendre la route dans les meilleures conditions.',
-    link: { label: 'Services en Station', to: '/produits', sec: 'boutiques' },
-  },
-]
-
-function Produits() {
-  return (
-    <section className="section section--bg produits">
-      <div className="container">
-        <div className="sec-head sec-head--stack">
-          <span className="eyebrow eyebrow--center">Offre énergétique intégrée</span>
-          <h2 className="h2">Des Produits d’Excellence pour Particuliers &amp; Professionnels</h2>
-          <p className="lead">
-            Approvisionnés auprès de fournisseurs agréés et contrôlés à chaque réception, nos
-            carburants additivés, nos bouteilles de gaz et nos lubrifiants sont servis au prix juste,
-            du plein quotidien des automobilistes aux besoins des ménages.
-          </p>
-        </div>
-        <div className="grid grid-4">
-          {produits.map((p) => (
-            <article className="card card-hover prod-card" key={p.title}>
-              <span className="icon-tile">{p.icon}</span>
-              <span className="prod-kicker">{p.kicker}</span>
-              <h3 className="h3">{p.title}</h3>
-              <p className="prod-text">{p.text}</p>
-              <a className="link-arrow" href={href(p.link.to, p.link.sec)}>
-                {p.link.label} <Icon.arrowR />
-              </a>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
 /* -------------------------------------------------------------- actualites */
 const news = [
   {
-    img: '/images/station-clean.png',
+    img: '/assets/images/station-clean.png',
     badge: 'Expansion réseau',
     date: '28 Avril 2026',
     place: 'Mbouda, Cameroun',
     title: 'Ouverture officielle de notre station de Mbouda',
-    text: 'Nouvelle adresse du réseau Vision Energy dans la Région de l’Ouest: carburants, gaz domestique, lubrifiants et espace de rafraîchissement, au service des automobilistes et des mototaxis.',
+    text: 'Nouvelle adresse Vision Energy dans l\'Ouest : carburants, gaz domestique, lubrifiants et espace de rafraîchissement.',
     link: 'Lire le communiqué',
   },
   {
-    img: '/images/station-aerial.jpg',
+    img: '/assets/images/station-aerial.jpg',
     badge: 'Réseau & stations',
     date: '15 Janvier 2026',
     place: 'Batcham, Cameroun',
-    title: 'Inauguration de la station de l’axe Mbouda – Batcham',
-    text: 'La direction générale a confirmé lors de l’ouverture un maillage continu de l’Ouest du pays, avec un objectif de 30 stations-service exploitées d’ici 2028.',
-    link: 'Retour sur l’inauguration',
+    title: 'Inauguration de la station de l\'axe Mbouda–Batcham',
+    text: 'Maillage continu de l\'Ouest du pays avec un objectif de 30 stations exploitées d\'ici 2028.',
+    link: 'Retour sur l\'inauguration',
   },
   {
-    img: '/images/station-gaz-carbu.png',
+    img: '/assets/images/station-hero.png',
     badge: 'Conformité & environnement',
     date: '27 Juin 2025',
     place: 'Tobe (Poumougne), Cameroun',
-    title: 'Station de Tobe: dossier de conformité reçu',
-    text: 'Étude d’impact, plan d’urgence et dossier technique déposés auprès des autorités compétentes: notre implantation de Tobe, dans l’arrondissement de Poumougne, est accompagnée jusqu’à sa mise en service.',
+    title: 'Station de Tobe : dossier de conformité reçu',
+    text: 'Étude d\'impact et dossier technique déposés auprès des autorités — implantation de Tobe accompagnée jusqu\'à sa mise en service.',
     link: 'Détails du dossier',
   },
 ]
@@ -210,8 +285,7 @@ function Actualites() {
         <div className="sec-head sec-head--stack">
           <span className="eyebrow eyebrow--center">Nos actualités</span>
           <p className="lead">
-            Suivez les dernières étapes de notre expansion géographique, nos partenariats stratégiques
-            et nos innovations réseau.
+            Suivez les dernières étapes de notre expansion et nos innovations réseau.
           </p>
         </div>
         <div className="grid grid-3">
@@ -258,13 +332,12 @@ function VisionPass() {
         <div>
           <span className="eyebrow eyebrow--mint">Paiement dématérialisé en piste</span>
           <h2 className="h2 vp-title">
-            Réglez tous vos achats Vision Energy avec votre solution{' '}
+            Réglez en station avec{' '}
             <span className="hl--mint">Mobile Money &amp; VisionPass</span>
           </h2>
           <p className="lead vp-lead">
-            Gain de temps, sécurité accrue et zéro manipulation d’espèces. Activez vos remises
-            immédiates sur le carburant, réglez vos recharges de gaz et pilotez vos flottes en temps
-            réel.
+            Paiement sans contact, remises immédiates sur carburant, gestion de flotte
+            et zéro manipulation d'espèces.
           </p>
           <div className="chips vp-chips">
             {wallets.map((w) => (
@@ -275,10 +348,10 @@ function VisionPass() {
           </div>
           <div className="btn-row" style={{ marginTop: 26 }}>
             <a className="btn btn--mint" href={href('/produits', 'visionpass')}>
-              <Icon.card /> Découvrir la Carte VisionPass
+              <Icon.card /> Carte VisionPass
             </a>
             <a className="btn btn--ghost" href={href('/produits', 'flottes')}>
-              Portail Gestionnaire de Flotte <Icon.arrowR />
+              Espace Gestionnaire de Flotte <Icon.arrowR />
             </a>
           </div>
         </div>
@@ -316,10 +389,10 @@ function Localisation() {
       <div className="container loc-grid">
         <div>
           <span className="eyebrow">Géolocalisation immédiate</span>
-          <h2 className="h2">Trouvez la station Vision Energy la plus proche de votre trajet</h2>
+          <h2 className="h2">Trouvez la station Vision Energy la plus proche</h2>
           <p className="lead">
-            Consultez les prix en direct, les services disponibles (baie de vidange, lavage, gaz,
-            restaurant) et l’état des pompes en temps réel.
+            Prix en direct, services disponibles (vidange, lavage, gaz) et état des pompes
+            en temps réel.
           </p>
         </div>
         <form
@@ -331,7 +404,11 @@ function Localisation() {
         >
           <label className="loc-input">
             <Icon.search />
-            <input type="search" placeholder="Ville, quartier ou code postal…" aria-label="Rechercher une station" />
+            <input
+              type="search"
+              placeholder="Ville ou quartier…"
+              aria-label="Rechercher une station"
+            />
           </label>
           <button className="btn btn--primary" type="submit">
             Rechercher
@@ -345,8 +422,8 @@ function Localisation() {
 /* ---------------------------------------------------------------- cta band */
 export function CtaBand({
   title = 'VisionPass & Carte Carburant Pro',
-  text = 'Réglez sans contact, gérez vos flottes et activez vos remises instantanées en station.',
-  primary = { label: "Découvrir l'App", to: '/produits', sec: 'visionpass' },
+  text = 'Paiement sans contact, gestion de flotte et remises instantanées en station.',
+  primary = { label: "Découvrir VisionPass", to: '/produits', sec: 'visionpass' },
   secondary = { label: 'Espace Entreprise', to: '/produits', sec: 'flottes' },
 }: {
   title?: string
@@ -381,8 +458,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Gouvernance />
       <Produits />
+      <Gouvernance />
       <Actualites />
       <VisionPass />
       <Localisation />

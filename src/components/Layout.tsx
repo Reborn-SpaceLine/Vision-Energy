@@ -44,22 +44,14 @@ export function Header({ path }: { path: string }) {
       <div className="container header-inner">
         <a className="brand" href={href('/')} aria-label="Vision Energy S.A. — accueil">
           <img
-            src="/images/logo-wordmark.png"
+            src="/assets/images/logo-wordmark.svg"
             alt="Vision Energy SA"
             className="brand-logo"
-            width="210"
-            height="27"
+            width="200"
+            height="26"
           />
         </a>
-        <button
-          type="button"
-          className="nav-burger"
-          aria-expanded={open}
-          aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
-          onClick={() => setOpen((o) => !o)}
-        >
-          {open ? <Icon.close /> : <Icon.burger />}
-        </button>
+
         <nav className={`nav${open ? ' open' : ''}`} aria-label="Navigation principale">
           <ul>
             {navItems.map((n) => {
@@ -78,14 +70,41 @@ export function Header({ path }: { path: string }) {
               )
             })}
           </ul>
+          <div className="nav-mobile-cta">
+            <a
+              className="btn btn--primary btn--block"
+              href={href('/reseau', 'contact')}
+              onClick={() => setOpen(false)}
+            >
+              <Icon.send /> Nous Contacter
+            </a>
+          </div>
         </nav>
+
+        {open && (
+          <div
+            className="nav-backdrop"
+            aria-hidden="true"
+            onClick={() => setOpen(false)}
+          />
+        )}
+
         <div className="header-actions">
-          <a className="btn btn--primary btn--sm" href={href('/reseau', 'contact')}>
+          <a className="btn btn--primary btn--sm header-cta-desktop" href={href('/reseau', 'contact')}>
             <Icon.send /> Nous Contacter
           </a>
           <a className="user-chip" href={href('/reseau', 'contact')} aria-label="Espace client">
             <Icon.user />
           </a>
+          <button
+            type="button"
+            className="nav-burger"
+            aria-expanded={open}
+            aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? <Icon.close /> : <Icon.burger />}
+          </button>
         </div>
       </div>
     </header>
@@ -98,7 +117,7 @@ export function Footer() {
       <div className="container footer-grid">
         <div className="footer-intro">
           <div className="footer-brand">
-            <img src="/images/logo-wordmark.png" alt="Vision Energy SA" width="186" height="24" />
+            <img src="/assets/images/logo-wordmark.svg" alt="Vision Energy SA" width="186" height="24" />
           </div>
           <p>
             Vision Energy S.A. — société anonyme camerounaise des produits pétroliers, du gaz et des
@@ -160,7 +179,7 @@ export function Footer() {
               <a href={href('/produits', 'stockage')}>Cuves &amp; Ravitaillement sur Site</a>
             </li>
             <li>
-              <a href={href('/produits', 'logistique')}>Approvisionnement Vrac</a>
+              <a href={href('/produits', 'logistique')}>Approvisionnement par Citerne</a>
             </li>
             <li>
               <a href={href('/carrieres')}>Espace Recrutement &amp; Talents</a>
