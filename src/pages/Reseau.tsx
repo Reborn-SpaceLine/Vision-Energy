@@ -249,92 +249,52 @@ export default function ReseauPage() {
       <section className="res-hero" id="geoloc">
         <div className="container">
           <div className="res-hero-top">
-            <div>
+            <div className="res-hero-copy">
               <span className="res-hero-pill">
-                <Icon.share /> Réseau Vision Energy Cameroun • 30 stations d’ici 2028
+                <Icon.share /> Réseau Vision Energy
               </span>
               <h1 className="res-hero-title">
-                Trouvez une Station <span className="res-hero-mint">Vision Energy</span> à
-                Proximité.
+                Trouvez une station <span className="res-hero-brand">près de vous</span>
               </h1>
               <p className="res-hero-lead">
-                Carburants additivés au prix juste, gaz en bouteille, lubrifiants et boutiques dans
-                nos stations de Douala et de la Région de l’Ouest — la qualité à bon prix.
+                Carburants, gaz, lubrifiants et services à Douala, Bafoussam et dans l’Ouest.
               </p>
-            </div>
-            <div className="res-hero-stats">
-              <div className="res-stat">
-                <b>6</b>
-                <span>Stations en exploitation</span>
-              </div>
-              <div className="res-stat">
-                <b className="res-stat--white">24h/24</b>
-                <span>Sécurité &amp; Piste</span>
-              </div>
             </div>
           </div>
 
-          <form className="res-panel" onSubmit={(e) => e.preventDefault()}>
+          <div className="res-panel">
             <div className="res-panel-grid">
               <div>
-                <span className="res-flabel">Ville, quartier ou axe routier</span>
+                <span className="res-flabel">Rechercher une station</span>
                 <label className="res-finput">
-                  <Icon.navigate />
+                  <Icon.search />
                   <input
-                    type="text"
+                    type="search"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Douala, Cameroun…"
-                    aria-label="Ville, quartier ou axe routier"
+                    placeholder="Ville, quartier ou axe routier…"
+                    aria-label="Rechercher une station par ville, quartier ou axe routier"
                   />
                 </label>
               </div>
-              <div>
-                <span className="res-flabel">Type d'énergie</span>
-                <label className="res-finput res-fselect">
-                  <Icon.fuel />
-                  <select defaultValue="all" aria-label="Type d'énergie">
-                    <option value="all">Tous carburants &amp; énergie</option>
-                    <option>Carburants (Super 95 / Gasoil)</option>
-                    <option>Gaz domestique &amp; bouteilles</option>
-                    <option>Lubrifiants VisionPro</option>
-                  </select>
-                  <Icon.chevD className="res-chev" />
-                </label>
-              </div>
-              <div>
-                <span className="res-flabel">Rayon</span>
-                <label className="res-finput res-fselect">
-                  <Icon.target />
-                  <select defaultValue="15" aria-label="Rayon de recherche">
-                    <option>5 km</option>
-                    <option>10 km</option>
-                    <option value="15">15 km</option>
-                    <option>25 km</option>
-                    <option>50 km</option>
-                  </select>
-                  <Icon.chevD className="res-chev" />
-                </label>
-              </div>
-              <button className="res-btn-search" type="submit">
-                <Icon.search /> Rechercher
-              </button>
             </div>
-            <div className="res-services">
-              <span className="res-services-lbl">Services prioritaires :</span>
-              {services.map((s, i) => (
-                <button
-                  key={s.label}
-                  type="button"
-                  className={'res-svc' + (i === activeSvc ? ' on' : '')}
-                  onClick={() => setActiveSvc(i)}
-                  aria-pressed={i === activeSvc}
-                >
-                  {s.icon} {s.label}
-                </button>
-              ))}
-            </div>
-          </form>
+            <details className="res-service-filter">
+              <summary>Filtrer par service</summary>
+              <div className="res-services" role="group" aria-label="Filtrer les stations par service">
+                {services.map((s, i) => (
+                  <button
+                    key={s.label}
+                    type="button"
+                    className={'res-svc' + (i === activeSvc ? ' on' : '')}
+                    onClick={() => setActiveSvc(i)}
+                    aria-pressed={i === activeSvc}
+                  >
+                    {s.icon} {s.label}
+                  </button>
+                ))}
+              </div>
+            </details>
+          </div>
         </div>
       </section>
 

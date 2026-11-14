@@ -1,7 +1,6 @@
 import '../styles/groupe.css'
 import { href } from '../router'
 import { Icon } from '../components/icons'
-import { CtaBand } from './Home'
 
 /* Icônes SVG spécifiques absentes de la bibliothèque (jamais dans icons.tsx) */
 const SealCheck = (
@@ -32,14 +31,6 @@ const heroFeats = [
   { icon: SolarPanel, label: 'Gaz Domestique & Lubrifiants' },
 ]
 
-const heroStats = [
-  { icon: <Icon.fuel />, label: 'Stations', value: '30', sub: 'Objectif réseau d’ici 2028' },
-  { icon: <Icon.flag />, label: 'Terrain', value: '2 Régions', sub: 'Littoral & Ouest', mod: ' grp-stat--blue' },
-  { icon: <Icon.users />, label: 'Expertises', value: '4 Métiers', sub: 'Lubrifiants, élec., automatisme, gaz' },
-  { icon: <Icon.server />, label: 'Centres gaz', value: '2 Villes', sub: 'Douala & Bafoussam' },
-  { icon: <Icon.wifi />, label: 'Stations livrées', value: '6 Repères', sub: 'Ouvertes ou citées depuis 2021', hl: true },
-]
-
 function Hero() {
   return (
     <>
@@ -58,9 +49,8 @@ function Hero() {
           <span className="grp-hero-eyebrow">Acteur énergétique camerounais</span>
           <h1 className="h1">Bâtir l’avenir énergétique du Cameroun avec rigueur et intégrité.</h1>
           <p className="grp-hero-lead">
-            Distributeur de carburants, de gaz domestique et de lubrifiants à travers un réseau de
-            stations-service en plein développement, Vision Energy sert automobilistes et ménages
-            camerounais sous un principe simple : la qualité à bon prix.
+            Vision Energy distribue carburants, gaz domestique et lubrifiants au Cameroun, avec une
+            priorité : la qualité à bon prix.
           </p>
           <ul className="grp-hero-feats">
             {heroFeats.map((f) => (
@@ -72,20 +62,6 @@ function Hero() {
         </div>
       </section>
 
-      <div className="container grp-stats-wrap">
-        <div className="grp-stats">
-          {heroStats.map((s) => (
-            <div className={'grp-stat' + (s.hl ? ' grp-stat--hl' : '') + (s.mod || '')} key={s.label}>
-              <div className="grp-stat-top">
-                {s.label}
-                {s.icon}
-              </div>
-              <b>{s.value}</b>
-              <span>{s.sub}</span>
-            </div>
-          ))}
-        </div>
-      </div>
     </>
   )
 }
@@ -96,21 +72,21 @@ const timeline = [
     num: '01',
     year: '2021',
     title: 'Première Station à Douala',
-    text: 'Ouverture de notre première station-service à Bonamoussadi (Douala), devenue un repère local et le point de départ de notre réseau de distribution.',
+    text: 'Ouverture de la première station à Bonamoussadi, Douala, point de départ du réseau.',
     foot: { icon: <Icon.anchor />, label: 'Bonamoussadi, repère depuis 2021' },
   },
   {
     num: '02',
     year: '2025',
     title: 'Extension du Réseau',
-    text: 'Mise en conformité et accompagnement de la station de Tobe (arr. Poumougne, Région de l’Ouest) le 27 juin 2025, aux côtés de Logbessou PK15 et Bamendzi.',
+    text: 'Mise en conformité de Tobe (Poumougne) le 27 juin 2025, avec Logbessou PK15 et Bamendzi.',
     foot: { icon: <Icon.truck />, label: 'Douala, Bafoussam & Ouest' },
   },
   {
     num: '03',
     year: '2026',
     title: 'Batcham & Mbouda Ouverts',
-    text: 'Ouverture de Batcham sur l’axe Mbouda–Batcham le 15 janvier 2026, puis inauguration officielle de Mbouda le 28 avril 2026.',
+    text: 'Ouverture de Batcham le 15 janvier, puis inauguration de Mbouda le 28 avril 2026.',
     foot: { icon: <Icon.drop />, label: 'Mbouda, 28 avril 2026' },
     numMod: 'grp-num--blue',
     yearMod: 'grp-year--blue',
@@ -120,7 +96,7 @@ const timeline = [
     num: '04',
     year: 'Aujourd’hui & Demain',
     title: 'Cap 30 Stations & Gaz',
-    text: 'Programme de construction et de réhabilitation de centres de remplissage de gaz à Douala et Bafoussam, avec pour objectif 30 stations d’ici 2028.',
+    text: 'Construction et réhabilitation de centres gaz à Douala et Bafoussam; objectif : 30 stations d’ici 2028.',
     foot: { icon: <Icon.leaf />, label: 'Objectif : 30 stations en 2028' },
     numMod: 'grp-num--solid',
   },
@@ -164,28 +140,28 @@ const values = [
     icon: <Icon.shieldPlus />,
     tile: 'icon-tile icon-tile--red',
     title: 'Sécurité & Rigueur',
-    text: 'Une culture exigeante de la sécurité des personnes et des installations aux stations comme dans les centres de remplissage de gaz, avec des procédures strictes.',
+    text: 'Procédures strictes pour la sécurité des personnes et des installations, en station comme dans les centres gaz.',
     tag: { label: 'Non-négociable', mod: 'grp-tag--red' },
   },
   {
     icon: <Icon.gavel />,
     tile: 'icon-tile icon-tile--blue',
     title: 'Intégrité & Conformité',
-    text: 'Études d’impact, plans d’urgence et dossiers réglementaires MINMIDT suivis avec sérieux pour chaque station du réseau camerounais.',
+    text: 'Études d’impact, plans d’urgence et dossiers MINMIDT suivis pour chaque station.',
     tag: { label: 'Conformité MINMIDT', mod: 'grp-tag--blue' },
   },
   {
     icon: <Icon.cpu />,
     tile: 'icon-tile',
     title: 'Innovation Technologique',
-    text: 'Ingénieurs en lubrifiants, électricité, automatisme et gaz : nos équipes conçoivent, réhabilitent et supervisent nos installations techniques.',
+    text: 'Nos ingénieurs conçoivent et supervisent les équipements de lubrifiants, d’électricité, d’automatisme et de gaz.',
     tag: { label: '4 spécialités', mod: 'grp-tag--green' },
   },
   {
     icon: <Icon.recycle />,
     tile: 'icon-tile icon-tile--gray',
     title: 'Éco-responsabilité',
-    text: 'Collecte des huiles usagées, gestion responsable des déchets et accompagnement des communautés riveraines de nos stations-service.',
+    text: 'Collecte des huiles usagées, gestion des déchets et accompagnement des communautés riveraines.',
     tag: { label: 'Gestes responsables', mod: 'grp-tag--gray' },
   },
 ]
@@ -243,18 +219,6 @@ function Gouvernance() {
         <div>
           <span className="eyebrow">Gouvernance stratégique</span>
           <h2 className="h2">Une direction camerounaise, présente sur le terrain depuis 2021.</h2>
-          <div className="grp-quote">
-            <span className="grp-quote-mark" aria-hidden="true">
-              &rdquo;
-            </span>
-            <p>
-              « La qualité à bon prix n’est pas un slogan : c’est l’exigence que nous appliquons à
-              chaque station, à chaque bouteille de gaz et à chaque litre distribué à nos clients
-              camerounais. »
-            </p>
-            <cite>— Comité de direction, Vision Energy S.A.</cite>
-          </div>
-
           <div className="grp-gov-cards">
             <article className="card grp-gov-card">
               <h3>
@@ -364,16 +328,9 @@ function Rapport() {
             </span>
             <h2 className="h2">Découvrez le Dossier Réseau &amp; Activités 2026</h2>
             <p className="lead">
-              Retrouvez la cartographie de nos stations, nos activités gaz et lubrifiants, notre
-              programme de centres de remplissage et notre engagement : la qualité à bon prix.
+              Cartographie des stations, activités gaz et lubrifiants, centres de remplissage et
+              engagements du réseau.
             </p>
-            <div className="grp-report-meta">
-              <span>Stations, gaz &amp; lubrifiants</span>
-              <i aria-hidden="true">•</i>
-              <span>Objectif 30 stations d’ici 2028</span>
-              <i aria-hidden="true">•</i>
-              <span>Adresses &amp; repères confirmés</span>
-            </div>
           </div>
           <div className="grp-report-actions">
             <a className="btn btn--primary" href={href('/reseau')}>
@@ -398,12 +355,6 @@ export default function GroupePage() {
       <Gouvernance />
       <Rse />
       <Rapport />
-      <CtaBand
-        title="VisionPass & Solutions Flottes Pro"
-        text="Paiement sécurisé sans contact, gestion de carburant par véhicule et remises automatiques en station."
-        primary={{ label: 'Découvrir VisionPass', to: '/produits', sec: 'visionpass' }}
-        secondary={{ label: 'Espace Entreprise', to: '/produits', sec: 'flottes' }}
-      />
     </>
   )
 }

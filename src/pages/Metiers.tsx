@@ -5,13 +5,6 @@ import { CtaBand } from './Home'
 import '../styles/metiers.css'
 
 /* ------------------------------------------------------------------- hero */
-const heroStats = [
-  { value: '30', label: 'Stations visées d’ici 2028' },
-  { value: '6', label: 'Stations en exploitation' },
-  { value: '2', label: 'Villes de centres gaz — Douala & Bafoussam' },
-  { value: '4', label: 'Spécialités d’ingénierie' },
-]
-
 function Hero() {
   return (
     <section className="mt-hero">
@@ -27,9 +20,8 @@ function Hero() {
           Nos Métiers <span className="hl--mint">— De l’approvisionnement en gros à la pompe de proximité.</span>
         </h1>
         <p className="mt-hero-lead">
-          Une maîtrise complète et sécurisée du flux énergétique : approvisionnement en produits
-          pétroliers, centres de remplissage de gaz, lubrifiants et stations-service de proximité
-          au service des automobilistes et des ménages camerounais.
+          De l’approvisionnement aux stations-service, nous distribuons carburants, gaz et lubrifiants
+          aux automobilistes et aux ménages camerounais.
         </p>
         <div className="btn-row">
           <a className="btn btn--primary btn--lg" href={href('/metiers', 'chaine')}>
@@ -38,14 +30,6 @@ function Hero() {
           <a className="btn btn--ghost btn--lg" href={href('/metiers', 'cotation')}>
             <Icon.doc /> Demander une Cotation Pro
           </a>
-        </div>
-        <div className="mt-stats">
-          {heroStats.map((s) => (
-            <div className="mt-stat" key={s.value}>
-              <b>{s.value}</b>
-              <span>{s.label}</span>
-            </div>
-          ))}
         </div>
       </div>
     </section>

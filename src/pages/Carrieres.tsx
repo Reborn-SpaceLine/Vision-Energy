@@ -5,23 +5,7 @@ import { CtaBand } from './Home'
 import '../styles/act.css'
 import '../styles/carrieres.css'
 
-/* ---------------------------------------------------------------- icônes */
-function IconQuote() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em" aria-hidden="true">
-      <path d="M4 17.5c0-4.6 2.4-8 6.6-9.6l.9 1.8c-2.4 1.1-3.7 2.6-3.9 4.3.3-.1.7-.2 1.1-.2 1.7 0 3 1.2 3 2.9 0 1.8-1.5 3.1-3.5 3.1C5.6 19.8 4 19 4 17.5Zm10.2 0c0-4.6 2.4-8 6.6-9.6l.9 1.8c-2.4 1.1-3.7 2.6-3.9 4.3.3-.1.7-.2 1.1-.2 1.7 0 3 1.2 3 2.9 0 1.8-1.5 3.1-3.5 3.1-2.6 0-4.2-.8-4.2-2.3Z" />
-    </svg>
-  )
-}
-
 /* ------------------------------------------------------------------ hero */
-const heroStats = [
-  { icon: <Icon.users />, value: '30+', label: 'Collaborateurs prévus', sub: 'Avec l\'objectif 30 stations', tone: '' },
-  { icon: <Icon.fuel />, value: '6', label: 'Stations actives', sub: 'Douala, Bafoussam, Mbouda, Batcham, Tobe', tone: '' },
-  { icon: <Icon.briefcase />, value: '5', label: 'Postes ouverts', sub: 'En CDI · Opérations & Technique', tone: 'icon-tile--lav' },
-  { icon: <Icon.rosette />, value: '4', label: 'Spécialités internes', sub: 'Lubrifiants, élec., automatisme & gaz', tone: '' },
-]
-
 function Hero() {
   return (
     <section className="car-page-hero">
@@ -40,9 +24,8 @@ function Hero() {
           <span className="hl--mint">en pleine construction.</span>
         </h1>
         <p className="car-page-lead">
-          Ingénieurs, responsables de station, techniciens gaz : nous bâtissons un réseau de
-          30 stations d'ici 2028 et cherchons des talents engagés à distribuer énergie et services de
-          proximité — en sécurité, au meilleur prix.
+          Ingénieurs, responsables de station et techniciens gaz : rejoignez le développement de notre
+          réseau, avec un objectif de 30 stations d’ici 2028.
         </p>
         <div className="btn-row">
           <a className="btn btn--primary btn--lg" href={href('/carrieres', 'offres')}>
@@ -51,18 +34,6 @@ function Hero() {
           <a className="btn btn--ghost btn--lg" href={href('/carrieres', 'candidature')}>
             <Icon.send /> Candidature spontanée
           </a>
-        </div>
-        <div className="act-stats car-page-stats">
-          {heroStats.map((s) => (
-            <div className="act-stat" key={s.label}>
-              <span className={`icon-tile ${s.tone}`.trim()}>{s.icon}</span>
-              <div>
-                <b>{s.value}</b>
-                <span>{s.label}</span>
-                <em>{s.sub}</em>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
@@ -116,9 +87,8 @@ function MarqueEmployeur() {
           Faites grandir votre talent dans un réseau camerounais en pleine construction.
         </h2>
         <p className="car-intro-lead">
-          Chez Vision Energy, nous formons une équipe d'ingénieurs, de responsables de station et de
-          techniciens gaz engagés à distribuer énergie et services de proximité, en sécurité, à
-          travers le Littoral et l'Ouest du Cameroun.
+          Ingénieurs, responsables de station et techniciens gaz contribuent à notre croissance au
+          Littoral et dans l’Ouest du Cameroun.
         </p>
 
         <div className="grid grid-4 car-values">
@@ -132,36 +102,6 @@ function MarqueEmployeur() {
           ))}
         </div>
 
-        <article className="card car-testi">
-          <div className="car-testi-media">
-            <div className="car-testi-photo">
-              <img
-                src="/assets/images/station-ve-real.jpg"
-                alt="Équipe Vision Energy en station"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <span className="car-testi-badge">
-              <IconQuote /> Équipes en poste depuis 2023
-            </span>
-          </div>
-          <div className="car-testi-body">
-            <span className="eyebrow car-eyebrow-icon">
-              <Icon.userCheck /> Vu du terrain
-            </span>
-            <blockquote className="car-quote">
-              « Chaque station que nous ouvrons ou remettons aux normes est un métier complet :
-              préparer le site, former l'équipe de piste, tenir la qualité du produit et rassurer le
-              client à chaque visite. Le réseau grandit vite, et les responsabilités suivent. »
-            </blockquote>
-            <b className="car-name">Exploitation Vision Energy</b>
-            <span className="car-role">
-              Équipes stations &amp; centres de remplissage de gaz
-            </span>
-            <span className="car-committee">Douala · Bafoussam · Mbouda · Batcham</span>
-          </div>
-        </article>
       </div>
     </section>
   )

@@ -27,12 +27,6 @@ function GasBottle(p: SVGProps<SVGSVGElement>) {
 }
 
 /* --------------------------------------------------------------- hero */
-const heroStats = [
-  { value: '840', label: 'CFA/L Super 95 — grille MINMIDT' },
-  { value: '828', label: 'CFA/L Gasoil — grille MINMIDT' },
-  { value: 'B6 → B35', label: 'Gaz en bouteille, en stock' },
-]
-
 function Hero() {
   return (
     <section className="pro-hero">
@@ -46,9 +40,8 @@ function Hero() {
             <span className="hl--mint">Votre Quotidien</span>
           </h1>
           <p className="lead">
-            Du carburant additivé aux lubrifiants de synthèse, Vision Energy déploie au Cameroun une
-            offre complète de produits pétroliers et de gaz domestique, pensée pour allier sécurité,
-            régularité de la qualité et prix maîtrisé — la qualité à bon prix.
+            Carburants, lubrifiants, gaz domestique et solutions pour les professionnels, avec une
+            qualité suivie et des prix maîtrisés.
           </p>
           <div className="btn-row">
             <a className="btn btn--primary" href={href('/produits', 'carburants')}>
@@ -57,14 +50,6 @@ function Hero() {
             <a className="btn btn--onlight" href={href('/produits', 'b2b')}>
               <Icon.doc /> Demander un Devis Pro
             </a>
-          </div>
-          <div className="pro-hero-stats">
-            {heroStats.map((s) => (
-              <div className="pro-hero-stat" key={s.label}>
-                <b>{s.value}</b>
-                <span>{s.label}</span>
-              </div>
-            ))}
           </div>
         </div>
         <div className="pro-hero-media">
