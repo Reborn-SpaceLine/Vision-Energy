@@ -10,7 +10,7 @@
     radial-gradient(900px 380px at 46% 118%, rgb(var(--color-primary-rgb) / 0.16), transparent 65%),
     var(--color-primary-strong);
   color: #fff;
-  padding: 56px 0 42px;
+  padding: 54px 0 44px;
 }
 
 .res-hero-top {

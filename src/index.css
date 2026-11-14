@@ -14,6 +14,7 @@
   --color-primary: #1e699a;
   --color-primary-hover: #1a5a84;
   --color-primary-strong: #0d2d42;
+  --color-primary-strong-rgb: 13 45 66;
   --color-primary-soft: #eaf5fc;
   --color-primary-rgb: 44 151 221;
   --color-secondary: var(--color-primary);
@@ -1146,10 +1147,10 @@ ul {
   inset: 0;
   background: linear-gradient(
     95deg,
-    rgb(13 45 66 / 0.96) 0%,
-    rgb(13 45 66 / 0.88) 42%,
-    rgb(13 45 66 / 0.58) 72%,
-    rgb(13 45 66 / 0.36) 100%
+    rgb(var(--color-primary-strong-rgb) / 0.96) 0%,
+    rgb(var(--color-primary-strong-rgb) / 0.88) 42%,
+    rgb(var(--color-primary-strong-rgb) / 0.58) 72%,
+    rgb(var(--color-primary-strong-rgb) / 0.36) 100%
   );
   z-index: 1;
 }
@@ -1182,7 +1183,7 @@ ul {
 
 .hero-title {
   font-family: var(--font-head);
-  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+  font-size: clamp(1.9rem, 3.8vw, 3rem);
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.02em;
@@ -1193,7 +1194,7 @@ ul {
 
 .hero-text {
   color: var(--color-text-inverse-muted);
-  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
   line-height: 1.55;
   max-width: 54ch;
 }
@@ -1993,7 +1994,11 @@ ul {
     object-position: 70% center;
   }
   .hero::before {
-    background: linear-gradient(100deg, rgb(13 45 66 / 0.94), rgb(13 45 66 / 0.72));
+    background: linear-gradient(
+      100deg,
+      rgb(var(--color-primary-strong-rgb) / 0.94),
+      rgb(var(--color-primary-strong-rgb) / 0.72)
+    );
   }
   .hero-card {
     padding: 24px 0;
@@ -2115,9 +2120,9 @@ ul {
   .hero::before {
     background: linear-gradient(
       160deg,
-      rgb(13 45 66 / 0.97) 0%,
-      rgb(13 45 66 / 0.88) 60%,
-      rgb(13 45 66 / 0.6) 100%
+      rgb(var(--color-primary-strong-rgb) / 0.97) 0%,
+      rgb(var(--color-primary-strong-rgb) / 0.88) 60%,
+      rgb(var(--color-primary-strong-rgb) / 0.6) 100%
     );
   }
   .hero-card {
@@ -2125,7 +2130,7 @@ ul {
     padding: 32px 0 28px;
   }
   .hero-title {
-    font-size: clamp(1.4rem, 7vw, 2rem);
+    font-size: clamp(1.9rem, 7vw, 2.35rem);
   }
   .hero-text {
     font-size: 1rem;
@@ -2166,6 +2171,38 @@ ul {
   .prod-featured-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
+  }
+}
+
+/* Shared page-hero reading scale and touch targets */
+.page-hero.page-hero .hero-text,
+.page-hero.page-hero .grp-hero-lead,
+.page-hero.page-hero .mt-hero-lead,
+.page-hero.page-hero .act-hero-lead,
+.page-hero.page-hero .lead,
+.page-hero.page-hero .res-hero-lead,
+.page-hero.page-hero .car-page-lead {
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  line-height: 1.6;
+}
+
+.page-hero.page-hero .btn-row > .btn {
+  min-height: 48px;
+  font-size: 0.95rem;
+}
+
+.page-hero.page-hero h1 {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .page-hero.page-hero {
+    padding-block: 24px;
+  }
+
+  .hero.page-hero {
+    min-height: 0;
   }
 }
 

@@ -13,11 +13,33 @@
    1. HERO
    ========================================================================== */
 .act-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 30px 0 68px;
+  background: var(--color-primary-strong);
+  color: var(--color-text-inverse);
+}
+
+.act-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
   background:
-    radial-gradient(70% 130% at 100% 12%, var(--color-primary-soft) 0%, rgb(var(--color-primary-rgb) / 0) 62%),
-    linear-gradient(to top, #e7ecf4 0%, rgba(231, 236, 244, 0) 46%),
-    #f2f4f6;
-  padding: 26px 0 66px;
+    linear-gradient(
+      90deg,
+      rgb(var(--color-primary-strong-rgb) / 0.98) 0%,
+      rgb(var(--color-primary-strong-rgb) / 0.92) 48%,
+      rgb(var(--color-primary-strong-rgb) / 0.48) 100%
+    ),
+    url('/assets/images/station-aerial.jpg') center 54% / cover no-repeat;
+  pointer-events: none;
+}
+
+.act-hero > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .act-crumb {
@@ -95,6 +117,64 @@
 .act-hero-cta .btn {
   font-size: 0.86rem;
   padding: 14px 22px;
+}
+
+.act-hero .act-crumb,
+.act-hero .act-crumb svg,
+.act-hero .act-crumb a {
+  color: var(--color-text-inverse-muted);
+}
+
+.act-hero .act-crumb b {
+  color: var(--color-text-inverse);
+}
+
+.act-hero .act-crumb a:hover {
+  color: var(--color-text-inverse);
+}
+
+.act-hero-pill {
+  background: rgb(var(--color-primary-rgb) / 0.16);
+  color: var(--color-text-inverse);
+  border: 1px solid rgb(var(--color-primary-rgb) / 0.35);
+}
+
+.act-hero-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.12;
+  color: var(--color-text-inverse);
+}
+
+.act-hero-title .hl {
+  color: var(--color-text-inverse);
+}
+
+.act-hero-lead {
+  color: var(--color-text-inverse-muted);
+}
+
+.act-hero-cta .btn--outline {
+  border-color: rgb(var(--color-inverse-rgb) / 0.28);
+}
+
+.act-hero-cta .btn--outline:hover {
+  border-color: var(--color-text-inverse);
+}
+
+@media (max-width: 640px) {
+  .act-hero {
+    padding-block: 24px 44px;
+  }
+
+  .act-hero::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgb(var(--color-primary-strong-rgb) / 0.97),
+        rgb(var(--color-primary-strong-rgb) / 0.82)
+      ),
+      url('/assets/images/station-aerial.jpg') 62% center / cover no-repeat;
+  }
 }
 
 /* stats */

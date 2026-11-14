@@ -8,7 +8,7 @@ import '../styles/carrieres.css'
 /* ------------------------------------------------------------------ hero */
 function Hero() {
   return (
-    <section className="car-page-hero">
+    <section className="car-page-hero page-hero">
       <div className="car-page-hero-bg" aria-hidden="true" />
       <div className="container">
         <nav className="act-crumb" aria-label="Fil d'Ariane">

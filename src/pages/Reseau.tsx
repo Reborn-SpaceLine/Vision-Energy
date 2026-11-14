@@ -246,7 +246,7 @@ export default function ReseauPage() {
   return (
     <>
       {/* ===== hero + recherche ===== */}
-      <section className="res-hero" id="geoloc">
+      <section className="res-hero page-hero" id="geoloc">
         <div className="container">
           <div className="res-hero-top">
             <div className="res-hero-copy">

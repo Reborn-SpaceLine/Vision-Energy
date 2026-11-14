@@ -7,7 +7,7 @@ import '../styles/metiers.css'
 /* ------------------------------------------------------------------- hero */
 function Hero() {
   return (
-    <section className="mt-hero">
+    <section className="mt-hero page-hero">
       <div className="mt-hero-bg" aria-hidden="true" />
       <div className="container">
         <div className="mt-hero-top">
@@ -17,7 +17,10 @@ function Hero() {
           <span className="mt-hero-tag">Cameroun — Littoral &amp; Ouest</span>
         </div>
         <h1 className="mt-hero-title">
-          Nos Métiers <span className="hl--mint">— De l’approvisionnement en gros à la pompe de proximité.</span>
+          Nos Métiers
+          <span className="mt-hero-subtitle hl--mint">
+            De l’approvisionnement en gros à la pompe de proximité.
+          </span>
         </h1>
         <p className="mt-hero-lead">
           De l’approvisionnement aux stations-service, nous distribuons carburants, gaz et lubrifiants

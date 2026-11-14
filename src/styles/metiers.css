@@ -31,9 +31,9 @@
   inset: 0;
   background: linear-gradient(
     100deg,
-    rgba(45, 49, 51, 1) 22%,
-    rgba(30, 38, 40, 0.92) 52%,
-    rgba(18, 28, 32, 0.6) 100%
+    rgb(var(--color-primary-strong-rgb) / 0.97) 18%,
+    rgb(var(--color-primary-strong-rgb) / 0.9) 54%,
+    rgb(var(--color-primary-strong-rgb) / 0.58) 100%
   );
 }
 
@@ -85,6 +85,9 @@
 }
 
 .mt-hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   margin-top: 26px;
   font-size: clamp(1.8rem, 4.1vw, 3.25rem);
   font-weight: 700;
@@ -92,6 +95,14 @@
   line-height: 1.13;
   max-width: 890px;
   overflow-wrap: anywhere;
+}
+
+.mt-hero-subtitle {
+  display: block;
+  max-width: 34ch;
+  font-size: clamp(1.35rem, 2.3vw, 2rem);
+  line-height: 1.24;
+  letter-spacing: -0.015em;
 }
 
 .mt-hero-title .hl--mint {
@@ -807,5 +818,8 @@
   }
   .mt-hero-title {
     font-size: clamp(1.8rem, 7.5vw, 2.25rem);
+  }
+  .mt-hero-subtitle {
+    font-size: clamp(1.3rem, 5.2vw, 1.6rem);
   }
 }

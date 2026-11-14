@@ -4,7 +4,7 @@ import { Icon } from '../components/icons'
 /* ------------------------------------------------------------------ hero */
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero page-hero">
       <div className="hero-media">
         <img
           className="hero-img"
@@ -23,8 +23,8 @@ function Hero() {
               Réseau de Stations-Service · Cameroun
             </span>
             <h1 className="hero-title">
-              Carburants Additivés &amp; Gaz Domestique{' '}
-              <span className="hl--mint">au Meilleur Prix</span>
+              Gaz domestique &amp; carburants{' '}
+              <span className="hl--mint">au juste prix</span>
             </h1>
             <p className="hero-text">
               Carburants, gaz domestique et lubrifiants aux prix homologués, dans nos stations de

@@ -17,9 +17,13 @@
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 70% -10%, rgb(var(--color-primary-rgb) / 0.2) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 10% 100%, rgba(40, 144, 216, 0.14) 0%, transparent 60%),
-    var(--color-primary-strong);
+    linear-gradient(
+      90deg,
+      rgb(var(--color-primary-strong-rgb) / 0.98) 0%,
+      rgb(var(--color-primary-strong-rgb) / 0.92) 48%,
+      rgb(var(--color-primary-strong-rgb) / 0.48) 100%
+    ),
+    url('/assets/images/station-modern-2.png') center 56% / cover no-repeat;
   pointer-events: none;
 }
 
@@ -57,7 +61,7 @@
 
 .car-page-title {
   font-family: var(--font-head);
-  font-size: clamp(2.15rem, 4vw, 3.4rem);
+  font-size: clamp(2rem, 3.7vw, 3.1rem);
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.025em;
@@ -147,7 +151,7 @@
 
 @media (max-width: 640px) {
   .car-page-title {
-    font-size: 1.9rem;
+    font-size: clamp(1.9rem, 7vw, 2.3rem);
   }
 
   .car-page-hero {

@@ -24,7 +24,7 @@ function IconHome() {
 
 function Hero() {
   return (
-    <section className="act-hero">
+    <section className="act-hero page-hero">
       <div className="container">
         <nav className="act-crumb" aria-label="Fil d'Ariane">
           <IconHome />

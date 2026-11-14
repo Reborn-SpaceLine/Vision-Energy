@@ -115,7 +115,7 @@
 .pro-hero {
   background: var(--color-primary-strong);
   color: #e7eeeb;
-  padding: 76px 0 72px;
+  padding: 64px 0;
   position: relative;
   overflow: hidden;
 }
@@ -129,9 +129,9 @@
 
 .pro-hero .h1 {
   color: #fff;
-  margin-top: 22px;
-  font-size: clamp(2.2rem, 4.4vw, 3.35rem);
-  line-height: 1.08;
+  margin-top: 18px;
+  font-size: clamp(1.95rem, 3.5vw, 2.85rem);
+  line-height: 1.12;
 }
 
 .pro-hero .lead {
@@ -214,7 +214,8 @@
   position: relative;
   border-radius: var(--r-lg);
   overflow: hidden;
-  aspect-ratio: 478 / 463;
+  aspect-ratio: 16 / 10;
+  max-height: 340px;
   box-shadow: var(--shadow-lg);
 }
 
@@ -1230,5 +1231,30 @@
   }
   .pro-form-foot .btn {
     flex-basis: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .pro-hero {
+    padding-block: 36px;
+  }
+
+  .pro-hero-grid {
+    gap: 22px;
+  }
+
+  .pro-hero .btn-row {
+    margin-top: 20px;
+  }
+
+  .pro-hero-media {
+    aspect-ratio: 16 / 9;
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 360px) {
+  .produits-root .section .h2 {
+    overflow-wrap: anywhere;
   }
 }

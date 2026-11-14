@@ -29,15 +29,15 @@ function GasBottle(p: SVGProps<SVGSVGElement>) {
 /* --------------------------------------------------------------- hero */
 function Hero() {
   return (
-    <section className="pro-hero">
+    <section className="pro-hero page-hero">
       <div className="container pro-hero-grid">
         <div>
           <span className="pro-hero-badge">
             <Icon.shieldPlus /> Conformité réglementaire &amp; sécurité en station
           </span>
           <h1 className="h1">
-            Des Produits de Haute Précision, des Services Pensés pour{' '}
-            <span className="hl--mint">Votre Quotidien</span>
+            Des produits essentiels,{' '}
+            <span className="hl--mint">des services de proximité</span>
           </h1>
           <p className="lead">
             Carburants, lubrifiants, gaz domestique et solutions pour les professionnels, avec une

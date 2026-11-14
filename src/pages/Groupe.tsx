@@ -34,7 +34,7 @@ const heroFeats = [
 function Hero() {
   return (
     <>
-      <section className="grp-hero">
+      <section className="grp-hero page-hero">
         <div className="grp-hero-bg" aria-hidden="true" />
         <div className="container grp-hero-inner">
           <nav className="grp-crumb" aria-label="Fil d'Ariane">
@@ -49,8 +49,7 @@ function Hero() {
           <span className="grp-hero-eyebrow">Acteur énergétique camerounais</span>
           <h1 className="h1">Bâtir l’avenir énergétique du Cameroun avec rigueur et intégrité.</h1>
           <p className="grp-hero-lead">
-            Vision Energy distribue carburants, gaz domestique et lubrifiants au Cameroun, avec une
-            priorité : la qualité à bon prix.
+            Carburants, gaz domestique et lubrifiants : la qualité à bon prix, au Cameroun.
           </p>
           <ul className="grp-hero-feats">
             {heroFeats.map((f) => (
