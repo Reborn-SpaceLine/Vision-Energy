@@ -48,20 +48,20 @@ function Hero() {
 /* ---------------------------------------------------------------- produits */
 const produits = [
   {
-    icon: <Icon.fuel />,
-    img: '/assets/images/pump.jpg',
-    kicker: 'Moteurs & Flottes',
-    title: 'Carburants Additivés ProClean™',
-    text: 'Super 95 à 840 CFA/L et Gasoil à 828 CFA/L, formulés pour protéger les injecteurs.',
-    link: { label: 'Tarifs & Spécifications', to: '/produits', sec: 'carburants' },
-  },
-  {
     icon: <Icon.flame />,
     img: '/assets/images/gaz-agent.jpg',
     kicker: 'Gaz Domestique & Ménages',
     title: 'VisionGaz B6, B12.5 & B35',
     text: 'Bouteilles scellées et pesées avec exactitude, recharge express en station.',
     link: { label: 'Formats & Points de Vente', to: '/produits', sec: 'gaz' },
+  },
+  {
+    icon: <Icon.fuel />,
+    img: '/assets/images/pump.jpg',
+    kicker: 'Moteurs & Flottes',
+    title: 'Carburants Additivés ProClean™',
+    text: 'Super 95 à 840 CFA/L et Gasoil à 828 CFA/L, formulés pour protéger les injecteurs.',
+    link: { label: 'Tarifs & Spécifications', to: '/produits', sec: 'carburants' },
   },
   {
     icon: <Icon.drop />,
@@ -82,19 +82,56 @@ const produits = [
 ]
 
 function Produits() {
+  const featuredProducts = produits.slice(0, 2)
+  const additionalProducts = produits.slice(2)
+
   return (
-    <section className="section section--bg produits">
+    <section className="section section--bg produits home-products">
       <div className="container">
-        <div className="sec-head sec-head--stack">
-          <span className="eyebrow eyebrow--center">Gamme intégrée</span>
-          <h2 className="h2">Produits &amp; Services de Proximité</h2>
+        <div className="sec-head home-products-head">
+          <div>
+            <span className="eyebrow">Nos essentiels</span>
+            <h2 className="h2">Gaz domestique &amp; carburants</h2>
+          </div>
           <p className="lead">
-            Carburants, gaz domestique sécurisé et lubrifiants au juste prix.
+            Deux offres au cœur de notre réseau, disponibles dans nos stations.
           </p>
         </div>
-        <div className="grid grid-4">
-          {produits.map((p) => (
-            <article className="card card-hover prod-card" key={p.title}>
+
+        <div className="prod-featured-grid">
+          {featuredProducts.map((p, index) => (
+            <article className="card card-hover prod-card prod-card--featured" key={p.title}>
+              <div className="prod-card-media">
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
+                  fetchPriority={index === 0 ? 'high' : 'auto'}
+                />
+                <span className="icon-tile">{p.icon}</span>
+              </div>
+              <div className="prod-card-body">
+                <span className="prod-kicker">{p.kicker}</span>
+                <h3 className="h3">{p.title}</h3>
+                <p className="prod-text">{p.text}</p>
+                <a className="btn btn--outline prod-card-action" href={href(p.link.to, p.link.sec)}>
+                  Découvrir l’offre <Icon.arrowR />
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="prod-support-head">
+          <h3>Autres services</h3>
+          <a className="link-arrow" href={href('/produits')}>
+            Toute l’offre <Icon.arrowR />
+          </a>
+        </div>
+        <div className="prod-support-grid">
+          {additionalProducts.map((p) => (
+            <article className="card card-hover prod-card prod-card--support" key={p.title}>
               <div className="prod-card-media">
                 <img src={p.img} alt={p.title} loading="lazy" decoding="async" />
                 <span className="icon-tile">{p.icon}</span>
@@ -104,7 +141,7 @@ function Produits() {
                 <h3 className="h3">{p.title}</h3>
                 <p className="prod-text">{p.text}</p>
                 <a className="link-arrow" href={href(p.link.to, p.link.sec)}>
-                  {p.link.label} <Icon.arrowR />
+                  En savoir plus <Icon.arrowR />
                 </a>
               </div>
             </article>

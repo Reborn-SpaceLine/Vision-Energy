@@ -790,24 +790,27 @@ ul {
    Footer
    ========================================================================== */
 .footer {
-  background: #fff;
-  border-top: 1px solid var(--color-border-soft);
-  padding-top: 58px;
+  background: var(--color-primary-strong);
+  color: var(--color-text-inverse-muted);
+  padding-top: 44px;
   font-size: 1rem;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 40px;
-  padding-bottom: 40px;
+  gap: 28px;
+  padding-bottom: 32px;
 }
 
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 14px;
+  width: fit-content;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 16px;
 }
 
 .footer-brand img {
@@ -817,46 +820,70 @@ ul {
 }
 
 .footer-intro p {
-  color: var(--color-text-muted);
+  color: var(--color-text-inverse-muted);
   max-width: 40ch;
+}
+
+.footer-tagline {
+  display: inline-flex;
+  margin-top: 14px;
+  color: var(--color-text-inverse);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .footer h4 {
   font-size: 1rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--color-primary-strong);
-  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+  color: var(--color-text-inverse);
+  margin: 0 0 10px;
 }
 
 .footer ul li {
-  padding: 10px 0;
-  color: var(--color-text-muted);
+  padding: 0;
+  color: var(--color-text-inverse-muted);
+  line-height: 1.45;
+}
+
+.footer-column ul a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-block: 6px;
 }
 
 .footer ul a:hover {
-  color: var(--color-primary);
+  color: var(--color-brand-primary);
 }
 
 .footer-contact li {
   display: flex;
   gap: 9px;
   align-items: flex-start;
+  overflow-wrap: anywhere;
 }
 
 .footer-contact svg {
-  color: var(--color-secondary);
-  margin-top: 4px;
+  color: var(--color-brand-primary);
+  margin-top: 5px;
+  flex: none;
 }
 
 .footer-rse {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 12px;
+  min-height: 44px;
+  margin-top: 6px;
   font-weight: 700;
-  color: var(--color-primary);
-  font-size: 0.82rem;
+  color: var(--color-text-inverse);
+  font-size: 0.9rem;
+}
+
+.footer-rse svg {
+  color: var(--color-brand-primary);
 }
 
 .footer-certs {
@@ -881,8 +908,9 @@ ul {
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--color-border-soft);
-  padding: 18px 0 calc(18px + env(safe-area-inset-bottom));
+  border-top: 1px solid rgb(var(--color-inverse-rgb) / 0.16);
+  background: rgb(0 0 0 / 0.12);
+  padding: 14px 0 calc(14px + env(safe-area-inset-bottom));
 }
 
 .footer-bottom-inner {
@@ -891,18 +919,12 @@ ul {
   justify-content: space-between;
   gap: 18px;
   flex-wrap: wrap;
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-}
-
-.footer-bottom nav {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
+  color: var(--color-text-inverse-muted);
+  font-size: 0.82rem;
 }
 
 .footer-bottom a:hover {
-  color: var(--color-primary);
+  color: var(--color-brand-primary);
 }
 
 /* ---------- responsive --------------------------------------------------- */
@@ -918,6 +940,9 @@ ul {
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .footer-intro {
+    grid-column: 1 / -1;
+  }
   .hero {
     min-height: 520px;
   }
@@ -930,6 +955,13 @@ ul {
 }
 
 @media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1.15fr 1fr 1fr 1fr;
+    gap: 28px;
+  }
+  .footer-intro {
+    grid-column: auto;
+  }
   .hero {
     min-height: 480px;
   }
@@ -951,9 +983,6 @@ ul {
 }
 
 @media (min-width: 1280px) {
-  .footer-grid {
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  }
   .grid-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1592,6 +1621,89 @@ ul {
   padding-top: 8px;
 }
 
+.home-products {
+  padding-block: clamp(32px, 5vw, 64px);
+}
+
+.home-products-head {
+  align-items: end;
+  margin-bottom: 20px;
+}
+
+.home-products-head .h2 {
+  margin-top: 8px;
+}
+
+.home-products-head .lead {
+  max-width: 34ch;
+  margin: 0;
+}
+
+.prod-featured-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+}
+
+.prod-card--featured {
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.prod-card--featured .prod-card-media {
+  height: clamp(190px, 24vw, 300px);
+}
+
+.prod-card--featured .prod-card-body {
+  padding: 20px 22px 22px;
+  gap: 10px;
+}
+
+.prod-card--featured .h3 {
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.prod-card--featured .prod-text {
+  font-size: 1rem;
+}
+
+.prod-card-action {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.prod-support-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 28px 0 14px;
+}
+
+.prod-support-head h3 {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+.prod-support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.prod-card--support .prod-card-media {
+  height: 132px;
+}
+
+.prod-card--support .prod-card-body {
+  padding: 14px;
+}
+
+.prod-card--support .prod-card .h3,
+.prod-card--support .h3 {
+  font-size: 0.98rem;
+}
+
 /* news */
 .news-card {
   padding: 0;
@@ -1874,8 +1986,8 @@ ul {
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 520px;
-    padding: 24px 0;
+    min-height: 0;
+    padding: 44px 0;
   }
   .hero-img {
     object-position: 70% center;
@@ -1997,7 +2109,8 @@ ul {
 /* Hero: full-width on mobile, overlay darker so text stays readable */
 @media (max-width: 640px) {
   .hero {
-    min-height: 480px;
+    min-height: 0;
+    padding: 36px 0;
   }
   .hero::before {
     background: linear-gradient(
@@ -2027,13 +2140,32 @@ ul {
   .hero-showcase-grid {
     grid-template-columns: minmax(0, 1fr);
   }
+  .home-products-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .home-products-head .lead {
+    text-align: left;
+  }
+  .prod-support-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
   .btn-row {
     flex-direction: column;
     gap: 10px;
   }
+
   .btn-row .btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .prod-featured-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
   }
 }
 
