@@ -89,7 +89,7 @@
 }
 
 .produits-root .pill--darkmint {
-  background: rgba(104, 219, 169, 0.14);
+  background: rgb(var(--color-primary-rgb) / 0.14);
   color: var(--color-secondary);
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -147,8 +147,8 @@
   gap: 9px;
   padding: 8px 15px;
   border-radius: 999px;
-  background: rgba(104, 219, 169, 0.12);
-  border: 1px solid rgba(104, 219, 169, 0.28);
+  background: rgb(var(--color-primary-rgb) / 0.12);
+  border: 1px solid rgb(var(--color-primary-rgb) / 0.28);
   color: var(--color-secondary);
   font-size: 11.5px;
   font-weight: 700;
@@ -199,7 +199,7 @@
 }
 
 .pro-hero-stat:first-child b {
-  color: var(--color-secondary);
+  color: var(--color-text-inverse);
 }
 
 .pro-hero-stat span {
@@ -259,7 +259,7 @@
 .pro-hero-float-text span {
   display: block;
   font-size: 0.82rem;
-  color: var(--color-secondary);
+  color: var(--color-text-inverse-muted);
   margin-top: 2px;
 }
 

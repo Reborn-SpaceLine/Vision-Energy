@@ -14,7 +14,7 @@
    ========================================================================== */
 .act-hero {
   background:
-    radial-gradient(70% 130% at 100% 12%, #d9e5e3 0%, rgba(217, 229, 227, 0) 62%),
+    radial-gradient(70% 130% at 100% 12%, var(--color-primary-soft) 0%, rgb(var(--color-primary-rgb) / 0) 62%),
     linear-gradient(to top, #e7ecf4 0%, rgba(231, 236, 244, 0) 46%),
     #f2f4f6;
   padding: 26px 0 66px;
@@ -54,8 +54,8 @@
   margin-top: 22px;
   padding: 8px 15px;
   border-radius: 999px;
-  background: #b1f6d8;
-  color: #002114;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-strong);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.11em;
@@ -85,7 +85,7 @@
   max-width: 810px;
   font-size: 1.06rem;
   line-height: 1.85;
-  color: #4a5751;
+  color: var(--color-text-muted);
 }
 
 .act-hero-cta {
@@ -759,7 +759,7 @@
 }
 
 .car-tag--mint {
-  background: #c2fbe1;
+  background: var(--color-primary-soft);
   color: var(--color-primary);
 }
 

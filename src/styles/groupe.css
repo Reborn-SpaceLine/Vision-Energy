@@ -61,7 +61,7 @@
 }
 
 .grp-crumb .cur {
-  color: var(--color-secondary);
+  color: var(--color-text-inverse);
 }
 
 .grp-crumb svg {
@@ -75,8 +75,8 @@
   gap: 9px;
   padding: 8px 16px;
   border-radius: 999px;
-  background: rgba(104, 219, 169, 0.12);
-  border: 1px solid rgba(104, 219, 169, 0.28);
+  background: rgb(var(--color-primary-rgb) / 0.12);
+  border: 1px solid rgb(var(--color-primary-rgb) / 0.28);
   color: var(--color-secondary);
   font-size: 0.72rem;
   font-weight: 700;
@@ -89,8 +89,8 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--color-secondary);
-  box-shadow: 0 0 0 3px rgba(104, 219, 169, 0.25);
+  background: var(--color-brand-primary);
+  box-shadow: 0 0 0 3px rgb(var(--color-primary-rgb) / 0.25);
 }
 
 .grp-hero .h1 {
@@ -126,7 +126,7 @@
 
 .grp-hero-feats svg {
   font-size: 1.35rem;
-  color: var(--color-secondary);
+  color: var(--color-brand-primary);
 }
 
 /* ------------------------------------------------------- overlapping stats */
@@ -555,7 +555,7 @@
 }
 
 .grp-rse-card .icon-tile {
-  background: rgba(104, 219, 169, 0.14);
+  background: rgb(var(--color-primary-rgb) / 0.14);
   color: var(--color-secondary);
 }
 
@@ -595,13 +595,13 @@
 }
 
 .grp-rse .lead {
-  color: #b9c6c1;
+  color: var(--color-text-inverse-muted);
 }
 
 /* ---------------------------------------------------------------- rapport */
 .grp-report {
   border-radius: var(--r-xl);
-  background: linear-gradient(135deg, #ffffff 0%, #f1f7f3 60%, #e7f4ec 100%);
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-primary-soft) 100%);
   border: 1px solid var(--color-border-soft);
   box-shadow: var(--shadow-md);
   padding: 48px 52px;
