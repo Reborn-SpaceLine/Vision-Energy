@@ -100,7 +100,10 @@ function Produits() {
 
         <div className="prod-featured-grid">
           {featuredProducts.map((p, index) => (
-            <article className="card card-hover prod-card prod-card--featured" key={p.title}>
+            <article
+              className={`card card-hover prod-card prod-card--featured ${index === 0 ? 'prod-card--gas' : 'prod-card--fuel'}`}
+              key={p.title}
+            >
               <div className="prod-card-media">
                 <img
                   src={p.img}
@@ -352,7 +355,7 @@ function Localisation() {
   return (
     <section className="section section--bg loc">
       <div className="container loc-grid">
-        <div>
+        <div className="loc-copy">
           <span className="eyebrow">Géolocalisation immédiate</span>
           <h2 className="h2">Trouvez la station Vision Energy la plus proche</h2>
           <p className="lead">
@@ -366,17 +369,21 @@ function Localisation() {
             window.location.hash = '#/reseau'
           }}
         >
-          <label className="loc-input">
-            <Icon.search />
-            <input
-              type="search"
-              placeholder="Ville ou quartier…"
-              aria-label="Rechercher une station"
-            />
-          </label>
-          <button className="btn btn--primary" type="submit">
-            Rechercher
-          </button>
+          <label className="loc-label" htmlFor="station-search">Rechercher par ville ou quartier</label>
+          <div className="loc-search-row">
+            <label className="loc-input" htmlFor="station-search">
+              <Icon.search />
+              <input
+                id="station-search"
+                type="search"
+                placeholder="Ville ou quartier…"
+                aria-label="Rechercher une station"
+              />
+            </label>
+            <button className="btn btn--primary" type="submit">
+              Rechercher <Icon.arrowR />
+            </button>
+          </div>
         </form>
       </div>
     </section>
